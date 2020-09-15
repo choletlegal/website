@@ -1,18 +1,55 @@
+.navbar {
+  justify-content: space-between;
+  background: white;
+  display: flex;
+  align-items: center;
+  height: 6rem;
+  border-bottom: solid rgba(30, 30, 30, 0.6) 1px; }
+
+.logo-navbar {
+  width: 6rem; }
+
+.navbar-brand {
+  display: flex;
+  align-items: center; }
+
+.navbar-menu {
+  font-size: 18px; }
+
+.list-inline li {
+  display: inline-block;
+  padding: 20px 20px; }
+
+.list-inline {
+  list-style: none;
+  padding-left: 0px; }
+
+.list-inline a {
+  text-decoration: none;
+  color: black; }
+
+.button {
+  color: #eb6361;
+  background-color: #FFFFFF;
+  padding: 18px 10px;
+  -webkit-box-shadow: 10px 10px 2px 1px rgba(235, 99, 97, 0.5);
+          box-shadow: 10px 10px 2px 1px rgba(235, 99, 97, 0.5);
+  border-radius: 1px;
+  border-color: rgba(235, 99, 97, 0.5);
+  border: solid; }
+
 body {
   background-color: #FFFFFF;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
+  margin: 0px;
   text-align: center; }
 
 a {
-  color: rgba(0, 0, 0, 0.7); }
-  a:focus, a:hover {
-    color: rgba(0, 0, 0, 0.6); }
+  text-decoration: none;
+  color: black; }
 
 .container {
-  margin: center;
-  text-align: center; }
+  margin: auto;
+  width: 1000px; }
 
 .logo {
   margin-bottom: 1rem;
