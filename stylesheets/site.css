@@ -1,24 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Cardo:wght@700&family=Lato:ital,wght@0,400;0,700;1,400&family=Libre+Baskerville:wght@700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 .navbar {
-  justify-content: space-between;
   background: white;
+  height: 65px;
+  border-bottom: solid rgba(30, 30, 30, 0.6) 1px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: normal;
+  padding: 10px 0px;
+  margin-bottom: 50px; }
+
+.navbar-container {
+  justify-content: space-between;
   display: flex;
-  align-items: center;
-  height: 6rem;
-  border-bottom: solid rgba(30, 30, 30, 0.6) 1px; }
+  height: 65px; }
 
 .logo-navbar {
-  width: 6rem; }
+  width: 4rem; }
 
 .navbar-brand {
   display: flex;
   align-items: center; }
 
 .navbar-menu {
-  font-size: 18px; }
+  font-size: 18px;
+  margin: 0px; }
 
 .list-inline li {
   display: inline-block;
   padding: 20px 20px; }
+
+.list-inline ul {
+  margin: 0px; }
 
 .list-inline {
   list-style: none;
@@ -32,16 +43,22 @@
   color: #eb6361;
   background-color: #FFFFFF;
   padding: 18px 10px;
-  -webkit-box-shadow: 10px 10px 2px 1px rgba(235, 99, 97, 0.5);
-          box-shadow: 10px 10px 2px 1px rgba(235, 99, 97, 0.5);
+  -webkit-box-shadow: 10px 10px 2px 1px rgba(80, 159, 116, 0.7);
+          box-shadow: 10px 10px 2px 1px rgba(80, 159, 116, 0.7);
   border-radius: 1px;
   border-color: rgba(235, 99, 97, 0.5);
   border: solid; }
 
 body {
-  background-color: #FFFFFF;
-  margin: 0px;
-  text-align: center; }
+  font-family: 'Noto Serif', serif;
+  margin: 0px; }
+
+h1 {
+  font-family: 'Montserrat', serif;
+  font-size: 32px; }
+
+p {
+  font-size: 18px; }
 
 a {
   text-decoration: none;
@@ -49,8 +66,35 @@ a {
 
 .container {
   margin: auto;
-  width: 1000px; }
+  width: 1100px; }
 
 .logo {
   margin-bottom: 1rem;
-  width: 10rem; }
+  width: 60%; }
+
+.logo-title {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0; }
+
+.logo-extension {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-size: 40px;
+  margin: 0; }
+
+.portrait {
+  margin-bottom: 2rem;
+  margin-right: 3rem;
+  width: 35rem;
+  -webkit-box-shadow: 0 10px 30px rgba(10, 10, 10, 0.2);
+          box-shadow: 0 10px 30px rgba(10, 10, 10, 0.2);
+  float: left; }
+
+.portrait-text {
+  text-align: justify;
+  line-height: 2em; }
+
+.index {
+  text-align: center; }
