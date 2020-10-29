@@ -2,7 +2,6 @@
  * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
-@import url("https://fonts.googleapis.com/css2?family=Cardo:wght@700&family=Lato:ital,wght@0,400;0,700;1,400&family=Libre+Baskerville:wght@700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 .fa,
 .fas,
 .far,
@@ -102,58 +101,40 @@
   margin-left: .3em; }
 
 .fa-spin {
-  -webkit-animation: fa-spin 2s infinite linear;
-          animation: fa-spin 2s infinite linear; }
+  animation: fa-spin 2s infinite linear; }
 
 .fa-pulse {
-  -webkit-animation: fa-spin 1s infinite steps(8);
-          animation: fa-spin 1s infinite steps(8); }
-
-@-webkit-keyframes fa-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
+  animation: fa-spin 1s infinite steps(8); }
 
 @keyframes fa-spin {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
+    transform: rotate(0deg); }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
+    transform: rotate(360deg); } }
 
 .fa-rotate-90 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg); }
+  transform: rotate(90deg); }
 
 .fa-rotate-180 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg); }
+  transform: rotate(180deg); }
 
 .fa-rotate-270 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
-  -webkit-transform: rotate(270deg);
-          transform: rotate(270deg); }
+  transform: rotate(270deg); }
 
 .fa-flip-horizontal {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
-  -webkit-transform: scale(-1, 1);
-          transform: scale(-1, 1); }
+  transform: scale(-1, 1); }
 
 .fa-flip-vertical {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
-  -webkit-transform: scale(1, -1);
-          transform: scale(1, -1); }
+  transform: scale(1, -1); }
 
 .fa-flip-both, .fa-flip-horizontal.fa-flip-vertical {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
-  -webkit-transform: scale(-1, -1);
-          transform: scale(-1, -1); }
+  transform: scale(-1, -1); }
 
 :root .fa-rotate-90,
 :root .fa-rotate-180,
@@ -161,8 +142,7 @@
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical,
 :root .fa-flip-both {
-  -webkit-filter: none;
-          filter: none; }
+  filter: none; }
 
 .fa-stack {
   display: inline-block;
@@ -4584,259 +4564,3 @@ readers do not read off random characters that represent icons */
   overflow: visible;
   position: static;
   width: auto; }
-
-/*!
- * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- */
-@font-face {
-  font-family: 'Font Awesome 5 Free';
-  font-style: normal;
-  font-weight: 900;
-  font-display: block;
-  src: url("./webfonts/fontawesome/fa-solid-900.eot");
-  src: url("./webfonts/fontawesome/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("./webfonts/fontawesome/fa-solid-900.woff2") format("woff2"), url("./webfonts/fontawesome/fa-solid-900.woff") format("woff"), url("./webfonts/fontawesome/fa-solid-900.ttf") format("truetype"), url("./webfonts/fontawesome/fa-solid-900.svg#fontawesome") format("svg"); }
-
-.fa,
-.fas {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900; }
-
-/*!
- * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- */
-@font-face {
-  font-family: 'Font Awesome 5 Brands';
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-  src: url("./webfonts/fontawesome/fa-brands-400.eot");
-  src: url("./webfonts/fontawesome/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("./webfonts/fontawesome/fa-brands-400.woff2") format("woff2"), url("./webfonts/fontawesome/fa-brands-400.woff") format("woff"), url("./webfonts/fontawesome/fa-brands-400.ttf") format("truetype"), url("./webfonts/fontawesome/fa-brands-400.svg#fontawesome") format("svg"); }
-
-.fab {
-  font-family: 'Font Awesome 5 Brands';
-  font-weight: 400; }
-
-.button {
-  color: #141414;
-  background-color: #FFFFFF;
-  padding: 18px 10px;
-  -webkit-box-shadow: 10px 10px 2px 1px rgba(36, 97, 166, 0.7);
-          box-shadow: 10px 10px 2px 1px rgba(36, 97, 166, 0.7);
-  border-radius: 1px;
-  border-color: rgba(235, 99, 97, 0.5);
-  border: solid; }
-
-.portrait {
-  background-color: #FFFFFF;
-  -webkit-box-shadow: 40px 35px 0px 1px rgba(36, 97, 166, 0.3);
-          box-shadow: 40px 35px 0px 1px rgba(36, 97, 166, 0.3);
-  border-radius: 1px;
-  margin-bottom: 4rem;
-  margin-right: 5rem;
-  width: 35rem;
-  float: left; }
-
-.navbar {
-  background: white;
-  height: 65px;
-  border-bottom: solid rgba(30, 30, 30, 0.6) 1px;
-  font-family: "Montserrat", sans-serif;
-  font-size: normal;
-  padding: 10px 0px;
-  margin-bottom: 50px; }
-
-.navbar-container {
-  justify-content: space-between;
-  display: flex;
-  height: 65px; }
-
-.logo-navbar {
-  width: 4rem; }
-
-.navbar-brand {
-  display: flex;
-  align-items: center; }
-
-.navbar-menu {
-  font-size: 18px;
-  margin: 0px; }
-
-.list-inline li {
-  display: inline-block;
-  padding: 20px 20px; }
-
-.list-inline ul {
-  margin: 0px; }
-
-.list-inline {
-  list-style: none;
-  padding-left: 0px; }
-
-.list-inline a {
-  text-decoration: none; }
-
-.highlight {
-  background-color: rgba(36, 97, 166, 0.1);
-  color: #2461a6;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  padding-bottom: 4px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 2px; }
-
-.footer {
-  background: white;
-  border-top: solid rgba(30, 30, 30, 0.6) 1px;
-  font-family: "Montserrat", sans-serif;
-  font-size: normal;
-  padding: 10px 0px;
-  margin-top: 50px;
-  text-align: left; }
-  .footer .container > div {
-    justify-content: space-between;
-    display: flex; }
-    .footer .container > div div {
-      width: 300px; }
-  .footer .footer-logo {
-    margin: 0px; }
-  .footer .footer-social {
-    text-align: right;
-    font-size: 40px; }
-    .footer .footer-social a {
-      color: #2461a6; }
-  .footer .footer-last {
-    text-align: center;
-    margin: 0;
-    font-size: 16px; }
-
-.banner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-
-.banner-slogan {
-  margin: 30px;
-  padding: 20px;
-  text-align: center;
-  width: 200px; }
-  .banner-slogan h3 {
-    font-size: 40px;
-    font-weight: bold; }
-
-.banner-presentation {
-  margin: 30px;
-  padding: 20px;
-  text-align: left;
-  width: 600px; }
-  .banner-presentation h1 {
-    font-size: 40px; }
-  .banner-presentation h2 {
-    font-size: 30px;
-    margin-bottom: 20px; }
-  .banner-presentation a {
-    margin: 20px 0px;
-    display: inline-block; }
-
-.cards {
-  display: -ms-grid;
-  display: grid;
-  width: 100%;
-  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-  grid-template-columns: 1fr 20px 1fr 20px 1fr;
-  grid-gap: 10px;
-  margin: 30px 0px; }
-
-.card-rdv {
-  height: 410px;
-  flex-direction: column;
-  border-radius: 4px;
-  -webkit-box-shadow: 0px;
-          box-shadow: 0px;
-  padding: 40px 35px;
-  -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  text-align: center; }
-  .card-rdv i {
-    font-size: 45px; }
-  .card-rdv h2 {
-    font-weight: bold; }
-  .card-rdv p {
-    margin-top: 20px; }
-
-.card-link {
-  text-align: center;
-  -ms-grid-row-align: center;
-      align-self: center; }
-
-body {
-  font-family: "Noto Serif", serif;
-  margin: 0px; }
-
-h1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 32px; }
-
-h2 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 24px;
-  font-weight: normal; }
-
-h3 {
-  font-family: "Noto Serif", serif;
-  font-size: 24px;
-  font-weight: normal; }
-
-p {
-  font-size: 18px;
-  text-align: justify;
-  line-height: 2em; }
-
-a {
-  text-decoration: none;
-  color: black; }
-
-.container {
-  margin: auto;
-  width: 80%; }
-
-.logo {
-  margin-bottom: 1rem;
-  width: 60%; }
-
-.logo-title {
-  font-family: "Libre Baskerville", serif;
-  font-weight: bold;
-  font-size: 40px;
-  margin: 0; }
-
-.logo-extension {
-  font-family: "Montserrat", sans-serif;
-  font-weight: normal;
-  font-size: 40px;
-  margin: 0; }
-
-.portrait-text {
-  text-align: justify;
-  line-height: 2em; }
-
-.index {
-  text-align: center; }
-
-.flexbox {
-  display: flex; }
-
-.flexitem {
-  align-items: center;
-  justify-content: space-between; }
-
-.underline-title {
-  background-image: -webkit-gradient(linear, left top, right top, from(#2461a6), to(#2461a6));
-  background-image: linear-gradient(90deg, #2461a6, #2461a6);
-  background-repeat: no-repeat;
-  background-position: 0 95%;
-  background-size: 100% .375rem; }
