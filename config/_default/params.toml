@@ -1,0 +1,95 @@
+# Meta Data for SEO
+
+## Homepage
+title = "Antonin Cholet"
+titleSeparator = "-"
+titleAddition = "Avocat"
+description = "Antonin Cholte est un avocat en droit public (urbanisme, marchés publics, fonction publique, etc)"
+
+## Documentation
+# docsVersion = "0.3"
+
+## Open Graph
+images = ["logoantonincholetavocat.png"]
+ogLocale = "fr_FR"
+domainTLD = "cholet-avocat.fr"
+titleHome = "Antonin Cholet Avocat"
+
+## Twitter Cards
+twitterSite = "@AntoninCholet"
+twitterCreator = "@AntoninCholet"
+
+## JSON-LD
+# schemaType = "Person"
+schemaType = "Organization"
+schemaName = "Antonin Cholet Avocat"
+schemaAuthor = "Antonin Cholet"
+schemaAuthorTwitter = "https://twitter.com/AntoninCholet"
+schemaAuthorLinkedIn = "https://linkedin.com/in/antonincholet"
+schemaAuthorGitHub = "https://github.com/Antonincholet"
+schemaLocale = "fr_FR"
+schemaLogo = "antonincholetavocatportrait.jpg"
+schemaLogoWidth = 512
+schemaLogoHeight = 512
+schemaImage = "logoantonincholetavocat.png"
+schemaImageWidth = 1280
+schemaImageHeight = 640
+schemaTwitter = "https://twitter.com/AntoninCholet"
+schemaLinkedIn = "https://linkedin.com/in/antonincholet"
+schemaGitHub = "https://github.com/Antonincholet"
+schemaSection = "blog"
+
+## Sitelinks Search Box
+siteLinksSearchBox = false
+
+## Chrome Browser
+themeColor = "#fff"
+
+# Images
+quality = 85
+bgColor = "#fff"
+landscapePhotoWidths = [900, 800, 700, 600, 500]
+portraitPhotoWidths = [800, 700, 600, 500]
+lqipWidth = "20x"
+smallLimit = "300"
+
+# Footer
+footer = "Powered by <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a>, and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
+
+# Feed
+copyRight = "Copyright (c) 2022 Antonin Cholet Avocat"
+
+# Alert
+alert = false
+alertDismissable = true
+# alertText = "Introducing the Doks child theme, several DX + UX updates, and more! <a class=\"alert-link stretched-link\" href=\"https://getdoks.org/blog/doks-v0.2/\" target=\"_blank\" rel=\"noopener\">Check out Doks v0.2</a>"
+alertText = "Introducing the Doks child theme, several DX + UX updates, and more! <a class=\"alert-link stretched-link\" href=\"https://getdoks.org/blog/doks-v0.2/\">Check out Doks v0.2</a>"
+
+# Edit Page
+# repoHost [Github | Gitea | GitLab | Bitbucket | BitbucketServer ] is used for building the edit link based on git hoster
+repoHost = "GitHub"
+#repoHost = "Gitea"
+docsRepo = "https://github.com/"
+docsRepoBranch = "master"
+docsRepoSubPath = ""
+editPage = false
+lastMod = false
+
+[options]
+  lazySizes = true
+  clipBoard = true
+  instantPage = true
+  flexSearch = true
+  darkMode = true
+  bootStrapJs = true
+  breadCrumb = false
+  highLight = true
+  kaTex = false
+  multilingualMode = false
+  docsVersioning = false
+  fullWidth = false
+
+[menu]
+  [menu.section]
+    auto = true
+    collapsibleSidebar = true
