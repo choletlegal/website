@@ -14,8 +14,6 @@ weight: 300
 toc: true
 ---
 
-
-
 ## Dématérialisation
 
 Nous disposons d'outils informatiques permettant de gérer nos dossiers de manière totalement dématérialisée, en toute sécurité et confidentialité, dans le respect des règles de la profession d'avocat.
@@ -37,7 +35,6 @@ Nous disposons également d’accès aux bases de données les plus reconnues, n
 
 Nous utilisons bien évidemment les jeux de données publiques, qu’il s’agisse de celle du Conseil d’État [ArianeWeb](https://www.conseil-etat.fr/arianeweb/), de celle de [Légifrance](https://www.legifrance.gouv.fr) ou encore des données cartographique et d’urbanisme du [Géoportail](https://www.geoportail.gouv.fr/) et du [Géoportail de l’urbanisme](https://www.geoportail-urbanisme.gouv.fr).
 
-
 ## Formation continue
 
 Le Droit est une matière changeante qui évolue sans cesse, au grè des changements de législation et des décisions de Justice. Si certains grands principes assurent une cohérence d’ensemble, leur interprétation par les juridictions nationales ou européennes a tendance à se modifier ou à ce préciser, de même que les normes plus techniques prises pour leur application varient au fur et à mesure du temps. A cela s’ajoute un phénomène d’inflation législative qui s’est accélérée sur les dernières décennies. Ce qui, au final, tend à créer une certaine instabilité juridique pour tous les sujets de droit.
@@ -47,4 +44,3 @@ Nous avons à coeur de pourvoir être au fait des plus récents développements 
 Nous effectuons en conséquence un suivi régulier des actualités juridiques concernant les nouvelles normes, les nouvelles décisions de justice faisant autorité, ainsi que des analyses ou réflexions prospectives de la doctrine.
 
 Nous prenons fréquement part à des formations ou des séminaires réalisés entre praticiens du droits.
-

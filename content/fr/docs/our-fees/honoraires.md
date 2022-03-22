@@ -15,6 +15,7 @@ toc: true
 ---
 
 Nos honoraires se composent:
+
 - des honoraires de prestation, qui sont destinés à rétribuer l'avocat pour les diligences réalisées,
 - d'un honoraire de résultat, en cas de gain financier.
 
@@ -35,10 +36,10 @@ Nos taux horaire usuels sont les suivants:
 | Taux usuel                            | 200 €           | 240 €            |
 | Taux de vacation (transport, attente) | 100 €           | 120 €            |
 
-
 ### Soit le forfait
 
 Nos forfaits comprennent les prestations prévisibles pour chaque démarche :
+
 - l’étude et la communication des pièces
 - les recherches nécessaires
 - la rédaction d’un recours amiable ou contentieux
@@ -59,7 +60,6 @@ Nos forfaits comprennent les prestations prévisibles pour chaque démarche :
 | Recours contentieux en annulation d'une Déclaration d'utilité publique    | _à partir de_ 2.700 €                     |
 | Recours contentieux en annulation d'un Plan local d’urbanisme             | _à partir de_ 2.700 €                     |
 
-
 ## L’honoraire de résultat
 
 Il s'agit d'un honoraire complémentaire qui s'ajoute aux honoraires de prestations et qui est fonction des _gains_ obtenus ou des _économies_ réalisées par notre intervention.
@@ -67,7 +67,6 @@ Il s'agit d'un honoraire complémentaire qui s'ajoute aux honoraires de prestati
 Il est uniquement dû en cas de succès effectif des diligences entreprises, c’est à dire si et seulement si:
 
 - la décision de justice est définitive ou la transaction est signée ;
-
 - l'avantage réalisé est effectivement perçu ou l'économie est effectivement réalisée.
 
 Nous fixons communément notre honoraire de résultat aux taux suivants:
@@ -80,9 +79,6 @@ Nous fixons communément notre honoraire de résultat aux taux suivants:
 | - de 200.000 € à 299.999 €                                           | 4%                 |
 | - à partir de 300.000 €                                              | 2%                 |
 
-
 ## TVA
 
 La TVA applicable sur les honoraires ainsi que sur les frais est celle au taux en vigueur à la date de la facturation (actuellement de 20 %).
-
-

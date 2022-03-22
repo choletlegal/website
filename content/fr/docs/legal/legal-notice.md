@@ -36,16 +36,13 @@ Capacité d’aptitude à la profession d’avocat délivrée en France par la H
 
 La profession d’avocat est soumise aux règles professionnelles définies par le [Règlement intérieur national](https://www.cnb.avocat.fr/fr/reglement-interieur-national-de-la-profession-davocat-rin) dans sa version en vigueur adoptée par le Conseil national des Barreaux (CNB).
 
-
 ## Directeur de la publication
 
 Antonin Cholet
 
-
 ## Hébergeur du site
 
 Github Inc.
-
 
 ## Crédits photographiques
 
@@ -60,10 +57,7 @@ www.snagah-photography.com
 
 SIRET 82903619300011
 
-
 ## Conditions générales d'utilisation
-
-
 
 ### Acceptation des conditions générales d'utilisation
 
@@ -116,5 +110,3 @@ Des plugins de réseaux sociaux intégrés sur le site engendrent également la 
 La loi applicable à tout litige découlant de l’utilisation du site [cholet-avocat.fr](https://www.cholet-avocat.fr) est la loi française.
 
 Les juridictions compétentes sont les juridictions françaises.
-
-

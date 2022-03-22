@@ -27,6 +27,7 @@ Le présent registre détaille les dispositions prises pour permettre aux person
 Nous sommes un cabinet d’avocat. Nous intervenons principalement dans tous les domaines du droit administratif. A ce titre nous développons à la fois une activité de conseil et une activité contentieuse, tant au profit de collectivités territoriales qu'au profit d'entreprises, de particuliers et d'associations.
 
 Nos champs d’action privilégiés sont :
+
 - __Le droit de l’urbanisme__ : permis de construire, plans locaux d'urbanisme (plu), divisions foncières, permis d'aménagement, aménagement commercial (cdac/cnac), loi montagne ;
 - __Le droit de la propriété publique__ : acquisition, protection, occupation du domaine public, affectation / désaffectation, déclassement et cession, voirie / chemins ;
 - __Le droit lié à la maîtrise foncière__ : préemption, expropriation, déclaration d'utilité publique (DUP), indemnités d'expropriation ;
@@ -57,6 +58,7 @@ Horaires d’accueil : 9h-12h / 14h-18h, sur rendez-vous uniquement
 Parc auto : Petit Chamars ou Mairie
 
 Arrêts de transport en commun :
+
 - Tram 1 et 2 arrêt Chamars
 - Bus 4, 10, 11, 21 arrêt préfecture
 - Bus 23 arrêt Nodier
@@ -67,13 +69,15 @@ Arrêts de transport en commun :
 Le Conseil national des barreaux a rappelé, dans sa résolution du 4 juillet 2015, que l'avocat peut conseiller, défendre, assister ou exercer ses missions, en se déplaçant librement au domicile de son client ou en tout lieu souhaité par lui, en veillant à ce que ce lieu lui permette de respecter les principes essentiels de la profession et le secret professionnel en toutes circonstances.
 
 A cet effet, les personnes en situation de handicap qui souhaitent bénéficier des prestations du cabinet sont invitées à suivre les étapes suivantes :
-1.  __La prise de rendez-vous__ : Il est  recommandé de signaler toute difficulté de mobilité avant la prise de rendez-vous directement auprès de Me Cholet. Ses coordonnées de contact sont celles indiquées ci-dessus.
-2. __Les modalités du rendez-vous__: Le cabinet s’efforce de permettre à tout client en situation de handicap d’être reçu dans les meilleures conditions dans ses locaux. Toutefois, en fonction du type de handicap, des rendez-vous en dehors des locaux du cabinet peuvent être envisagés soit physiquement, soit par visioconférence.
-  - Dans le premier cas, les rendez-vous se déroulent par téléphone ou via l’utilisation d’une solution de visio-conférence. L’avocat communique ses coordonnées au client en amont du rendez-vous. En revanche, le cabinet ne fournit pas le matériel informatique nécessaire, ni ne prend en charge les coûts de connexion au réseau internet. Le client se charge de se munir du matériel adéquat pour réaliser la visioconférence à partir du lieu où il se trouve.
-  - Dans le second cas, les rendez-vous se réalisent en dehors des locaux habituels de l’avocat, sans frais supplémentaires, à condition de se dérouler sur le territoire de la commune de Besançon.
-  Le lieu choisi pourra être soit le domicile du client, soit une salle de réunion complètement accessible et conforme aux règles déontologiques de la profession d'avocat.
+
+1. __La prise de rendez-vous__ : Il est  recommandé de signaler toute difficulté de mobilité avant la prise de rendez-vous directement auprès de Me Cholet. Ses coordonnées de contact sont celles indiquées ci-dessus.
+
+2. __Les modalités du rendez-vous__ : Le cabinet s’efforce de permettre à tout client en situation de handicap d’être reçu dans les meilleures conditions dans ses locaux. Toutefois, en fonction du type de handicap, des rendez-vous en dehors des locaux du cabinet peuvent être envisagés soit physiquement, soit par visioconférence.
+
+- Dans le premier cas, les rendez-vous se déroulent par téléphone ou via l’utilisation d’une solution de visio-conférence. L’avocat communique ses coordonnées au client en amont du rendez-vous. En revanche, le cabinet ne fournit pas le matériel informatique nécessaire, ni ne prend en charge les coûts de connexion au réseau internet. Le client se charge de se munir du matériel adéquat pour réaliser la visioconférence à partir du lieu où il se trouve.
+- Dans le second cas, les rendez-vous se réalisent en dehors des locaux habituels de l’avocat, sans frais supplémentaires, à condition de se dérouler sur le territoire de la commune de Besançon.
+Le lieu choisi pourra être soit le domicile du client, soit une salle de réunion complètement accessible et conforme aux règles déontologiques de la profession d'avocat.
 
 ### Personnel chargé de l’accueil
 
 Le rendez-vous sera directement réalisé par un avocat du cabinet.
-

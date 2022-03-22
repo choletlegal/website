@@ -18,7 +18,6 @@ toc: true
 
 ### Droit de l’urbanisme
 
-
 - Permis de construire
 - Plans locaux d'urbanisme (PLU)
 - Permis d'aménager
@@ -27,7 +26,6 @@ toc: true
 - Loi Montagne
 
 ### Propriété publique
-
 
 - Acquisition
 - Protection
@@ -38,7 +36,6 @@ toc: true
 
 ### Maitrise foncière
 
-
 - Préemption
 - Expropriation
 - Déclaration d'utilité publique (DUP)
@@ -47,7 +44,6 @@ toc: true
 
 ### Responsabilité de l’administration
 
-
 - Responsabilité pour faute
 - Responsabilité pour charge anormale
 - Responsabilité pour refus de concours de la force publique
@@ -55,7 +51,6 @@ toc: true
 - Responsabilité contractuelle
 
 ### Fonction publique
-
 
 - Carrière et statut
 - Accident de travail
@@ -67,13 +62,10 @@ toc: true
 - Gestion des conflits
 - Réorganisation de service
 
-
 ### Droit des données personnelles
 
 - Délégué à la protection des données personnelles externalisé
 - Contentieux des données personnelles
-
-
 
 ## Lieu d’intervention
 
@@ -86,4 +78,3 @@ Par ailleurs, il n’existe pas de postulation pour les procédures administrati
 ## Langue d’intervention
 
 Les langues de travail sont le français, l'anglais et l'italien.
-

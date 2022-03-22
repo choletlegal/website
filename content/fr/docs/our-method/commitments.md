@@ -65,4 +65,3 @@ Condamnation aux frais
 Nous échangeons avec nos confrères dans le strict respect de notre déontologie. Les termes de nos échanges sont soumis au secret professionnel, à moins qu’il n’en est été clairement spécifié autrement.
 
 Nous sommes disponibles à chaque étape de notre intervention pour trouver un temps d’échange avec nos confères, par tout moyen de communication.
-

@@ -86,6 +86,7 @@ Les honoraires pratiqués sont fermes et définitifs et s’entendent en euros H
 Les frais et débours exposés par l’AVOCAT dans l’intérêt de la mission sont à la charge du CLIENT. Ils sont, le cas échéant, majorés de la taxe sur la valeur ajoutée au taux en vigueur.  Leur mode de calcul est défini dans les conditions particulières.
 
 ### Facturation
+
 Les factures au taux horaire sont émises à terme échu. Les factures au forfait sont émises à la commande. Les factures de résultats sont émises dès lors que le résultat escompté est définitif.
 
 Le Client accepte expressément que les factures lui soient transmises par voie électronique.
@@ -173,8 +174,6 @@ Pour exercer ce droit, le CLIENT notifie sa demande, sans donner de motif et dan
 > _Date: […]_
 >
 > _Signature: […]_ "
-
-
 
 ## Traitement des données à caractère personnel
 

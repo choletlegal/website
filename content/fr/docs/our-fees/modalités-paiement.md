@@ -20,11 +20,9 @@ Les paiements sont à privilègier par virement sur le compte du cabinet.
 
 Les paiements par chèques sont également acceptés (libellé à l'ordre de « ANTONIN CHOLET »), en tant que membre d’une association agréée par l’administration fiscale acceptant à ce titre un tel règlement.
 
-
 ## Provision
 
 Lorsque nos diligences sont facturées selon un taux horaire, le versement d’une provision est sollicitée au début de notre intervention.
-
 
 ## Échelonnement
 

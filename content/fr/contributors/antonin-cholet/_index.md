@@ -10,7 +10,6 @@ images: []
 
 ![Antonin Cholet portrait](antonincholetavocatportrait.jpg)
 
-
 [@AntoninCholet](https://twitter.com/AntoninCholet)
 
 ## Parcours de Me Antonin Cholet
@@ -30,4 +29,3 @@ Mon parcours dans différentes sociétés d’avocats de renommée nationale tel
 Depuis 2017, je fais partie du Barreau de Besançon où j’ai créé mon propre cabinet d’avocat à l’expertise reconnue en droit administratif, notamment en droit de l’urbanisme.
 
 Les collectivités territoriales comme les entreprises, les particuliers et les associations ont recours à mes services dans ce domaine. Mon rôle est de les accompagner dans les décisions qu’ils ont à prendre et, le cas échéant, de les représenter devant les juridictions administratives.
-
