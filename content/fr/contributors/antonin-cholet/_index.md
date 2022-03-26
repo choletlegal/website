@@ -10,7 +10,7 @@ images: []
 
 ![Antonin Cholet portrait](antonincholetavocatportrait.jpg)
 
-[@AntoninCholet](https://twitter.com/AntoninCholet)
+[@AntoninCholet](http://linkedin.com/in/antonincholet)
 
 ## Parcours de Me Antonin Cholet
 

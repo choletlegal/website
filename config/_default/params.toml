@@ -54,7 +54,7 @@ lqipWidth = "20x"
 smallLimit = "300"
 
 # Footer
-footer = "Powered by <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a>, and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
+footer = "Powered by <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a>, and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>. Hosted on <a class=\"text-muted\" href=\"https://github.com/choletlegal/website/\">Github</a>.<br>Made in 🇪🇺"
 
 # Feed
 copyRight = "Copyright (c) 2022 Antonin Cholet Avocat"
