@@ -16,7 +16,7 @@ Pour apprécier de cet intérêt, le juge administratif procède à une étude e
 
 Le cas particulier des associations de protection de l'environnement agréées au titre de l'article L.141-1 du code de l'environnement ne sera pas exposé ci-après. Ces dernières bénéficient d'un cadre juridique plus favorable énoncé à l'article L.142-1 du même code et qui leur attribue « un intérêt pour agir contre toute décision administrative ayant un rapport direct avec leur objet et leurs activités statutaires et produisant des effets dommageables pour l'environnement sur tout ou partie du territoire pour lequel elles bénéficient de l'agrément dès lors que cette décision est intervenue après la date de leur agrément ».
 
-# L'exigence d'un dépôt des statuts de l'association antérieur à l'affichage en mairie de la demande de permis de construire
+## L'exigence d'un dépôt des statuts de l'association antérieur à l'affichage en mairie de la demande de permis de construire
 
 L'article L.600-1-1 du code de l'urbanisme, introduit par la loi n° 2006-872 du 13 juillet 2006, limite les possibilités de recours des associations à celles d'entre elles qui ont déposé leurs statuts en préfecture avant l’affichage en mairie de la demande du pétitionnaire.
 
@@ -28,7 +28,7 @@ Toute modification des statuts intervenue postérieurement ne pourra être prise
 
 Il est à noter que l'article L.600-1-1 du code de l'urbanisme a été déclaré conforme à la constitution par le Conseil constitutionnel dans sa décision en date du 17 juin 2011 (Conseil constitutionnel, QPC du 17 juin 2011, n° 2011-138).
 
-# L'appréciation de l'intérêt à agir
+## L'appréciation de l'intérêt à agir
 
 Au préalable, il convient de préciser que l'article L.600-1-2 introduit par l’ordonnance du 18 juillet 2013 n° 2013-638 en vue de restreindre les conditions de l’intérêt à agir contre un permis de construire n’est pas applicable aux associations. Elles n'ont donc pas à démontrer que le projet contesté serait de nature à affecter directement les conditions d'occupation, d'utilisation ou de jouissance de leurs biens.
 
