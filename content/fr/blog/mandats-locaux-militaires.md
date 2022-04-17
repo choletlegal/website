@@ -10,7 +10,6 @@ images: [""]
 contributors: ["Antonin Cholet"]
 ---
 
-
 [Décret n° 2018-1252 du 26 décembre 2018](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000037864460)
 
 Un décret du 26 décembre 2018 est venu élargir aux militaires d'active certains droits et garanties reconnus par le code général des collectivités territoriales aux titulaires des mandats de conseiller municipal ou de conseiller communautaire.

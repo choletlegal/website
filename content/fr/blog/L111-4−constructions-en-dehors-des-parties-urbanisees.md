@@ -9,6 +9,7 @@ weight: 50
 images: [""]
 contributors: ["Antonin Cholet"]
 ---
+
 [Conseil d'État, 1ère et 4ème chambres réunies, 29/05/2019, 419921](http://www.legifrance.gouv.fr/affichJuriAdmin.do?oldAction=rechJuriAdmin&idTexte=CETATEXT000038530390)
 
 L'article L.111-3 du code de l'urbanisme interdit en principe, en l'absence de plan local d'urbanisme ou de carte communale opposable aux tiers ou de tout document d'urbanisme en tenant lieu, les constructions implantées en dehors des parties actuellement urbanisées de la commune, c'est-à-dire des parties du territoire communal qui comportent déjà un nombre et une densité significatifs de constructions.
