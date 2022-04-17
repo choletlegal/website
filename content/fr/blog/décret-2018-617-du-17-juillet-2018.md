@@ -14,9 +14,9 @@ A compter de ce jour, les nouvelles dispositions contentieuses introduites par l
 
 Au préalable, il n'est pas inutile de préciser que le Conseil national des Barreaux a saisi le Conseil d'État d'un recours en annulation à l'encontre de ce décret, lequel pourrait méconnaitre le droit à un recours effectif, le droit à un procès équitable et le respect des droits de la défense.
 
-# S'AGISSANT DU CONTENTIEUX ADMINISTRATIF EN GÉNÉRAL :
+## S’agissant du contentieux administratif en général
 
-## Un nouveau cas de désistement d'office
+### Un nouveau cas de désistement d'office
 
 Désormais, il appartient à tout requérant, dont la demande de suspension présentée sur le fondement de l'article L. 521-1 a été rejetée pour absence de moyen propre à créer un doute sérieux, de confirmer le maintien de sa requête à fin d'annulation ou de réformation.
 
@@ -28,7 +28,7 @@ Elle est applicable aux requêtes à fin d'annulation ou de réformation enregis
 
 Un nouvel article [R.612-5-2](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037214566) est inséré dans le code de justice administrative : « En cas de rejet d'une demande de suspension présentée sur le fondement de l'article L. 521-1 au motif qu'il n'est pas fait état d'un moyen propre à créer, en l'état de l'instruction, un doute sérieux quant à la légalité de la décision, il appartient au requérant, sauf lorsqu'un pourvoi en cassation est exercé contre l'ordonnance rendue par le juge des référés, de confirmer le maintien de sa requête à fin d'annulation ou de réformation dans un délai d'un mois à compter de la notification de ce rejet. A défaut, le requérant est réputé s'être désisté. Dans le cas prévu au premier alinéa, la notification de l'ordonnance de rejet mentionne qu'à défaut de confirmation du maintien de sa requête dans le délai d'un mois, le requérant est réputé s'être désisté ».
 
-## La prolongation de la suppression du double degré de juridiction pour la contestation des autorisations d'urbanisme en zone tendue
+### La prolongation de la suppression du double degré de juridiction pour la contestation des autorisations d'urbanisme en zone tendue
 
 Le décret n° 2013-879 du 1er octobre 2013 avait introduit la suppression de l'appel contre les permis de construire ou de démolir un bâtiment à usage principal d'habitation ou contre les permis d'aménager un lotissement lorsque le bâtiment ou le lotissement est implanté en tout ou partie sur le territoire d'une des communes mentionnées à l'article 232 du code général des impôts et son décret d'application ([R.811-1-1 du code de justice administrative](www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=1B0152EAC165C4E2B3794EE7F391D782.tplgfr27s_2?idArticle=LEGIARTI000037215360&cidTexte=LEGITEXT000006070933&dateTexte=20181001)).
 
@@ -36,10 +36,9 @@ Les communes ainsi visées sont celles où la taxe annuelle sur les logements va
 
 Ces dispositions sont prolongées jusqu'au 31 décembre 2022.
 
+## S’agissant du contentieux de l’urbanisme en particulier
 
-# S'AGISSANT DU CONTENTIEUX DE L'URBANISME EN PARTICULIER :
-
-## La mention sur la décision de la date d'affichage en mairie de l'avis de dépôt de la demande
+### La mention sur la décision de la date d'affichage en mairie de l'avis de dépôt de la demande
 
 Les autorisations d'urbanisme, les déclarations préalables et les certificats d'urbanisme doivent mentionner la date d'affichage en mairie de l'avis de dépôt de la demande.
 
@@ -47,7 +46,7 @@ Cette exigence est applicable dès le 1er octobre 2018.
 
 Les articles [R.424-5](www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=1B0152EAC165C4E2B3794EE7F391D782.tplgfr27s_2?idArticle=LEGIARTI000037215375&cidTexte=LEGITEXT000006074075&dateTexte=20181001) et [R.424-13](www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=1B0152EAC165C4E2B3794EE7F391D782.tplgfr27s_2?idArticle=LEGIARTI000037215370&cidTexte=LEGITEXT000006074075&categorieLien=id&dateTexte=20181001) du code de l'urbanisme sont complétés en ce sens.
 
-## L'élargissement du champ de l'obligation de notification des recours
+### L'élargissement du champ de l'obligation de notification des recours
 
 Désormais, l'obligation de notification des recours prévue à l'article [R.600-1](www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=1B0152EAC165C4E2B3794EE7F391D782.tplgfr27s_2?idArticle=LEGIARTI000037215388&cidTexte=LEGITEXT000006074075&dateTexte=20181001) du code de l'urbanisme est étendu à toute « décision relative à l'occupation ou l'utilisation du sol » régie par le code de l'urbanisme.
 
@@ -55,7 +54,7 @@ Le décret opère donc une extension du champs d'application de cet article, leq
 
 Cette nouvelle rédaction est applicable aux requêtes dirigées contre des décisions intervenues après le 1er octobre 2018.
 
-## La réduction du délai de forclusion des actions en annulation à l'encontre des autorisations d'urbanisme des constructions achevées
+### La réduction du délai de forclusion des actions en annulation à l'encontre des autorisations d'urbanisme des constructions achevées
 
 Le délai de forclusion prévu à l'article [R.600-3](www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=1B0152EAC165C4E2B3794EE7F391D782.tplgfr27s_2?idArticle=LEGIARTI000037215382&cidTexte=LEGITEXT000006074075&dateTexte=20181001&categorieLien=id&oldAction=&nbResultRech=) du code de l'urbanisme passe de un an à six mois à compter de l'achèvement de la construction ou de l'aménagement contesté.
 
@@ -65,7 +64,7 @@ Sauf preuve contraire, la date de l'achèvement des travaux demeure être celle 
 
 Cette nouvelle rédaction est applicable aux requêtes dirigées contre des décisions intervenues après le 1er octobre 2018.
 
-## Le durcissement des conditions de recevabilité des recours exercés par les tiers
+### Le durcissement des conditions de recevabilité des recours exercés par les tiers
 
 Un nouvel article [R.600-4](www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=1B0152EAC165C4E2B3794EE7F391D782.tplgfr27s_2?idArticle=LEGIARTI000037215380&cidTexte=LEGITEXT000006074075&dateTexte=20181001&categorieLien=id&oldAction=&nbResultRech=) du code de l'urbanisme oblige les tiers souhaitant contester une décision relative à l'occupation ou l'utilisation du sol à transmettre systématiquement les pièces de nature à établir le caractère régulier de l'occupation ou de la détention de leurs biens, afin de démontrer leur intérêt à agir.
 
@@ -77,7 +76,7 @@ Cette nouvelle disposition est applicable aux requêtes dirigées contre des dé
 
 L'article R.600-4 du code de l'urbanisme prévoit désormais : « Les requêtes dirigées contre une décision relative à l'occupation ou l'utilisation du sol régie par le présent code doivent, à peine d'irrecevabilité, être accompagnées du titre de propriété, de la promesse de vente, du bail, du contrat préliminaire mentionné à l'article L. 261-15 du code de la construction et de l'habitation, du contrat de bail, ou de tout autre acte de nature à établir le caractère régulier de l'occupation ou de la détention de son bien par le requérant.Lorsqu'elles sont introduites par une association, ces mêmes requêtes doivent, à peine d'irrecevabilité, être accompagnées des statuts de celle-ci, ainsi que du récépissé attestant de sa déclaration en préfecture.Le présent article n'est pas applicable aux décisions contestées par le pétitionnaire. »
 
-## La cristallisation automatique des moyens
+### La cristallisation automatique des moyens
 
 Il est instauré à l'article [R.600-5](www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=1B0152EAC165C4E2B3794EE7F391D782.tplgfr27s_2?idArticle=LEGIARTI000037214906&cidTexte=LEGITEXT000006074075&dateTexte=20181001&categorieLien=id&oldAction=&nbResultRech=) une cristallisation automatique des moyens passé un délai de deux mois à compter de la communication aux parties du premier mémoire en défense. Au delà, les parties ne peuvent plus invoquer de moyens nouveaux en vue d'obtenir l'annulation d'une décision d'occupation ou d'utilisation du sol.
 
@@ -89,7 +88,7 @@ Cette nouvelle disposition est applicable aux requêtes enregistrées à compter
 
 Le nouvel article R.600-5 dispose que : « Par dérogation à l'article R. 611-7-1 du code de justice administrative, et sans préjudice de l'application de l'article R. 613-1 du même code, lorsque la juridiction est saisie d'une requête relative à une décision d'occupation ou d'utilisation du sol régie par le présent code, ou d'une demande tendant à l'annulation ou à la réformation d'une décision juridictionnelle concernant une telle décision, les parties ne peuvent plus invoquer de moyens nouveaux passé un délai de deux mois à compter de la communication aux parties du premier mémoire en défense. Cette communication s'effectue dans les conditions prévues au deuxième alinéa de l'article R. 611-3 du code de justice administrative. Le président de la formation de jugement, ou le magistrat qu'il désigne à cet effet, peut, à tout moment, fixer une nouvelle date de cristallisation des moyens lorsque le jugement de l'affaire le justifie. Le présent article n'est pas applicable aux décisions contestées par le pétitionnaire. »
 
-## Un délai de jugement de dix mois
+### Un délai de jugement de dix mois
 
 En matière de contestation d'un permis de construire un bâtiment comportant plus de deux logements ou de contestation d'un permis d'aménager un lotissement, le juge administratif se voit désormais impartir un délai de jugement de dix mois pour statuer.
 
@@ -99,7 +98,7 @@ Cette nouvelle disposition est applicable aux requêtes enregistrées à compter
 
 Le nouvel article [R. 600-6](www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=1B0152EAC165C4E2B3794EE7F391D782.tplgfr27s_2?idArticle=LEGIARTI000037214940&cidTexte=LEGITEXT000006074075&dateTexte=20181001&categorieLien=id&oldAction=&nbResultRech=) dispose ainsi que « Le juge statue dans un délai de dix mois sur les recours contre les permis de construire un bâtiment comportant plus de deux logements ou contre les permis d'aménager un lotissement. La cour administrative d'appel statue dans le même délai sur les jugements rendus sur les requêtes mentionnées au premier alinéa. »
 
-## Le certificat de non recours
+### Le certificat de non recours
 
 Il est dorénavant formellement possible de se faire délivrer par le greffe de toute juridiction une attestation sur l'existence ou l'absence de recours déposé à l'encontre d'une décision relative à l'occupation ou à l'utilisation du sol ou d'une décision juridictionnelle s'y rattachant.
 
