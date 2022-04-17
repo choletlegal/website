@@ -6,7 +6,7 @@ date: 2019-06-07T16:43:16+01:00
 lastmod: 2022-03-22T16:43:16+01:00
 draft: false
 weight: 50
-images: ["l111-4constructions-en-dehors-des-parties-urbanisees.jpg"]
+images: [""]
 contributors: ["Antonin Cholet"]
 ---
 [Conseil d'État, 1ère et 4ème chambres réunies, 29/05/2019, 419921](http://www.legifrance.gouv.fr/affichJuriAdmin.do?oldAction=rechJuriAdmin&idTexte=CETATEXT000038530390)
