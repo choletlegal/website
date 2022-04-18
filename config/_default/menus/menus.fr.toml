@@ -12,7 +12,7 @@
   name = "Votre avocat"
   weight = 30
   identifier = "Votreavocat"
-  url = "/contributors/antonin-cholet/"
+  url = "/equipe/antonin-cholet/"
 
 [[social]]
   name = "RDV visio"

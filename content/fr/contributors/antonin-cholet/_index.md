@@ -1,7 +1,7 @@
 ---
 title: "Antonin Cholet"
 description: "Portrait de Me Antonin Cholet"
-# url: "/equipe/antonin-cholet"
+url: "/equipe/antonin-cholet"
 date: 2022-03-16T17:23:44+01:00
 lastmod: 2022-03-16T17:23:44+01:00
 draft: false
