@@ -1,7 +1,7 @@
 ---
 title: "Clef PGP publique de Me Antonin Cholet"
 description: ""
-# url: "/equipe/antonin-cholet/clef-pgp-publique"
+url: "/equipe/antonin-cholet/clef-pgp-publique"
 date: 2022-04-18T14:20:08+02:00
 lastmod: 2022-04-18T14:20:08+02:00
 draft: false
