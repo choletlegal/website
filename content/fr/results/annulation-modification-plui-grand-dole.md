@@ -15,7 +15,7 @@ Un recours gracieux a été exercé contre cette décision, lequel a été rejet
 
 Nous avons donc saisi le Tribunal administratif de Besançon qui a retenu notre argumentation et prononcé l’annulation de cette délibération pour un motif de vice de procédure.
 
-**TA Besançon, 26 oct. 2021, n° 2100101**
+Jugement **TA Besançon, 26 oct. 2021, n° 2100101**
 
 Consulter [la décision sur Doctrine](https://www.doctrine.fr/d/TA/Besancon/2021/UF70C91C3F3300607F99A)
 
