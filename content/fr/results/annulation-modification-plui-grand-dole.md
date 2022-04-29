@@ -7,10 +7,6 @@ draft: false
 images: []
 ---
 
-**TA Besançon, 26 oct. 2021, n° 2100101**
-
-Consulter [la décision sur Doctrine](https://www.doctrine.fr/d/TA/Besancon/2021/UF70C91C3F3300607F99A).
-
 ## En bref
 
 Dans cette affaire, notre mandant, qui exerce la profession d’exploitant agricole, sollicitait l’annulation d’une délibération du conseil communautaire de la Communauté d’agglomération du Grand Dole modifiant son plan local d’urbanisme intercommunal (PLUI).
@@ -18,6 +14,10 @@ Dans cette affaire, notre mandant, qui exerce la profession d’exploitant agric
 Un recours gracieux a été exercé contre cette décision, lequel a été rejeté par le Président de la communauté d’agglomération.
 
 Nous avons donc saisi le Tribunal administratif de Besançon qui a retenu notre argumentation et prononcé l’annulation de cette délibération pour un motif de vice de procédure.
+
+**TA Besançon, 26 oct. 2021, n° 2100101**
+
+Consulter [la décision sur Doctrine](https://www.doctrine.fr/d/TA/Besancon/2021/UF70C91C3F3300607F99A)
 
 ## En pratique
 
