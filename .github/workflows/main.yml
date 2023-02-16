@@ -12,7 +12,8 @@ jobs:
     name: Deploy Hugo Website
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
@@ -23,6 +24,11 @@ jobs:
 
       - name: Check for linting errors
         run: npm test
+
+      - name: setup hugo
+        uses: peaceiris/actions-hugo@v2.6.0
+        with:
+          hugo-version: '0.108.0'
 
       - name: Build production website
         run: npm run build
