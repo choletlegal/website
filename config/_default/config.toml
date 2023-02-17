@@ -87,10 +87,3 @@ rel  = "sitemap"
   [[module.mounts]]
     source = "node_modules/mermaid"
     target = "assets/js/vendor/mermaid"
-
-[deployment]
-
-[[deployment.targets]]
-# Configure the deployment target to the Object Storage bucket. Make sure your bucket is named exactly as your base URL
-  name = "www.cholet-avocat.fr"
-  URL = "s3://www.cholet-avocat.fr?endpoint=https://s3.fr-par.scw.cloud&region=fr-par"

@@ -1,10 +1,10 @@
 # Meta Data for SEO
 
 ## Homepage
-title = "Antonin Cholet"
+title = "Avocat Permis de construire"
 titleSeparator = "-"
-titleAddition = "Avocat"
-description = "Antonin Cholte est un avocat en droit public (urbanisme, marchés publics, fonction publique, etc)"
+titleAddition = "Urbanisme"
+description = "Antonin Cholet est un avocat en droit public (urbanisme, marchés publics, fonction publique, etc)"
 
 ## Documentation
 # docsVersion = "0.3"
@@ -54,10 +54,10 @@ lqipWidth = "20x"
 smallLimit = "300"
 
 # Footer
-footer = "Powered by <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a>, and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>. Hosted on <a class=\"text-muted\" href=\"https://github.com/choletlegal/website/\">Github</a>.<br>Made in 🇪🇺"
+footer = "Propulsé via <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a>, et <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>. Hébergé sur <a class=\"text-muted\" href=\"https://github.com/choletlegal/website/\">Github</a>.<br>Fait en 🇪🇺"
 
 # Feed
-copyRight = "Copyright (c) 2022 Antonin Cholet Avocat"
+copyRight = "Copyright (c) 2023 Antonin Cholet Avocat"
 
 # Alert
 alert = false
