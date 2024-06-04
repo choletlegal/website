@@ -16,9 +16,9 @@ toc: true
 
 Les factures sont transmises par voie électroniques et réglables à réception.
 
-Les paiements sont à privilègier par virement sur le compte du cabinet.
+Les paiements sont à réaliser par virement sur le compte du cabinet.
 
-Les paiements par chèques sont également acceptés (libellé à l'ordre de « ANTONIN CHOLET »), en tant que membre d’une association agréée par l’administration fiscale acceptant à ce titre un tel règlement.
+Les paiements par carte bancaire sont également acceptés, en tant que membre d’une association agréée par l’administration fiscale acceptant à ce titre un tel règlement.
 
 ## Provision
 
