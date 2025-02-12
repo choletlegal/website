@@ -18,7 +18,7 @@ Nous avons donc saisi le Tribunal administratif de Besançon, qui a également r
 
 Et c’est finalement la Cour administrative d’appel de NANCY qui a accueilli cette demande d’annulation totale.
 
-Arrêt **Cour administrative d’appel de Nancy, 10 février 2025, n° 21NC03320**
+Arrêt (**Cour administrative d’appel de Nancy, 10 février 2025, n° 21NC03320**)[https://www.legifrance.gouv.fr/ceta/id/CETATEXT000051154132?COURS_APPEL=NANCY&dateDecision=&init=true&page=1&query=&searchField=ALL&tab_selection=cetat]
 
 ## En pratique
 
