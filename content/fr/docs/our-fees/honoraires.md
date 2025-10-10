@@ -33,7 +33,7 @@ Nos taux horaire usuels sont les suivants:
 
 | Honoraires de prestations             | Taux horaire HT | Taux horaire TTC |
 | ------------------------------------- | --------------: | ----------------:|
-| Taux usuel                            | 200 €           | 240 €            |
+| Taux usuel                            | 240 €           | 288 €            |
 | Taux de vacation (transport, attente) | 100 €           | 120 €            |
 
 ### Soit le forfait
