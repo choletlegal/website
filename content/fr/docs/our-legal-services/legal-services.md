@@ -1,8 +1,8 @@
 ---
-title: "Expertises"
+title: "Domaines d’activités"
 description: ""
 lead: ""
-url: "/docs/notre-expertise/expertise"
+url: "/docs/nos-domaines-d-activites/domaines-d-activites"
 date: 2022-03-17T17:30:30+01:00
 lastmod: 2022-03-17T17:30:30+01:00
 draft: false
@@ -14,7 +14,7 @@ weight: 110
 toc: true
 ---
 
-## Domaine d’intervention
+## Domaines d’activités dominantes
 
 ### Droit de l’urbanisme
 
@@ -24,15 +24,6 @@ toc: true
 - Déclaration préalable
 - Aménagement commercial (CDAC/CNAC)
 - Loi Montagne
-
-### Propriété publique
-
-- Acquisition
-- Protection
-- Occupation du domaine public
-- Affectation / désaffectation
-- Déclassement et cession
-- Voirie / Chemins
 
 ### Maitrise foncière
 
@@ -49,6 +40,8 @@ toc: true
 - Responsabilité pour refus de concours de la force publique
 - Responsabilité pour dommages de travaux publics
 - Responsabilité contractuelle
+
+## Domaines d’activités annexes
 
 ### Fonction publique
 
