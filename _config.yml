@@ -30,6 +30,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
+  - jekyll-asset-pipeline
 
 # Configuration de jekyll-paginate-v2
 pagination:
@@ -148,6 +149,23 @@ sitemap:
   filename: sitemap.xml
 
 
+
+# Configuration pour jekyll-asset-pipeline
+asset_pipeline:
+  # Activer la compression
+  compress:
+    css: true
+    js: true
+  # Minification
+  minify:
+    css: true
+    js: true
+  # Gzip
+  gzip: false
+  # Fingerprinting (cache busting)
+  fingerprint:
+    enabled: true
+    ignore: [".png", ".jpg", ".jpeg", ".gif", ".svg", ".woff", ".woff2"]
 
 # Algolia (à configurer plus tard)
 algolia:

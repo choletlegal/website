@@ -1,25 +1,52 @@
-<!-- Bootstrap JS Bundle with Popper -->
+<!-- Bootstrap JS Bundle with Popper (via CDN) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-<!-- Highlight.js -->
+<!-- Highlight.js (via CDN) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
 <script>
   hljs.configure({ languages: [] });
   hljs.highlightAll();
 </script>
 
-<!-- Clipboard.js -->
+<!-- Clipboard.js (via CDN) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
 
-<!-- Dark Mode -->
-<script src="{{ '/assets/js/darkmode.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/darkmode-init.js' | relative_url }}"></script>
+<!-- Dark Mode (local) -->
+{% if site.asset_pipeline.fingerprint.enabled %}
+<script src="{{ '/assets/darkmode.js' | relative_url }}"></script>
+<script src="{{ '/assets/darkmode-init.js' | relative_url }}"></script>
+{% else %}
+<script src="{{ '/_assets/js/darkmode.js' | relative_url }}"></script>
+<script src="{{ '/_assets/js/darkmode-init.js' | relative_url }}"></script>
+{% endif %}
 
 <!-- Algolia Search (à configurer) -->
 {% if site.algolia.application_id != "" %}
 <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.14.2/dist/algoliasearch-lite.umd.js"></script>
-<script src="{{ '/assets/js/algolia.js' | relative_url }}"></script>
+{% if site.asset_pipeline.fingerprint.enabled %}
+<script src="{{ '/assets/algolia.js' | relative_url }}"></script>
+{% else %}
+<script src="{{ '/_assets/js/algolia.js' | relative_url }}"></script>
+{% endif %}
 {% endif %}
 
-<!-- Scripts personnalisés -->
-<script src="{{ '/assets/js/app.js' | relative_url }}"></script>
+<!-- Scripts personnalisés (local) -->
+{% if site.asset_pipeline.fingerprint.enabled %}
+<script src="{{ '/assets/app.js' | relative_url }}"></script>
+{% else %}
+<script src="{{ '/_assets/js/app.js' | relative_url }}"></script>
+{% endif %}
+
+<!-- InstantPage (local) -->
+{% if site.asset_pipeline.fingerprint.enabled %}
+<script src="{{ '/assets/instant.page.js' | relative_url }}" type="module"></script>
+{% else %}
+<script src="{{ '/_assets/js/instant.page.js' | relative_url }}" type="module"></script>
+{% endif %}
+
+<!-- LazySizes (local) -->
+{% if site.asset_pipeline.fingerprint.enabled %}
+<script src="{{ '/assets/lazysizes.js' | relative_url }}" async></script>
+{% else %}
+<script src="{{ '/_assets/js/lazysizes.js' | relative_url }}" async></script>
+{% endif %}

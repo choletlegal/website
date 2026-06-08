@@ -14,8 +14,13 @@
 <meta name="theme-color" content="#ffffff">
 
 <!-- CSS -->
-<link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style">
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+{% if site.asset_pipeline.fingerprint.enabled %}
+<link rel="preload" href="{{ '/assets/main.css' | relative_url }}" as="style">
+<link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+{% else %}
+<link rel="preload" href="{{ '/_assets/css/main.css' | relative_url }}" as="style">
+<link rel="stylesheet" href="{{ '/_assets/css/main.css' | relative_url }}">
+{% endif %}
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -27,10 +32,18 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css">
 
 <!-- InstantPage -->
-<script src="{{ '/assets/js/instant.page.js' | relative_url }}" type="module"></script>
+{% if site.asset_pipeline.fingerprint.enabled %}
+<script src="{{ '/assets/instant.page.js' | relative_url }}" type="module"></script>
+{% else %}
+<script src="{{ '/_assets/js/instant.page.js' | relative_url }}" type="module"></script>
+{% endif %}
 
 <!-- LazySizes -->
-<script src="{{ '/assets/js/lazysizes.js' | relative_url }}" async></script>
+{% if site.asset_pipeline.fingerprint.enabled %}
+<script src="{{ '/assets/lazysizes.js' | relative_url }}" async></script>
+{% else %}
+<script src="{{ '/_assets/js/lazysizes.js' | relative_url }}" async></script>
+{% endif %}
 
 <!-- JSON-LD pour SEO -->
 <script type="application/ld+json">

@@ -10,6 +10,9 @@ source "https://rubygems.org"
  gem "jekyll-seo-tag", "~> 2.8"
  gem "jekyll-feed", "~> 0.15"
 
+# Asset Pipeline pour la minification CSS/JS
+ gem "jekyll-asset-pipeline", "~> 4.0"
+
 # Pour le développement local
  group :jekyll_plugins do
    gem "jekyll-admin", "~> 0.10"

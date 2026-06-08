@@ -1,0 +1,44 @@
+# Configuration pour jekyll-asset-pipeline
+# ========================================
+
+# CSS
+css:
+  # Compression
+  compress: true
+  
+  # Minification
+  minify: true
+  
+  # Autoprefixer (ajoute les préfixes vendeurs)
+  autoprefixer:
+    enabled: true
+    browsers:
+      - "> 1%"
+      - "last 2 versions"
+      - "not ie <= 10"
+
+# JavaScript
+js:
+  # Compression
+  compress: true
+  
+  # Minification
+  minify: true
+
+# Fingerprinting (cache busting)
+fingerprint:
+  enabled: true
+  ignore:
+    - ".png"
+    - ".jpg"
+    - ".jpeg"
+    - ".gif"
+    - ".svg"
+    - ".woff"
+    - ".woff2"
+    - ".ttf"
+    - ".eot"
+
+# Gzip
+gzip:
+  enabled: false
