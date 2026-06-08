@@ -20,10 +20,6 @@ author:
   linkedin: "https://linkedin.com/in/antonincholet"
   github: "https://github.com/Antonincholet"
 
-# Pagination
-paginate: 7
-paginate_path: "/blog/page:num/"
-
 # Plugins
 plugins:
   - jekyll-paginate-v2
@@ -32,7 +28,7 @@ plugins:
   - jekyll-feed
   - jekyll-asset-pipeline
 
-# Configuration de jekyll-paginate-v2
+# Configuration de jekyll-paginate-v2 (DÉSACTIVE la pagination ancienne)
 pagination:
   enabled: true
   per_page: 7
@@ -41,6 +37,9 @@ pagination:
   limit: 0
   sort_field: "date"
   sort_reverse: true
+
+# Désactive explicitement l'ancienne pagination
+paginate: off
 
 # Collections pour la documentation et les résultats
 collections:
