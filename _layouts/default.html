@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}" dir="ltr">
+<head>
+  {% include head.html %}
+</head>
+<body class="{{ page.layout }}">
+  {% include header.html %}
+  
+  <main role="main" class="main">
+    {{ content }}
+  </main>
+  
+  {% include footer.html %}
+  {% include scripts.html %}
+</body>
+</html>

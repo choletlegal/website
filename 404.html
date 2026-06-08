@@ -1,0 +1,32 @@
+---
+layout: default
+title: "Page non trouvée"
+---
+
+<div class="container-xxl py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-12 col-lg-10 col-xl-8 text-center">
+      <h1>404</h1>
+      <h2>Page non trouvée</h2>
+      <p class="lead">
+        Désolé, la page que vous cherchez n'existe pas ou a été déplacée.
+      </p>
+      
+      <div class="mt-4">
+        <a href="{{ '/' | relative_url }}" class="btn btn-primary">
+          <i class="fas fa-home me-2"></i> Retour à l'accueil
+        </a>
+      </div>
+      
+      <div class="mt-4">
+        <h3>Suggestions</h3>
+        <ul class="list-unstyled">
+          <li><a href="{{ '/blog/' | relative_url }}">Consulter notre blog</a></li>
+          <li><a href="{{ '/docs/' | relative_url }}">Explorer notre documentation</a></li>
+          <li><a href="{{ '/results/' | relative_url }}">Voir nos résultats</a></li>
+          <li><a href="{{ '/contributors/' | relative_url }}">Découvrir notre équipe</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

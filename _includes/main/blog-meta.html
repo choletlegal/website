@@ -1,0 +1,24 @@
+<div class="blog-meta">
+  <span class="blog-meta-item">
+    <i class="fas fa-calendar-alt me-1"></i>
+    <time datetime="{{ page.date | date_to_xmlschema }}">
+      {{ page.date | date: "%d %B %Y" }}
+    </time>
+  </span>
+  
+  {% if page.contributors %}
+    <span class="blog-meta-item">
+      <i class="fas fa-user me-1"></i>
+      {% for contributor in page.contributors %}
+        <a href="{{ '/contributors/' | append: contributor | downcase | append: '/' | relative_url }}">{{ contributor }}</a>{% if forloop.last == false %}, {% endif %}
+      {% endfor %}
+    </span>
+  {% endif %}
+  
+  {% if page.lastmod %}
+    <span class="blog-meta-item">
+      <i class="fas fa-sync-alt me-1"></i>
+      Mis à jour le {{ page.lastmod | date: "%d %B %Y" }}
+    </span>
+  {% endif %}
+</div>

@@ -1,5 +1,53 @@
-node_modules
-public
-resources
-.netlify
-.hugo_build.lock
+# Dependencies
+/vendor/bundle/
+
+# Jekyll
+.sass-cache/
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby
+*.gem
+*.rbc
+*.sublime-workspace
+*.sublime-project
+.ruby-version
+.rbenv-vars
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Node (if used)
+node_modules/
+
+# Hugo (old files)
+/config/
+/layouts/
+/archetypes/
+/i18n/
+/static/
+content/
+netlify.toml
+theme.toml
+
+# Temporary files
+*.tmp
+*.temp

@@ -1,0 +1,35 @@
+# Données globales du site
+# =========================
+
+# Informations de contact
+contact:
+  email: "contact@cholet-avocat.fr"
+  phone: ""
+  address: ""
+
+# Réseaux sociaux
+social:
+  twitter: "https://twitter.com/AntoninCholet"
+  linkedin: "https://linkedin.com/in/antonincholet"
+  github: "https://github.com/Antonincholet"
+
+# Paramètres de design
+design:
+  theme_color: "#fff"
+  primary_color: "#0d6efd"
+  secondary_color: "#6c757d"
+  success_color: "#198754"
+  info_color: "#0dcaf0"
+  warning_color: "#ffc107"
+  danger_color: "#dc3545"
+  light_color: "#f8f9fa"
+  dark_color: "#212529"
+
+# Paramètres de qualité d'image
+images:
+  quality: 85
+  bg_color: "#fff"
+  landscape_widths: [900, 800, 700, 600, 500]
+  portrait_widths: [800, 700, 600, 500]
+  lqip_width: "20x"
+  small_limit: "300"

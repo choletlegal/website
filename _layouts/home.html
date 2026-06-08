@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="container-xxl py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-12 col-lg-10 col-xl-8">
+      <article>
+        <h1 class="text-center">{{ page.title | default: site.title }}</h1>
+        <div class="text-center lead">{{ page.description | default: site.description }}</div>
+        
+        {% if page.content != empty %}
+          <div class="content mt-4">
+            {{ page.content | markdownify }}
+          </div>
+        {% endif %}
+      </article>
+    </div>
+  </div>
+</div>

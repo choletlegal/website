@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<div class="container-xxl py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-12 col-lg-10 col-xl-8">
+      <article>
+        <div class="blog-header mb-4">
+          <h1>{{ page.title }}</h1>
+          {% include main/blog-meta.html %}
+        </div>
+        
+        {% if page.lead %}
+          <p class="lead">{{ page.lead | safe }}</p>
+        {% endif %}
+        
+        <div class="content">
+          {{ content }}
+        </div>
+        
+        {% if page.tags or page.categories %}
+          <div class="blog-tags mt-4">
+            {% if page.tags %}
+              <div class="blog-tags-item">
+                <i class="fas fa-tag me-1"></i>
+                {% for tag in page.tags %}
+                  <a href="{{ '/blog/tag/' | append: tag | downcase | append: '/' | relative_url }}" class="badge bg-secondary text-decoration-none">{{ tag }}</a>
+                {% endfor %}
+              </div>
+            {% endif %}
+            
+            {% if page.categories %}
+              <div class="blog-tags-item mt-2">
+                <i class="fas fa-folder me-1"></i>
+                {% for category in page.categories %}
+                  <a href="{{ '/blog/category/' | append: category | downcase | append: '/' | relative_url }}" class="badge bg-primary text-decoration-none">{{ category }}</a>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      </article>
+    </div>
+  </div>
+</div>

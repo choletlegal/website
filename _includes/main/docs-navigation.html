@@ -1,0 +1,18 @@
+<nav class="docs-navigation" aria-label="Navigation entre les pages">
+  <div class="docs-navigation-prev">
+    {% if page.previous %}
+      <a href="{{ page.previous.url | relative_url }}" class="btn btn-outline-primary">
+        <i class="fas fa-chevron-left me-1"></i>
+        {{ page.previous.title }}
+      </a>
+    {% endif %}
+  </div>
+  <div class="docs-navigation-next">
+    {% if page.next %}
+      <a href="{{ page.next.url | relative_url }}" class="btn btn-outline-primary">
+        {{ page.next.title }}
+        <i class="fas fa-chevron-right ms-1"></i>
+      </a>
+    {% endif %}
+  </div>
+</nav>

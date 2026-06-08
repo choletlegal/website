@@ -1,0 +1,19 @@
+<nav class="docs-toc" aria-label="Table des matières">
+  <h4 class="docs-toc-title">Sur cette page</h4>
+  <ul class="docs-toc-list list-unstyled mb-0">
+    {% assign headers = page.content | split: '</h' %}
+    {% for header in headers %}
+      {% assign level = header | split: '>' | first | split: 'h' | last | plus: 0 %}
+      {% if level > 0 and level < 4 %}
+        {% assign text = header | split: '>' | last | strip_html | strip %}
+        {% if text != '' %}
+          <li class="docs-toc-item level-{{ level }}">
+            <a class="docs-toc-link" href="#{{ text | downcase | gsub: ' ', '-' }}">
+              {{ text }}
+            </a>
+          </li>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>

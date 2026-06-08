@@ -1,0 +1,82 @@
+---
+layout: default
+---
+
+<div class="container-xxl">
+  <div class="row flex-xl-nowrap">
+    <!-- Sidebar pour desktop -->
+    <div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+      <nav class="docs-links" aria-label="Main navigation">
+        {% include sidebar/docs-menu.html %}
+      </nav>
+    </div>
+    
+    <!-- Table des matières pour desktop -->
+    {% if page.toc != false %}
+    <nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+      {% include sidebar/docs-toc.html %}
+    </nav>
+    {% endif %}
+    
+    <!-- Contenu principal -->
+    {% if page.toc %}
+    <main class="docs-content col-lg-11 col-xl-9">
+    {% else %}
+    <main class="docs-content col-lg-11 col-xl-9 mx-xl-auto">
+    {% endif %}
+      
+      {% if site.params.options.breadcrumb %}
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ '/' | relative_url }}">Accueil</a></li>
+            {% assign path_parts = page.url | split: '/' %}
+            {% for part in path_parts offset: 1 %}
+              {% if forloop.last %}
+                <li class="breadcrumb-item active" aria-current="page">{{ part | replace: '-', ' ' | capitalize }}</li>
+              {% else %}
+                <li class="breadcrumb-item"><a href="{{ '/' | append: part | append: '/' | relative_url }}">{{ part | replace: '-', ' ' | capitalize }}</a></li>
+              {% endif %}
+            {% endfor %}
+          </ol>
+        </nav>
+      {% endif %}
+      
+      <h1>{{ page.title }}</h1>
+      
+      {% if page.lead %}
+        <p class="lead">{{ page.lead | safe }}</p>
+      {% endif %}
+      
+      <!-- Table des matières pour mobile -->
+      {% if page.toc != false %}
+      <nav class="d-xl-none mb-4" aria-label="Quaternary navigation">
+        {% include sidebar/docs-toc.html %}
+      </nav>
+      {% endif %}
+      
+      <div class="content">
+        {{ content }}
+      </div>
+      
+      <div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between mt-4">
+        {% if site.params.lastMod and page.lastmod %}
+          <div class="text-muted">
+            <i class="fas fa-sync-alt me-1"></i>
+            Mis à jour le {{ page.lastmod | date: "%d %B %Y" }}
+          </div>
+        {% endif %}
+        
+        {% if site.params.editPage %}
+          <div class="text-muted">
+            <a href="{{ site.params.docsRepo }}{{ site.repository }}/edit/{{ site.params.docsRepoBranch }}/{{ page.path }}" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-edit me-1"></i>
+              Modifier cette page
+            </a>
+          </div>
+        {% endif %}
+      </div>
+      
+      {% include main/docs-navigation.html %}
+    </main>
+  </div>
+</div>

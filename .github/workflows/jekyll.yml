@@ -1,0 +1,47 @@
+name: Deploy Jekyll site to GitHub Pages
+
+on:
+  push:
+    branches: [ "master", "vibe/jekyll-migration-aeaf64" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: "pages-build-deployment"
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true  # Fetch Hugo themes (if used as submodules)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
+
+      - name: Build Jekyll site
+        run: |
+          bundle exec jekyll build --destination _site
+
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/vibe/jekyll-migration-aeaf64'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          cname: www.cholet-avocat.fr
+          enablement: true
+          exclude_assets: '.github,Gemfile,Gemfile.lock,node_modules,vendor'
+          keep_files: false
+          force_orphan: true

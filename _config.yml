@@ -1,0 +1,163 @@
+# Configuration du site Jekyll pour Antonin Cholet Avocat
+# ============================================================
+
+# Paramètres de base du site
+title: "Antonin Cholet"
+description: "Antonin Cholet est un avocat en droit public (urbanisme, marchés publics, fonction publique, etc)"
+url: "https://www.cholet-avocat.fr"
+baseurl: ""
+repository: "choletlegal/website"
+
+# Paramètres de langue
+timezone: Europe/Paris
+lang: fr-FR
+
+# Auteur
+author:
+  name: "Antonin Cholet"
+  email: "contact@cholet-avocat.fr"
+  twitter: "@AntoninCholet"
+  linkedin: "https://linkedin.com/in/antonincholet"
+  github: "https://github.com/Antonincholet"
+
+# Pagination
+paginate: 7
+paginate_path: "/blog/page:num/"
+
+# Plugins
+plugins:
+  - jekyll-paginate-v2
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-compress
+
+# Configuration de jekyll-paginate-v2
+pagination:
+  enabled: true
+  per_page: 7
+  permalink: "/blog/page/:num/"
+  title: ":title - page :num"
+  limit: 0
+  sort_field: "date"
+  sort_reverse: true
+
+# Collections pour la documentation et les résultats
+collections:
+  docs:
+    output: true
+    permalink: /docs/:path/
+    sort_by: weight
+  results:
+    output: true
+    permalink: /results/:path/
+    sort_by: date
+
+# Dossiers à inclure
+include:
+  - _pages
+  - _docs
+  - _results
+
+# Dossiers à exclure
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .git
+  - .github
+  - .gitignore
+  - .sass-cache/
+  - README.md
+  - LICENSE
+  - netlify.toml
+  - theme.toml
+
+# Paramètres SEO
+seo:
+  title_separator: "/ Avocat /"
+  title_addition: "Permis de construire Urbanisme PLU"
+  og_locale: "fr_FR"
+  og_image: "/assets/images/logoantonincholetavocat.png"
+  og_image_width: 1280
+  og_image_height: 640
+  twitter:
+    username: "@AntoninCholet"
+    card: "summary_large_image"
+  schema:
+    type: "Organization"
+    name: "Antonin Cholet Avocat"
+    author: "Antonin Cholet"
+    author_twitter: "https://twitter.com/AntoninCholet"
+    author_linkedin: "https://linkedin.com/in/antonincholet"
+    author_github: "https://github.com/Antonincholet"
+    locale: "fr_FR"
+    logo: "/assets/images/antonincholetavocatportrait.jpg"
+    logo_width: 512
+    logo_height: 512
+    image: "/assets/images/logoantonincholetavocat.png"
+    image_width: 1280
+    image_height: 640
+    twitter: "https://twitter.com/AntoninCholet"
+    linkedin: "https://linkedin.com/in/antonincholet"
+    github: "https://github.com/Antonincholet"
+
+# Paramètres du site
+params:
+  # Pied de page
+  footer: "Propulsé via <a class=\"text-muted\" href=\"https://jekyllrb.com/\">Jekyll</a>. Hébergé sur <a class=\"text-muted\" href=\"https://github.com/choletlegal/website/\">GitHub</a>.<br>Fait en 🇪🇺"
+  copyright: "Copyright (c) 2023 Antonin Cholet Avocat"
+  
+  # Alertes
+  alert: false
+  alert_dismissable: true
+  alert_text: "Bienvenue sur le site d'Antonin Cholet, avocat en droit public."
+  
+  # Options
+  options:
+    lazy_sizes: true
+    clip_board: true
+    instant_page: true
+    dark_mode: true
+    boot_strap_js: true
+    breadcrumb: false
+    high_light: true
+    ka_tex: false
+    multilingual_mode: false
+    docs_versioning: false
+    full_width: false
+  
+  # Menu
+  menu:
+    section:
+      auto: true
+      collapsible_sidebar: true
+
+# Configuration pour jekyll-feed
+feed:
+  path: /feed.xml
+  posts_limit: 10
+
+# Configuration pour jekyll-sitemap
+sitemap:
+  changefreq: weekly
+  priority: 0.5
+  filename: sitemap.xml
+
+# Configuration pour jekyll-compress
+compress_html:
+  clippings: all
+  ignore:
+    envs: [development]
+
+# Algolia (à configurer plus tard)
+algolia:
+  application_id: ""
+  search_only_api_key: ""
+  index_name: ""
+  settings:
+    hitsPerPage: 10

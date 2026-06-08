@@ -1,0 +1,44 @@
+<ul class="docs-links list-unstyled mb-0">
+  {% for item in site.data.menus.docs %}
+    {% assign current_url = page.url | remove: 'index.html' | remove: '/' %}
+    {% assign item_url = item.url | remove: 'index.html' | remove: '/' %}
+    {% assign is_active = false %}
+    
+    {% if current_url == item_url %}
+      {% assign is_active = true %}
+    {% endif %}
+    
+    {% if item.children %}
+      <li class="docs-link-item {% if is_active %}active{% endif %}">
+        <a class="docs-link {% if is_active %}active{% endif %}" href="{{ item.url | relative_url }}">
+          {{ item.name }}
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </a>
+        <ul class="docs-sublinks list-unstyled">
+          {% for child in item.children %}
+            {% assign child_url = child.url | remove: 'index.html' | remove: '/' %}
+            {% assign child_is_active = false %}
+            
+            {% if current_url == child_url %}
+              {% assign child_is_active = true %}
+            {% endif %}
+            
+            <li class="docs-sublink-item">
+              <a class="docs-sublink {% if child_is_active %}active{% endif %}" href="{{ child.url | relative_url }}">
+                {{ child.name }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </li>
+    {% else %}
+      <li class="docs-link-item {% if is_active %}active{% endif %}">
+        <a class="docs-link {% if is_active %}active{% endif %}" href="{{ item.url | relative_url }}">
+          {{ item.name }}
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
