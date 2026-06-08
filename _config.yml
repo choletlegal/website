@@ -30,7 +30,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
-  - jekyll-compress
 
 # Configuration de jekyll-paginate-v2
 pagination:
@@ -148,11 +147,7 @@ sitemap:
   priority: 0.5
   filename: sitemap.xml
 
-# Configuration pour jekyll-compress
-compress_html:
-  clippings: all
-  ignore:
-    envs: [development]
+
 
 # Algolia (à configurer plus tard)
 algolia:
