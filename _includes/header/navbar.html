@@ -1,0 +1,44 @@
+<!--- Navbar Responsive avec Bootstrap 5 -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center lh-sm fs-4" href="/">
+      <img src="/assets/images/favicon_avocat_antonin_cholet_150.webp" alt="Logo Antonin Cholet" height="100px">
+      <span class="fw-bold">{{ site.data.author.author.first_name }}
+      <span class="fw-bold text-uppercase">{{site.data.author.author.last_name }}</span></br>
+      <span class="fw-normal fst-italic">{{ site.data.author.author.titre }}</span>
+    </a>
+
+    <!-- Mobile Toggle Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navigation Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/equipe/antonin-cholet">Votre avocat</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/services/">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog/">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact/">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Bouton CTA (prendre RDV) -->
+      <a href="/contact/" class="btn btn-primary ms-lg-3">
+        <i class="fas fa-calendar-alt me-1"></i> Prendre RDV
+      </a>
+    </div>
+  </div>
+</nav>

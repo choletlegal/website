@@ -1,5 +1,23 @@
-node_modules
-public
-resources
-.netlify
-.hugo_build.lock
+# Jekyll
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+
+# Ruby
+vendor
+Gemfile.lock
+
+# IDE/Editor
+.idea
+.vscode
+*.swp
+.DS_Store
+
+# OS
+*.log
+*.tmp
+
+# Node (si utilisé plus tard)
+node_modules/
+package-lock.json

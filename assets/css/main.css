@@ -1,0 +1,496 @@
+/* ============================================
+   Custom CSS - Cholet Legal
+   ============================================ */
+
+/* --- CSS Custom Properties --- */
+:root {
+  /* Colors */
+  --bs-primary: #6a92a3;
+  --bs-secondary: #1E8BBA;
+  --bs-tertiary: #113240;
+  --bs-success: #10b981;
+  --bs-danger: #ef4444;
+  --bs-warning: #f59e0b;
+  --bs-info: #3b82f6;
+  --bs-light: #f8fafc;
+  --bs-dark: #0f172a;
+
+  --body-bg: #ffffff;
+  --body-color: #2e2e2e;
+  --text-muted: #2e2e2e;
+  --link-color: #2e2e2e;
+  --link-hover-color: #8dacb9;
+  --code-bg: #f1f5f9;
+
+  /* --- Fonts --- */
+  --font-heading: 'Inter', 'Roboto Slab', 'Georgia', serif;
+  --font-body: 'Montserrat', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* --- Font Sizes --- */
+  --h1-size: 2.5rem;
+  --h2-size: 2rem;
+  --h3-size: 1.75rem;
+  --h4-size: 1.5rem;
+  --h5-size: 1.25rem;
+  --h6-size: 1rem;
+
+  /* --- Spacing --- */
+  --border-radius: 0.1rem;
+  --border-radius-lg: 0.1rem;
+
+  /* --- Shadows --- */
+  --box-shadow: 0 1px 3px rgba(15, 23, 42, 0.1);
+  --box-shadow-lg: 0 10px 25px rgba(15, 23, 42, 0.1);
+
+  /* --- Transitions --- */
+  --transition: all 0.2s ease-in-out;
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
+
+/* --- Body --- */
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  color: var(--body-color);
+  background-color: var(--body-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- All text elements --- */
+p, span, li, td, th, blockquote, address, cite, code, pre, small, strong, em, b, i, u {
+  color: #2e2e2e !important;
+}
+
+/* --- Headings --- */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--font-heading) !important;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--body-color);
+  line-height: 1.2;
+}
+
+/* H1 : Gros et gras */
+h1, .h1 {
+  font-size: var(--h1-size);
+  font-weight: 700 !important;
+}
+
+/* H2 : Moins gros, moins gras */
+h2, .h2 {
+  font-size: var(--h2-size);
+  font-weight: 600 !important;
+}
+
+/* H3 : Gras mais plus petit */
+h3, .h3 {
+  font-size: var(--h3-size);
+  font-weight: 700 !important;
+}
+
+/* H4 */
+h4, .h4 {
+  font-size: var(--h4-size);
+  font-weight: 600 !important;
+}
+
+/* H5 */
+h5, .h5 {
+  font-size: var(--h5-size);
+  font-weight: 600 !important;
+}
+
+/* H6 */
+h6, .h6 {
+  font-size: var(--h6-size);
+  font-weight: 600 !important;
+}
+
+/* --- Links --- */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: none;
+}
+
+/* --- Accentuation --- */
+
+.accent {
+  color: var(--bs-primary) !important;
+}
+
+/* ============================================
+   Layout Components
+   ============================================ */
+
+/* --- Navbar --- */
+.navbar {
+  padding: 1rem 0;
+  box-shadow: var(--box-shadow);
+}
+
+.navbar.sticky-top {
+  z-index: 1030;
+}
+
+.navbar-brand {
+  font-size: 1.25rem;
+  font-family: var(--font-heading) !important;
+  letter-spacing: -0.5px;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-body) !important;
+  color: #2e2e2e;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #2e2e2e;
+}
+
+.navbar-nav .nav-link.active {
+  color: #2e2e2e;
+  position: relative;
+}
+
+.navbar-nav .nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  right: 1rem;
+  height: 2px;
+  background-color: var(--bs-primary);
+}
+
+/* --- Cards --- */
+.card {
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  border-radius: var(--border-radius-lg);
+  background-color: #ffffff;
+  color: #2e2e2e !important;
+}
+
+.card:hover {
+  box-shadow: var(--box-shadow-lg);
+  transform: translateY(-2px);
+  border-color: var(--bs-primary);
+}
+
+.card a {
+  color: #2e2e2e !important;
+  text-decoration: none !important;
+}
+
+.card a:hover {
+  color: var(--bs-primary) !important;
+}
+
+.card-body {
+  padding: 1.5rem;
+  color: #2e2e2e !important;
+}
+
+.card-title {
+  font-weight: 600;
+  color: #2e2e2e !important;
+}
+
+.card-text {
+  color: #2e2e2e !important;
+}
+
+/* --- Buttons --- */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  transition: var(--transition);
+  font-family: var(--font-body) !important;
+}
+
+.btn:focus,
+.btn.focus {
+  box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.25);
+}
+
+.btn-primary{
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color:white;
+}
+
+.btn-primary:hover {
+  background-color: var(--link-hover-color);
+  border-color: var(--link-hover-color);
+  color:white;
+}
+
+.btn-outline-primary {
+  color: #2e2e2e;
+  border-color: var(--bs-primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: #2e2e2e;
+}
+
+/* --- Hero Section --- */
+/* .bg-primary {
+  background-color: #ffffff;
+  background: #ffffff;
+} */
+
+/* --- Footer --- */
+.footer a {
+  color: #2e2e2e;
+}
+
+.footer a:hover {
+  color: #2e2e2e;
+  text-decoration: underline;
+}
+
+/* --- Forms --- */
+.form-control {
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius);
+  border: 1px solid #d1d5db;
+  font-family: var(--font-body) !important;
+}
+
+.form-control:focus {
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.25);
+}
+
+.form-select {
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius);
+  font-family: var(--font-body) !important;
+}
+
+/* --- Utility Classes --- */
+.text-primary {
+  color: var(--bs-primary) !important;
+}
+
+.bg-primary {
+  background-color: var(--bs-primary) !important;
+}
+
+/* Shadow utilities */
+.shadow-sm {
+  box-shadow: var(--box-shadow);
+}
+
+.shadow-lg {
+  box-shadow: var(--box-shadow-lg);
+}
+
+/* Hover lift effect */
+.hover-lift:hover {
+  transform: translateY(-6px) !important;
+}
+
+/* Transition utilities */
+.transition-all-03s {
+  transition: all 0.3s ease !important;
+}
+
+/* --- Code Blocks --- */
+pre,
+code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  background-color: var(--code-bg);
+  border-radius: var(--border-radius);
+  padding: 0.2rem 0.4rem;
+  font-size: 0.875em;
+}
+
+pre {
+  padding: 1rem;
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+}
+
+/* --- Badges --- */
+.badge {
+  font-weight: 500;
+  padding: 0.35em 0.75em;
+  border-radius: 9999px;
+  background-color: var(--bs-secondary);
+  color: white;
+}
+
+/* --- Icon --- */
+
+.icon {
+  color: #2e2e2e;
+}
+
+/* --- Timeline --- */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #e2e8f0;
+}
+
+.timeline-marker {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--bs-primary);
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 767.98px) {
+  .timeline::before {
+    left: 20px;
+  }
+  .timeline {
+    padding-left: 1.5rem;
+  }
+}
+
+/* --- Social Links --- */
+.social-links a {
+  color: #2e2e2e;
+  transition: var(--transition);
+}
+
+.social-links a:hover {
+  color: #2e2e2e;
+  transform: translateY(-2px);
+}
+
+/* --- Ratio (Google Maps) --- */
+.ratio {
+  position: relative;
+  width: 100%;
+}
+
+.ratio::before {
+  content: '';
+  display: block;
+  padding-top: 56.25%;
+}
+
+.ratio > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* --- List Group --- */
+.list-group-item {
+  border: none;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 1rem;
+  transition: var(--transition);
+}
+
+.list-group-item:hover {
+  box-shadow: var(--box-shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* --- Text muted --- */
+.text-muted {
+  color: #2e2e2e !important;
+}
+
+.small.text-muted {
+  color: #2e2e2e !important;
+}
+
+/* ============================================
+   Responsive Adjustments
+   ============================================ */
+
+@media (max-width: 767.98px) {
+  .display-4 {
+    font-size: 2.5rem;
+  }
+
+  .display-5 {
+    font-size: 2rem;
+  }
+
+  :root {
+    --h1-size: 2rem;
+    --h2-size: 1.75rem;
+    --h3-size: 1.5rem;
+  }
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* ============================================
+   Fix Footer Visibility - Force override
+   ============================================ */
+.bg-dark * {
+  color: #fff !important;
+}
+.bg-dark .text-muted,
+footer .text-muted {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+.bg-dark .small.text-muted,
+footer .small.text-muted {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+.bg-dark a:not(.text-muted),
+footer a:not(.text-muted) {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+.bg-dark a:hover,
+footer a:hover {
+  color: #fff !important;
+}

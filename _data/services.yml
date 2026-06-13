@@ -1,0 +1,52 @@
+# ============================================
+# Données des Services - Me Antonin Cholet (Droit de l'Urbanisme)
+# ============================================
+
+services:
+  - id: permis-construire
+    title: "Permis de Construire"
+    description: "Accompagnement pour l'obtention et la défense de vos permis de construire"
+    icon: "fa-file-alt"
+    image: "/assets/images/services/permis-construire.jpg"
+    url: /services/permis-construire/
+    features:
+      - "Dépôt de dossier de permis de construire"
+      - "Recours contre les refus de permis"
+      - "Modification de permis existant"
+      - "Prorogation et transfert de permis"
+
+  - id: declaration-prealable
+    title: "Déclaration Préalable"
+    description: "Assistance pour les travaux ne nécessitant pas de permis de construire"
+    icon: "fa-edit"
+    image: "/assets/images/services/declaration-prealable.jpg"
+    url: /services/declaration-prealable/
+    features:
+      - "Déclaration pour travaux légers"
+      - "Vérification de conformité"
+      - "Recours en cas de refus"
+      - "Conseil sur les seuils"
+
+  - id: contentieux-urbanisme
+    title: "Contentieux de l'Urbanisme"
+    description: "Défense de vos droits devant les juridictions administratives"
+    icon: "fa-gavel"
+    image: "/assets/images/services/contentieux-urbanisme.jpg"
+    url: /services/contentieux-urbanisme/
+    features:
+      - "Recours pour excès de pouvoir"
+      - "Recours de pleine juridiction"
+      - "Référé suspension"
+      - "Référé liberté"
+
+  - id: plan-local-urbanisme
+    title: "PLU et Documents d'Urbanisme"
+    description: "Accompagnement des collectivités et promoteurs dans les procédures d'urbanisme"
+    icon: "fa-city"
+    image: "/assets/images/services/plu.jpg"
+    url: /services/plan-local-urbanisme/
+    features:
+      - "Élaboration et révision de PLU"
+      - "Contentieux des PLU"
+      - "Permis d'aménager"
+      - "Lotissements"

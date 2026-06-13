@@ -1,0 +1,40 @@
+<!--- Section Services -->
+<div class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge mb-3">Nos Services</span>
+      <h2 class="display-5 fw-bold">Domaines d'intervention</h2>
+      <p class="lead text-muted">
+        Nous intervenons dans tous les aspects du droit de l'urbanisme et du droit administratif.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      {% assign services_data = site.data.services | default: site.data.services %}
+      {% for service in services_data.services limit: 3 %}
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body p-4">
+            <div class="mb-4">
+              <i class="fas {{ service.icon }} icon fa-3x"></i>
+            </div>
+            <h3 class="h5">{{ service.title }}</h3>
+            <p class="text-muted mb-4">
+              {{ service.description }}
+            </p>
+            <!-- <a href="{{ service.url }}" class="btn btn-outline-primary">
+              En savoir plus <i class="fas fa-arrow-right ms-1"></i>
+            </a> -->
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="text-center mt-4">
+      <a href="/services/" class="btn btn-primary px-4">
+        Voir tous nos services <i class="fas fa-arrow-right ms-2"></i>
+      </a>
+    </div>
+  </div>
+</div>

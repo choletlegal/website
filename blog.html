@@ -1,0 +1,54 @@
+---
+layout: default
+title: "Blog - Maître Antonin Cholet"
+description: "Articles et analyses sur le droit de l'urbanisme en France."
+permalink: /blog/
+---
+
+<!-- Hero Blog -->
+<div class="bg-light py-5">
+  <div class="container text-center py-5">
+    <span class="badge bg-primary mb-3">Blog Juridique</span>
+    <h1 class="display-4 fw-bold mb-4">Actualités du Droit de l'Urbanisme</h1>
+    <p class="lead text-muted mb-5">
+      Découvrez nos analyses, commentaires et conseils sur les dernières évolutions
+      législatives et jurisprudentielles en droit de l'urbanisme.
+    </p>
+    <form class="d-flex max-w-500 mx-auto" role="search">
+      <input type="search" class="form-control me-2" placeholder="Rechercher un article...">
+      <button type="submit" class="btn btn-primary">
+        <i class="fas fa-search"></i>
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- Liste des articles -->
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <div class="row g-4">
+        {% for post in site.posts %}
+        <div class="col-md-6 col-lg-4">
+          <a href="{{ post.url }}" class="card h-100 shadow-sm hover-lift transition-all-03s">
+            <div class="card-body d-flex flex-column p-4">
+              <div class="d-flex align-items-center text-muted small mb-2">
+                <i class="fas fa-calendar-alt me-2"></i>
+                <span>{{ post.date | date: "%d/%m/%Y" }}</span>
+              </div>
+              <span class="badge bg-primary mb-3 align-self-start">{{ post.categories | first | default: "Blog" }}</span>
+              <h3 class="card-title fw-bold mb-3">{{ post.title }}</h3>
+              <p class="card-text text-muted flex-grow-1">{{ post.description | truncatewords: 30 }}</p>
+              <div class="mt-auto pt-3 border-top">
+                <span class="text-primary fw-semibold">
+                  Lire l'article <i class="fas fa-arrow-right ms-1"></i>
+                </span>
+              </div>
+            </div>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

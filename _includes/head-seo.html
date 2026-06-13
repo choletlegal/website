@@ -1,0 +1,122 @@
+<!--- SEO Tags (jekyll-seo-tag) + Open Graph + Schema.org -->
+{% assign site_name = site.title | default: site.name %}
+{% assign site_description = site.description | default: "Cabinet d'avocat en droit de l'urbanisme" %}
+{% assign site_url = site.url | append: site.baseurl %}
+{% assign author = site.data.author.author | default: site.author %}
+{% assign page_url = page.url | prepend: site_url | replace: '//', '/' %}
+{% assign page_title = page.title | default: site_name %}
+{% assign page_description = page.description | default: page.excerpt | default: site_description %}
+{% assign page_image = page.image | default: author.avatar | default: "/assets/images/og-image.jpg" %}
+
+<!-- ==== Meta Tags ==== -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{{ page_description | strip_html | xml_escape }}">
+
+<!-- ==== Open Graph / Facebook ==== -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site_url }}">
+<meta property="og:title" content="{{ page_title | xml_escape }}">
+<meta property="og:description" content="{{ page_description | strip_html | xml_escape }}">
+<meta property="og:image" content="{{ site_url }}{{ page_image }}">
+<meta property="og:site_name" content="{{ site_name | xml_escape }}">
+<meta property="og:locale" content="fr_FR">
+
+<!-- ==== Twitter Card ==== -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page_title | xml_escape }}">
+<meta name="twitter:description" content="{{ page_description | strip_html | xml_escape }}">
+<meta name="twitter:image" content="{{ site_url }}{{ page_image }}">
+{% if author.social.twitter %}
+<meta name="twitter:site" content="{{ author.social.twitter }}">
+{% endif %}
+
+<!-- ==== Canonical URL ==== -->
+<link rel="canonical" href="{{ page_url }}">
+
+<!-- ==== Favicon ==== -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<!-- ==== Schema.org (JSON-LD) - Person ==== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ author.name | xml_escape }}",
+  "description": "{{ author.bio | xml_escape }}",
+  "url": "{{ site_url }}",
+  "image": "{{ site_url }}{{ author.avatar }}",
+  "hasOccupation": {
+    "@type": "Role",
+    "name": "Avocat"
+  },
+  "knowsAbout": [
+    "Droit de l'urbanisme",
+    "Permis de construire",
+    "Contentieux de l'urbanisme",
+    "Droit de la construction",
+    "Droit administratif"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ author.address.street | xml_escape }}",
+    "addressLocality": "{{ author.address.city | xml_escape }}",
+    "postalCode": "{{ author.address.postal_code }}",
+    "addressCountry": "{{ author.address.country }}"
+  },
+  "telephone": "{{ author.phone | replace: ' ', '' }}",
+  "email": "{{ author.email }}"
+  {% if author.social.linkedin %},
+  "sameAs": [
+    "https://{{ author.social.linkedin }}",
+    "https://{{ author.social.twitter | replace: '@', '' }}",
+    "https://{{ author.social.github }}",
+    "https://{{ author.social.facebook }}"
+  ]{% endif %}
+}
+</script>
+
+<!-- ==== Schema.org (JSON-LD) - WebSite ==== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ site_name | xml_escape }}",
+  "url": "{{ site_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ author.name | xml_escape }}"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ site_url }}/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- ==== Schema.org (JSON-LD) - LocalBusiness (pour SEO local) ==== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "{{ site_name | xml_escape }}",
+  "description": "{{ site_description | strip_html | xml_escape }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ author.address.street | xml_escape }}",
+    "addressLocality": "{{ author.address.city | xml_escape }}",
+    "postalCode": "{{ author.address.postal_code }}",
+    "addressCountry": "{{ author.address.country }}"
+  },
+  "telephone": "{{ author.phone | replace: ' ', '' }}",
+  "email": "{{ author.email }}",
+  "openingHours": "Mo,Tu,We,Th,Fr 09:00-18:00",
+  "hasMap": "https://www.google.com/maps/place/24+Rue+de+la+Pr%C3%A9fecture,+25000+Besan%C3%A7on",
+  "sameAs": [
+    "https://{{ author.social.linkedin }}",
+    "https://{{ author.social.twitter | replace: '@', '' }}"
+  ]
+}
+</script>

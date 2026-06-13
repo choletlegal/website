@@ -1,0 +1,32 @@
+# ============================================
+# Données de l'Avocat - Me Antonin Cholet
+# ============================================
+
+author:
+  name: "Maître Antonin Cholet"
+  first_name: "Antonin"
+  last_name: "Cholet"
+  titre: "Avocat"
+  bio: "Avocat au Barreau de Besançon, en droit de l'urbanisme"
+  avatar: "/assets/images/portrait_avocat_antonin_cholet.webp"
+  phone: "+33 7 67 25 00 39"
+  address:
+    street: "24 rue de la Préfecture"
+    city: "Besançon"
+    postal_code: "25000"
+    country: "France"
+  barreau: "Besançon"
+  specializations:
+    - "Droit de l'urbanisme"
+    - "Permis de construire"
+    - "Contentieux de l'urbanisme"
+    - "Droit administratif"
+  education: []
+  experience: []
+  social:
+    twitter: "@AntoninCholet"
+    linkedin: "linkedin.com/in/antonincholet"
+    github: "github.com/Antonincholet"
+    facebook: "facebook/Antonin-Cholet-Avocat-1507007512720805/"
+    avocat: "consultation.avocat.fr/avocat-besancon/antonin-cholet-40539.html"
+  certifications: []
