@@ -6,7 +6,6 @@ _site
 
 # Ruby
 vendor
-Gemfile.lock
 
 # IDE/Editor
 .idea
