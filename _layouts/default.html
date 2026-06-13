@@ -1,0 +1,21 @@
+---
+layout: base
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  {% include head-seo.html %}
+  {% include head-css.html %}
+</head>
+<body>
+  {% include header/navbar.html %}
+  
+  <main>
+    {{ content }}
+  </main>
+  
+  {% include footer/footer.html %}
+  {% include head-js.html %}
+</body>
+</html>

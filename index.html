@@ -1,0 +1,55 @@
+---
+layout: default
+title: "Me Antonin Cholet - Avocat en droit de l'urbanisme"
+description: "Cabinet d'avocat en droit de l'urbanisme à Besançon. Conseil et défense des particuliers et professionnels."
+---
+
+<!-- Hero Section -->
+{% include header/hero.html %}
+
+<!-- Section Services -->
+{% include sections/services.html %}
+
+<!-- Section Blog (Derniers articles) -->
+{% if site.posts.size > 0 %}
+<div class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge bg-primary mb-3">Derniers Articles</span>
+      <h2 class="display-5 fw-bold">Actualités Juridiques</h2>
+      <p class="lead text-muted">
+        Restez informé avec nos analyses sur le droit de l'urbanisme et de la construction.
+      </p>
+    </div>
+
+    <div class="row g-4 mb-4">
+      {% for post in site.posts limit: 3 %}
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <span class="badge bg-primary mb-2">{{ post.categories | first | default: "Blog" }}</span>
+            <h5 class="card-title">{{ post.title }}</h5>
+            <p class="card-text text-muted small mb-3">{{ post.excerpt | truncatewords: 20 }}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small class="text-muted">
+                <i class="fas fa-calendar me-1"></i> {{ post.date | date: "%d/%m/%Y" }}
+              </small>
+              <a href="{{ post.url }}" class="btn btn-sm btn-outline-primary">Lire plus</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="text-center">
+      <a href="/blog/" class="btn btn-primary px-4">
+        Voir tous les articles <i class="fas fa-arrow-right ms-2"></i>
+      </a>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<!-- Section CTA -->
+{% include sections/cta.html %}

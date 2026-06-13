@@ -1,0 +1,32 @@
+<!--- Hero Section -->
+<div class="py-5">
+  <div class="container py-5">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <span class="badge mb-3">Droit de l'Urbanisme</span>
+        <span class="badge mb-3">Droit administratif</span>
+        <h1 class="display-4 fw-bold mb-4">
+          Le droit administratif vous cause des soucis ?
+          Je vous apporte <emp classe="accent">La solution.</emp>
+        </h1>
+        <p class="lead mb-5">
+          {{ page.description | default: site.description }}
+        </p>
+        <div class="d-flex gap-3">
+          <a href="/contact/" class="btn btn-primary px-4">
+            <i class="fas fa-calendar-alt me-2"></i> Prendre rendez-vous
+          </a>
+          <a href="/services/" class="btn btn-outline-primary btn-lg px-4 align-items-center">
+            Nos services <i class="fas fa-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center text-lg-end">
+        <img src="/assets/images/hero_citadelle.webp"
+             alt="Illustration droit de l'urbanisme"
+             class="img-fluid"
+             style="max-height: 600px;">
+      </div>
+    </div>
+  </div>
+</div>

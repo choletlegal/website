@@ -1,0 +1,85 @@
+# ============================================
+# Configuration Site - Avocat en Droit de l'Urbanisme
+# ============================================
+
+# --- Site Settings ---
+title: "Me Antonin Cholet - Avocat en droit de l'urbanisme"
+description: >-
+  Cabinet d'avocat en droit de l'urbanisme à Besançon. Conseil et défense
+  des particuliers et professionnels face à l'administration.
+baseurl: "" # Laisser vide si site à la racine du domaine
+url: "https://www.cholet-avocat.fr" # Domaine final
+twitter_username: "AntoninCholet"
+
+# --- Author (pour SEO et articles) ---
+author:
+  name: "Maître Antonin Cholet"
+  bio: "Avocat au Barreau de Besançon, en droit de l'urbanisme"
+  avatar: "/assets/images/portrait_avocat_antonin_cholet.webp"
+
+# --- Default Front Matter ---
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+      image: "/assets/images/og-image.jpg"
+  - scope:
+      path: "_posts"
+    values:
+      layout: "post"
+      author: "Maître Antonin Cholet"
+
+# --- Plugins ---
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# --- SEO Tag Configuration ---
+seo:
+  name: "Me Antonin Cholet"
+  social:
+    twitter: "@AntoninCholet"
+    linkedin: "linkedin.com/in/antonincholet"
+    github: "github.com/Antonincholet"
+    facebook: "facebook/Antonin-Cholet-Avocat-1507007512720805/"
+    avocat: "consultation.avocat.fr/avocat-besancon/antonin-cholet-40539.html"
+  webmaster_verifications:
+    google: ""
+    bing: ""
+
+# --- Feed ---
+feed:
+  path: /feed.xml
+
+# --- Sitemap ---
+sitemap:
+  filename: sitemap.xml
+  exclude: ["/test/*", "/404.html"]
+
+# --- Build Settings ---
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+# --- Exclude from processing ---
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - _site/
+  - .sass-cache/
+  - .jekyll-cache/
+  - .jekyll-metadata
+  - README.md
+  - LICENSE
+  - AGENTS.md
+
+# --- Include (fichiers normalement exclus) ---
+include:
+  - robots.txt
+  - .htaccess
