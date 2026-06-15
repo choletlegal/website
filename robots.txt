@@ -1,14 +1,13 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://choletlegal.fr/sitemap.xml
+Sitemap: https://www.cholet-avocat.fr/sitemap.xml
 
 # Bloquer les dossiers internes
 Disallow: /_site/
 Disallow: /_includes/
 Disallow: /_layouts/
 Disallow: /_sass/
-Disallow: /assets/
 
 # Priorité de crawl
 Crawl-delay: 2

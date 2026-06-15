@@ -5,7 +5,6 @@
   titre: "Avocat"
   bio: "Avocat au Barreau de Besançon, en droit de l'urbanisme"
   avatar: "/assets/images/portrait_avocat_antonin_cholet.webp"
-  email: "contact@cholet-avocat.fr"
   phone: "+33 7 67 25 00 39"
   ---
 
