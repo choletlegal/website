@@ -1,38 +1,16 @@
-<!--- SEO Tags (jekyll-seo-tag) + Open Graph + Schema.org -->
+<!--- SEO Tags - Géré par jekyll-seo-tag + Schema.org personnalisé -->
 {% assign site_name = site.title | default: site.name %}
 {% assign site_description = site.description | default: "Cabinet d'avocat en droit de l'urbanisme" %}
 {% assign site_url = site.url | append: site.baseurl %}
 {% assign author = site.data.author.author | default: site.author %}
-{% assign page_url = page.url | prepend: site_url | replace: '//', '/' %}
-{% assign page_title = page.title | default: site_name %}
-{% assign page_description = page.description | default: page.excerpt | default: site_description %}
-{% assign page_image = page.image | default: author.avatar | default: "/assets/images/og-image.jpg" %}
 
-<!-- ==== Meta Tags ==== -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="{{ page_description | strip_html | xml_escape }}">
-
-<!-- ==== Open Graph / Facebook ==== -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="{{ site_url }}">
-<meta property="og:title" content="{{ page_title | xml_escape }}">
-<meta property="og:description" content="{{ page_description | strip_html | xml_escape }}">
-<meta property="og:image" content="{{ site_url }}{{ page_image }}">
-<meta property="og:site_name" content="{{ site_name | xml_escape }}">
-<meta property="og:locale" content="fr_FR">
-
-<!-- ==== Twitter Card ==== -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ page_title | xml_escape }}">
-<meta name="twitter:description" content="{{ page_description | strip_html | xml_escape }}">
-<meta name="twitter:image" content="{{ site_url }}{{ page_image }}">
-{% if author.social.twitter %}
-<meta name="twitter:site" content="{{ author.social.twitter }}">
+<!-- ==== Webmaster Verification ==== -->
+{% if site.webmaster_verifications.google != "" %}
+<meta name="google-site-verification" content="{{ site.webmaster_verifications.google }}" />
 {% endif %}
-
-<!-- ==== Canonical URL ==== -->
-<link rel="canonical" href="{{ page_url }}">
+{% if site.webmaster_verifications.bing != "" %}
+<meta name="msvalidate.01" content="{{ site.webmaster_verifications.bing }}" />
+{% endif %}
 
 <!-- ==== Favicon ==== -->
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -65,12 +43,10 @@
     "postalCode": "{{ author.address.postal_code }}",
     "addressCountry": "{{ author.address.country }}"
   },
-  "telephone": "{{ author.phone | replace: ' ', '' }}",
-  "email": "{{ author.email }}"
-  {% if author.social.linkedin %},
+  "telephone": "{{ author.phone | replace: ' ', '' }}"{% if author.social.linkedin %},
   "sameAs": [
     "https://{{ author.social.linkedin }}",
-    "https://{{ author.social.twitter | replace: '@', '' }}",
+    "https://twitter.com/{{ author.social.twitter | replace: '@', '' }}",
     "https://{{ author.social.github }}",
     "https://{{ author.social.facebook }}"
   ]{% endif %}
@@ -96,7 +72,7 @@
 }
 </script>
 
-<!-- ==== Schema.org (JSON-LD) - LocalBusiness (pour SEO local) ==== -->
+<!-- ==== Schema.org (JSON-LD) - LegalService (pour SEO local) ==== -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -111,12 +87,27 @@
     "addressCountry": "{{ author.address.country }}"
   },
   "telephone": "{{ author.phone | replace: ' ', '' }}",
-  "email": "{{ author.email }}",
   "openingHours": "Mo,Tu,We,Th,Fr 09:00-18:00",
   "hasMap": "https://www.google.com/maps/place/24+Rue+de+la+Pr%C3%A9fecture,+25000+Besan%C3%A7on",
   "sameAs": [
     "https://{{ author.social.linkedin }}",
-    "https://{{ author.social.twitter | replace: '@', '' }}"
-  ]
+    "https://twitter.com/{{ author.social.twitter | replace: '@', '' }}",
+    "https://{{ author.social.github }}",
+    "https://{{ author.social.facebook }}"
+  ],
+  "logo": {
+    "@type": "ImageObject",
+    "url": "{{ site_url }}/assets/images/logo_avocat_antonin_cholet_1200.webp",
+    "width": 1200,
+    "height": 630
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Besançon"
+  },
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Avocat"
+  }
 }
 </script>
