@@ -4,9 +4,7 @@
 
 # --- Site Settings ---
 title: "Me Antonin Cholet - Avocat en droit de l'urbanisme"
-description: >-
-  Cabinet d'avocat en droit de l'urbanisme à Besançon. Conseil et défense
-  des particuliers et professionnels face à l'administration.
+description: "Cabinet d'avocat en droit de l'urbanisme à Besançon"
 baseurl: "" # Laisser vide si site à la racine du domaine
 url: "https://www.cholet-avocat.fr" # Domaine final
 twitter_username: "AntoninCholet"
