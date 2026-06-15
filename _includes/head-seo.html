@@ -73,8 +73,7 @@
     "postalCode": "{{ author.address.postal_code }}",
     "addressCountry": "{{ author.address.country }}"
   },
-  "telephone": "{{ author.phone | replace: ' ', '' }}",
-  "email": "{{ author.email }}"{% if author.social.linkedin %},
+  "telephone": "{{ author.phone | replace: ' ', '' }}"{% if author.social.linkedin %},
   "sameAs": [
     "https://{{ author.social.linkedin }}",
     "https://twitter.com/{{ author.social.twitter | replace: '@', '' }}",
@@ -118,7 +117,6 @@
     "addressCountry": "{{ author.address.country }}"
   },
   "telephone": "{{ author.phone | replace: ' ', '' }}",
-  "email": "{{ author.email }}",
   "openingHours": "Mo,Tu,We,Th,Fr 09:00-18:00",
   "hasMap": "https://www.google.com/maps/place/24+Rue+de+la+Pr%C3%A9fecture,+25000+Besan%C3%A7on",
   "sameAs": [
