@@ -34,9 +34,9 @@ permalink: /services/
           <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> {{ feature }}</li>
           {% endfor %}
         </ul>
-        <!-- <a href="{{ service.url }}" class="btn btn-primary">
-          <i class="fas fa-envelope me-2"></i> Nous contacter
-        </a> -->
+        <a href="{{ service.url }}" class="btn btn-outline-primary">
+          <i class="fas fa-arrow-right me-2"></i> En savoir plus
+        </a>
       </div>
     </div>
     <div class="col-lg-6 {% if forloop.index0 > 1 %}order-lg-1{% endif %}">
