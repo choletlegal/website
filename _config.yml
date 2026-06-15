@@ -35,17 +35,15 @@ plugins:
   - jekyll-feed
 
 # --- SEO Tag Configuration ---
-seo:
-  name: "Me Antonin Cholet"
-  social:
-    twitter: "@AntoninCholet"
-    linkedin: "linkedin.com/in/antonincholet"
-    github: "github.com/Antonincholet"
-    facebook: "facebook/Antonin-Cholet-Avocat-1507007512720805/"
-    avocat: "consultation.avocat.fr/avocat-besancon/antonin-cholet-40539.html"
-  webmaster_verifications:
-    google: ""
-    bing: ""
+# (jekyll-seo-tag utilise site.title et site.description par défaut)
+# Pour éviter la duplication du titre, on configure le séparateur comme vide
+jekyll-seo-tag:
+  title_separator: ""
+
+# --- Webmaster Verifications ---
+webmaster_verifications:
+  google: ""
+  bing: ""
 
 # --- Feed ---
 feed:
