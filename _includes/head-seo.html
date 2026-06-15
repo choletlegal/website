@@ -34,6 +34,14 @@
 <!-- ==== Canonical URL ==== -->
 <link rel="canonical" href="{{ page_url }}">
 
+<!-- ==== Webmaster Verification ==== -->
+{% if site.seo.webmaster_verifications.google != "" %}
+<meta name="google-site-verification" content="{{ site.seo.webmaster_verifications.google }}" />
+{% endif %}
+{% if site.seo.webmaster_verifications.bing != "" %}
+<meta name="msvalidate.01" content="{{ site.seo.webmaster_verifications.bing }}" />
+{% endif %}
+
 <!-- ==== Favicon ==== -->
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -65,12 +73,10 @@
     "postalCode": "{{ author.address.postal_code }}",
     "addressCountry": "{{ author.address.country }}"
   },
-  "telephone": "{{ author.phone | replace: ' ', '' }}",
-  "email": "{{ author.email }}"
-  {% if author.social.linkedin %},
+  "telephone": "{{ author.phone | replace: ' ', '' }}"{% if author.social.linkedin %},
   "sameAs": [
     "https://{{ author.social.linkedin }}",
-    "https://{{ author.social.twitter | replace: '@', '' }}",
+    "https://twitter.com/{{ author.social.twitter | replace: '@', '' }}",
     "https://{{ author.social.github }}",
     "https://{{ author.social.facebook }}"
   ]{% endif %}
@@ -111,12 +117,27 @@
     "addressCountry": "{{ author.address.country }}"
   },
   "telephone": "{{ author.phone | replace: ' ', '' }}",
-  "email": "{{ author.email }}",
   "openingHours": "Mo,Tu,We,Th,Fr 09:00-18:00",
   "hasMap": "https://www.google.com/maps/place/24+Rue+de+la+Pr%C3%A9fecture,+25000+Besan%C3%A7on",
   "sameAs": [
     "https://{{ author.social.linkedin }}",
-    "https://{{ author.social.twitter | replace: '@', '' }}"
-  ]
+    "https://twitter.com/{{ author.social.twitter | replace: '@', '' }}",
+    "https://{{ author.social.github }}",
+    "https://{{ author.social.facebook }}"
+  ],
+  "logo": {
+    "@type": "ImageObject",
+    "url": "{{ site_url }}/assets/images/logo_avocat_antonin_cholet_1200.webp",
+    "width": 1200,
+    "height": 630
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Besançon"
+  },
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Avocat"
+  }
 }
 </script>

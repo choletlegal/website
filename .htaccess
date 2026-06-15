@@ -1,0 +1,71 @@
+# ============================================
+# Redirections 301 pour migration Hugo → Jekyll
+# Site: www.cholet-avocat.fr
+# ============================================
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # --- Redirection HTTP → HTTPS ---
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  # --- Redirection www → non-www (ou inverse selon préférence) ---
+  # Option 1: Rediriger vers www (recommandé pour la cohérence)
+  RewriteCond %{HTTP_HOST} ^cholet-avocat\.fr$ [NC]
+  RewriteRule ^(.*)$ https://www.cholet-avocat.fr/$1 [R=301,L]
+
+  # Option 2: Rediriger vers non-www (désactiver l'option 1 si choix différent)
+  # RewriteCond %{HTTP_HOST} ^www\.cholet-avocat\.fr$ [NC]
+  # RewriteRule ^(.*)$ https://cholet-avocat.fr/$1 [R=301,L]
+
+  # --- Redirections spécifiques depuis l'ancien site Hugo ---
+  # Exemples à adapter selon l'ancienne structure Hugo
+  # Redirect 301 /old-about.html https://www.cholet-avocat.fr/equipe/antonin-cholet/
+  # Redirect 301 /old-services.html https://www.cholet-avocat.fr/services/
+  # Redirect 301 /old-blog/post1.html https://www.cholet-avocat.fr/blog/post1/
+
+  # --- Redirection de l'ancienne page équipe vers la nouvelle ---
+  Redirect 301 /equipe/ https://www.cholet-avocat.fr/equipe/antonin-cholet/
+  Redirect 301 /equipe.html https://www.cholet-avocat.fr/equipe/antonin-cholet/
+
+  # --- Redirection des URLs de services depuis _data/services.yml ---
+  # Ces URLs sont référencées dans les données mais n'existaient pas
+  # On redirige vers la page services principale pour éviter les 404
+  Redirect 301 /services/permis-construire/ https://www.cholet-avocat.fr/services/
+  Redirect 301 /services/declaration-prealable/ https://www.cholet-avocat.fr/services/
+  Redirect 301 /services/contentieux-urbanisme/ https://www.cholet-avocat.fr/services/
+  Redirect 301 /services/plan-local-urbanisme/ https://www.cholet-avocat.fr/services/
+
+  # --- Gestion des trailing slashes ---
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} !(.*)/$
+  RewriteRule ^(.*)$ https://www.cholet-avocat.fr/$1/ [R=301,L]
+
+  # --- Cache des assets statiques ---
+  <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </FilesMatch>
+
+  # --- Compression GZIP ---
+  <IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript
+  </IfModule>
+</IfModule>
+
+# ============================================
+# Optimisations supplémentaires
+# ============================================
+
+# Désactiver le directory listing
+Options -Indexes
+
+# Protéger les fichiers sensibles
+<FilesMatch "^\.">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# Type MIME pour les favicons
+AddType image/x-icon .ico
