@@ -1,20 +1,14 @@
-<!--- Section CTA -->
-<div class="py-5 bg-primary">
-  <div class="container text-center text-white">
-    <span class="badge bg-white text-primary mb-3">Besoin d'un avocat en droit de l'urbanisme ?</span>
-    <h2 class="display-5 fw-bold mb-4">
-      Prenez rendez-vous dès aujourd'hui
-    </h2>
-    <p class="lead mb-5">
-      Notre cabinet est à votre disposition pour répondre à toutes vos questions.
-    </p>
-    <div class="d-flex justify-content-center gap-3">
-      <a href="/contact/" class="btn btn-light btn-lg px-4">
-        <i class="fas fa-calendar-alt me-2"></i> Prendre RDV
-      </a>
-      <a href="tel:+33767250039" class="btn btn-outline-light btn-lg px-4">
-        <i class="fas fa-phone me-2"></i> +33 7 67 25 00 39
-      </a>
+<!--- Bandeau CTA de fin de page — fond clair, cadré d'un filet, accent bordeaux
+      réservé au bouton et au mot mis en emphase (cf. CLAUDE.md, Direction visuelle). -->
+{% assign author = site.data.author.author %}
+<section class="accent-band">
+  <div class="wrap accent-band-grid">
+    <div>
+      <h2>Prenez <em>rendez-vous</em> dès aujourd'hui</h2>
+    </div>
+    <div class="accent-band-actions">
+      <a class="action-btn action-btn-accent" href="/contact/">Prendre rendez-vous</a>
+      <a class="action-btn action-btn-outline" href="tel:{{ author.phone | replace: ' ', '' }}">{{ author.phone }}</a>
     </div>
   </div>
-</div>
+</section>

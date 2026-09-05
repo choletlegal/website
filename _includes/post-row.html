@@ -1,0 +1,11 @@
+<!--- Une ligne de liste d'articles (date/titre/extrait/lien) — réutilisée par
+      blog.html, sections/blog-preview.html et les "Articles similaires" de
+      _layouts/post.html. Paramètre : post (l'objet post Jekyll). -->
+<article class="post-row">
+  <time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: "%d/%m/%Y" }}</time>
+  <div>
+    <h3>{{ include.post.title }}</h3>
+    <p>{{ include.post.excerpt | strip_html | truncatewords: 24 }}</p>
+  </div>
+  <a class="link-arrow" href="{{ include.post.url | uri_escape }}">Lire l'article <span aria-hidden="true">→</span></a>
+</article>

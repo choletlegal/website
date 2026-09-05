@@ -1,0 +1,23 @@
+<!--- Aperçu "Derniers articles" (accueil) — mêmes codes visuels que les autres listes
+      éditoriales du site (filets fins, pas de cartes). N'affiche rien si aucun article. -->
+{% if site.posts.size > 0 %}
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Blog</span>
+      <h2>Actualités juridiques</h2>
+      <p>Veille et commentaires sur le droit public, le droit administratif et le droit de l'urbanisme.</p>
+    </div>
+
+    <div class="posts-list">
+      {% for post in site.posts limit: 3 %}
+      {% include post-row.html post=post %}
+      {% endfor %}
+    </div>
+
+    <div class="section-foot">
+      <a class="link-arrow" href="/blog/">Voir tous les articles <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+{% endif %}

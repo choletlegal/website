@@ -1,0 +1,15 @@
+<!--- Liste éditoriale des domaines d'intervention — lit _data/domaines.yml.
+      Partagée entre la section accueil (sections/domaines.html) et la page
+      pivot /domaines-intervention/, pour ne jamais dupliquer la boucle. -->
+<div class="domaines-list">
+  {% for domaine in site.data.domaines.domaines %}
+  <article class="domaine-row">
+    <span class="domaine-index" aria-hidden="true">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+    <div>
+      <h3>{{ domaine.title }}</h3>
+      <p>{{ domaine.description }}.</p>
+    </div>
+    <a class="link-arrow" href="{{ domaine.url }}">En savoir plus <span aria-hidden="true">→</span></a>
+  </article>
+  {% endfor %}
+</div>

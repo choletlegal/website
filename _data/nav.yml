@@ -1,0 +1,11 @@
+# Liens de navigation principale — source unique, lue par _includes/header/navbar.html
+# pour la liste desktop (.nav-links) et le panneau mobile (.mobile-panel), afin de ne pas
+# dupliquer les 4 liens deux fois dans le même template.
+- label: "Votre avocat"
+  url: /votre-avocat/
+- label: "Domaines d'intervention"
+  url: /domaines-intervention/
+- label: "Blog"
+  url: /blog/
+- label: "Contact"
+  url: /contact/

@@ -1,496 +1,619 @@
 /* ============================================
-   Custom CSS - Cholet Legal
+   Base — reset minimal sur les tokens Piste B
+   (cf. assets/css/tokens.css pour les valeurs).
+   Bootstrap retiré du site (CDN + classes) : plus
+   besoin de règles de compatibilité ici.
    ============================================ */
 
-/* --- CSS Custom Properties --- */
-:root {
-  /* Colors */
-  --bs-primary: #6a92a3;
-  --bs-secondary: #1E8BBA;
-  --bs-tertiary: #113240;
-  --bs-success: #10b981;
-  --bs-danger: #ef4444;
-  --bs-warning: #f59e0b;
-  --bs-info: #3b82f6;
-  --bs-light: #f8fafc;
-  --bs-dark: #0f172a;
-
-  --body-bg: #ffffff;
-  --body-color: #2e2e2e;
-  --text-muted: #2e2e2e;
-  --link-color: #2e2e2e;
-  --link-hover-color: #8dacb9;
-  --code-bg: #f1f5f9;
-
-  /* --- Fonts --- */
-  --font-heading: 'Inter', 'Roboto Slab', 'Georgia', serif;
-  --font-body: 'Montserrat', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-
-  /* --- Font Sizes --- */
-  --h1-size: 2.5rem;
-  --h2-size: 2rem;
-  --h3-size: 1.75rem;
-  --h4-size: 1.5rem;
-  --h5-size: 1.25rem;
-  --h6-size: 1rem;
-
-  /* --- Spacing --- */
-  --border-radius: 0.1rem;
-  --border-radius-lg: 0.1rem;
-
-  /* --- Shadows --- */
-  --box-shadow: 0 1px 3px rgba(15, 23, 42, 0.1);
-  --box-shadow-lg: 0 10px 25px rgba(15, 23, 42, 0.1);
-
-  /* --- Transitions --- */
-  --transition: all 0.2s ease-in-out;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-/* ============================================
-   Base Styles
-   ============================================ */
-
-/* --- Body --- */
 body {
-  font-family: var(--font-body);
+  margin: 0;
+  font-family: var(--font-display);
   line-height: 1.6;
-  color: var(--body-color);
-  background-color: var(--body-bg);
+  color: var(--ink-body);
+  background-color: var(--bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* --- All text elements --- */
-p, span, li, td, th, blockquote, address, cite, code, pre, small, strong, em, b, i, u {
-  color: #2e2e2e !important;
-}
-
-/* --- Headings --- */
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: var(--font-heading) !important;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  color: var(--body-color);
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
   line-height: 1.2;
+  margin: 0 0 0.5rem;
+  color: var(--ink-heading);
 }
 
-/* H1 : Gros et gras */
-h1, .h1 {
-  font-size: var(--h1-size);
-  font-weight: 700 !important;
-}
-
-/* H2 : Moins gros, moins gras */
-h2, .h2 {
-  font-size: var(--h2-size);
-  font-weight: 600 !important;
-}
-
-/* H3 : Gras mais plus petit */
-h3, .h3 {
-  font-size: var(--h3-size);
-  font-weight: 700 !important;
-}
-
-/* H4 */
-h4, .h4 {
-  font-size: var(--h4-size);
-  font-weight: 600 !important;
-}
-
-/* H5 */
-h5, .h5 {
-  font-size: var(--h5-size);
-  font-weight: 600 !important;
-}
-
-/* H6 */
-h6, .h6 {
-  font-size: var(--h6-size);
-  font-weight: 600 !important;
-}
-
-/* --- Links --- */
 a {
-  color: var(--link-color);
+  color: var(--accent-ink);
   text-decoration: none;
-  transition: var(--transition);
 }
-
 a:hover {
-  color: var(--link-hover-color);
-  text-decoration: none;
-}
-
-/* --- Accentuation --- */
-
-.accent {
-  color: var(--bs-primary) !important;
-}
-
-/* ============================================
-   Layout Components
-   ============================================ */
-
-/* --- Navbar --- */
-.navbar {
-  padding: 1rem 0;
-  box-shadow: var(--box-shadow);
-}
-
-.navbar.sticky-top {
-  z-index: 1030;
-}
-
-.navbar-brand {
-  font-size: 1.25rem;
-  font-family: var(--font-heading) !important;
-  letter-spacing: -0.5px;
-}
-
-.navbar-nav .nav-link {
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  font-family: var(--font-body) !important;
-  color: #2e2e2e;
-}
-
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link:focus {
-  color: #2e2e2e;
-}
-
-.navbar-nav .nav-link.active {
-  color: #2e2e2e;
-  position: relative;
-}
-
-.navbar-nav .nav-link.active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 1rem;
-  right: 1rem;
-  height: 2px;
-  background-color: var(--bs-primary);
-}
-
-/* --- Cards --- */
-.card {
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  box-shadow: var(--box-shadow);
-  transition: var(--transition);
-  border-radius: var(--border-radius-lg);
-  background-color: #ffffff;
-  color: #2e2e2e !important;
-}
-
-.card:hover {
-  box-shadow: var(--box-shadow-lg);
-  transform: translateY(-2px);
-  border-color: var(--bs-primary);
-}
-
-.card a {
-  color: #2e2e2e !important;
-  text-decoration: none !important;
-}
-
-.card a:hover {
-  color: var(--bs-primary) !important;
-}
-
-.card-body {
-  padding: 1.5rem;
-  color: #2e2e2e !important;
-}
-
-.card-title {
-  font-weight: 600;
-  color: #2e2e2e !important;
-}
-
-.card-text {
-  color: #2e2e2e !important;
-}
-
-/* --- Buttons --- */
-.btn {
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--border-radius);
-  font-weight: 500;
-  transition: var(--transition);
-  font-family: var(--font-body) !important;
-}
-
-.btn:focus,
-.btn.focus {
-  box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.25);
-}
-
-.btn-primary{
-  background-color: var(--bs-primary);
-  border-color: var(--bs-primary);
-  color:white;
-}
-
-.btn-primary:hover {
-  background-color: var(--link-hover-color);
-  border-color: var(--link-hover-color);
-  color:white;
-}
-
-.btn-outline-primary {
-  color: #2e2e2e;
-  border-color: var(--bs-primary);
-}
-
-.btn-outline-primary:hover {
-  background-color: var(--bs-primary);
-  border-color: var(--bs-primary);
-  color: #2e2e2e;
-}
-
-/* --- Hero Section --- */
-/* .bg-primary {
-  background-color: #ffffff;
-  background: #ffffff;
-} */
-
-/* --- Footer --- */
-.footer a {
-  color: #2e2e2e;
-}
-
-.footer a:hover {
-  color: #2e2e2e;
   text-decoration: underline;
 }
 
-/* --- Forms --- */
-.form-control {
-  padding: 0.75rem 1rem;
-  border-radius: var(--border-radius);
-  border: 1px solid #d1d5db;
-  font-family: var(--font-body) !important;
-}
-
-.form-control:focus {
-  border-color: var(--bs-primary);
-  box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.25);
-}
-
-.form-select {
-  padding: 0.75rem 1rem;
-  border-radius: var(--border-radius);
-  font-family: var(--font-body) !important;
-}
-
-/* --- Utility Classes --- */
-.text-primary {
-  color: var(--bs-primary) !important;
-}
-
-.bg-primary {
-  background-color: var(--bs-primary) !important;
-}
-
-/* Shadow utilities */
-.shadow-sm {
-  box-shadow: var(--box-shadow);
-}
-
-.shadow-lg {
-  box-shadow: var(--box-shadow-lg);
-}
-
-/* Hover lift effect */
-.hover-lift:hover {
-  transform: translateY(-6px) !important;
-}
-
-/* Transition utilities */
-.transition-all-03s {
-  transition: all 0.3s ease !important;
-}
-
-/* --- Code Blocks --- */
-pre,
-code {
+code, pre {
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-  background-color: var(--code-bg);
-  border-radius: var(--border-radius);
-  padding: 0.2rem 0.4rem;
-  font-size: 0.875em;
+  font-size: 0.9em;
 }
-
+code {
+  background: var(--surface-2);
+  padding: 0.15rem 0.4rem;
+  border-radius: var(--radius-sm);
+}
 pre {
   padding: 1rem;
   overflow-x: auto;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+}
+pre code {
+  background: none;
+  padding: 0;
 }
 
-/* --- Badges --- */
-.badge {
-  font-weight: 500;
-  padding: 0.35em 0.75em;
-  border-radius: 9999px;
-  background-color: var(--bs-secondary);
-  color: white;
+/* ============================================================
+   Piste B — composants natifs du site (header/footer + pages)
+   Cf. CLAUDE.md, section "Direction visuelle". Utilisent les
+   tokens de assets/css/tokens.css (--bg, --ink-*, --accent*,
+   --font-display...) — plus aucune classe Bootstrap à supporter.
+   ============================================================ */
+
+.wrap {
+  max-width: 1680px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+@media (min-width: 768px) { .wrap { padding: 0 2.5rem; } }
+@media (min-width: 1440px) { .wrap { padding: 0 3.5rem; } }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+.eyebrow[href] { text-decoration: none; transition: color 0.15s ease; }
+.eyebrow[href]:hover { color: var(--accent-ink); }
+
+/* Inter est déjà la police de base (cf. reset ci-dessus) : seuls
+   letter-spacing/text-wrap sont à poser sur ces titres. */
+.section-head h2,
+.domaine-row h3,
+.process-step h3,
+.accent-band h2,
+.post-row h3 {
+  letter-spacing: -0.015em;
+  text-wrap: balance;
 }
 
-/* --- Icon --- */
-
-.icon {
-  color: #2e2e2e;
+/* Paragraphes longs (chapô, intros) : justifiés avec césure automatique,
+   rendu proche du texte imprimé (cf. CLAUDE.md, Direction visuelle). */
+.section-head p,
+.domaine-row p,
+.page-lede,
+.page-domaine-content p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
-/* --- Timeline --- */
-.timeline {
-  position: relative;
-  padding-left: 2rem;
-}
+/* ---------------- Header / Nav ---------------- */
 
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 7px;
+.site-header {
+  --nav-bg: var(--bg);
+  --nav-fg: var(--ink-heading);
+  --nav-muted: var(--ink-muted);
+  --nav-line: var(--line);
+  --nav-divider: var(--line);
+  position: sticky;
   top: 0;
-  bottom: 0;
-  width: 2px;
-  background-color: #e2e8f0;
+  z-index: 40;
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-line);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-.timeline-marker {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: var(--bs-primary);
-  margin-top: 6px;
-  flex-shrink: 0;
+/* Sur les pages avec un hero inversé (front matter `hero: true` -> body.has-inverted-hero),
+   le header démarre dans les couleurs du hero et bascule au scroll via .is-scrolled
+   (posée par assets/js/main.js). Sur les autres pages, toujours l'apparence claire. */
+body.has-inverted-hero .site-header:not(.is-scrolled) {
+  --nav-bg: var(--hero-bg);
+  --nav-fg: var(--hero-fg);
+  --nav-muted: var(--hero-muted);
+  --nav-line: transparent;
+  --nav-divider: rgba(223, 220, 212, 0.2);
 }
 
-@media (max-width: 767.98px) {
-  .timeline::before {
-    left: 20px;
-  }
-  .timeline {
-    padding-left: 1.5rem;
-  }
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  padding: 1rem 0;
 }
 
-/* --- Social Links --- */
-.social-links a {
-  color: #2e2e2e;
-  transition: var(--transition);
+.brand { display: flex; align-items: center; gap: 1rem; text-decoration: none; }
+
+.brand-mark {
+  width: 3.35rem; height: 3.35rem; flex: none;
+  display: grid; place-items: center;
+  color: var(--nav-fg);
+  transition: color 0.2s ease;
+}
+.brand-mark svg { width: 100%; height: 100%; display: block; }
+
+.brand-text { line-height: 1.25; }
+.brand-name { display: block; font-weight: 700; font-size: 1.3rem; letter-spacing: -0.01em; color: var(--nav-fg); transition: color 0.2s ease; }
+.brand-title { display: block; font-size: 1.1rem; font-style: italic; color: var(--nav-muted); transition: color 0.2s ease; }
+
+.nav-links { display: none; list-style: none; margin: 0; padding: 0; gap: 1.85rem; font-weight: 500; font-size: 1.1rem; }
+.nav-links a {
+  text-decoration: none; color: var(--nav-fg);
+  font-variant-caps: small-caps; letter-spacing: 0.03em;
+  padding: 0.35rem 0; border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.nav-links a:hover, .nav-links a:focus-visible { border-color: var(--accent); }
+.nav-links a[aria-current="page"] { border-color: var(--accent-ink); }
+
+.nav-actions { display: flex; align-items: center; gap: 0.75rem; margin-left: auto; }
+
+.action-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  font-weight: 600; font-size: 0.93rem;
+  padding: 0.7rem 1.35rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  text-decoration: none; cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, opacity 0.15s ease;
+}
+.action-btn-accent { background: var(--accent-fill); color: var(--accent-on); }
+.action-btn-accent:hover { opacity: 0.88; }
+.action-btn-outline { background: transparent; border-color: var(--ink-heading); color: var(--ink-heading); }
+.action-btn-outline:hover { background: var(--surface-2); }
+.action-btn-on-dark { background: transparent; border-color: rgba(247, 246, 243, 0.5); color: var(--hero-fg); }
+.action-btn-on-dark:hover { background: rgba(247, 246, 243, 0.1); }
+
+.nav-cta { display: none; }
+
+.burger {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2.5rem; height: 2.5rem;
+  border: 1px solid var(--nav-muted);
+  background: transparent;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+.burger svg { width: 1.3rem; height: 1.3rem; color: var(--nav-fg); transition: color 0.2s ease; }
+
+.mobile-panel { border-top: 1px solid var(--nav-divider); padding: 0.5rem 1.25rem 1.25rem; }
+.mobile-panel[hidden] { display: none; }
+.mobile-panel ul { list-style: none; margin: 0 0 1rem; padding: 0; display: flex; flex-direction: column; }
+.mobile-panel a {
+  display: block; padding: 0.75rem 0.25rem; text-decoration: none;
+  color: var(--nav-fg); font-weight: 500;
+  font-variant-caps: small-caps; letter-spacing: 0.03em;
+  border-bottom: 1px solid var(--nav-divider);
+}
+.mobile-panel a[aria-current="page"] { color: var(--accent-ink); }
+.mobile-panel .action-btn { width: 100%; }
+
+@media (min-width: 960px) {
+  .nav-links { display: flex; margin-left: auto; }
+  .nav-actions { margin-left: 0; }
+  .nav-cta { display: inline-flex; }
+  .burger, .mobile-panel { display: none; }
 }
 
-.social-links a:hover {
-  color: #2e2e2e;
-  transform: translateY(-2px);
-}
+/* ---------------- Hero — bandeau inversé, exception assumée ---------------- */
 
-/* --- Ratio (Google Maps) --- */
-.ratio {
+.hero {
   position: relative;
-  width: 100%;
+  overflow: hidden;
+  background: var(--hero-bg);
+  color: var(--hero-fg);
+  padding: 4rem 0 4.5rem;
+}
+@media (min-width: 960px) { .hero { padding: 6.5rem 0 7rem; } }
+
+/* Trame de pierre — appareil de taille (maquette Claude Design "Frise Citadelle Besançon", 1a) */
+.hero::before {
+  content: "";
+  position: absolute; inset: 0; z-index: 1;
+  background-image:
+    repeating-linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 0 1px, transparent 1px 64px),
+    repeating-linear-gradient(to right, rgba(255, 255, 255, 0.045) 0 1px, transparent 1px 140px);
+  background-position: 0 -1px;
+  pointer-events: none;
 }
 
-.ratio::before {
-  content: '';
+/* Liseré — cadre en angle, refermé en bas-gauche (idem maquette 1a) */
+.hero::after {
+  content: "";
+  position: absolute; z-index: 1;
+  left: 20px; right: 20px; top: 20px; bottom: 20px;
+  border-left: 1px solid var(--hero-accent);
+  border-bottom: 1px solid var(--hero-accent);
+  opacity: 0.55;
+  pointer-events: none;
+}
+@media (min-width: 768px) { .hero::after { left: 32px; right: 32px; top: 32px; bottom: 32px; } }
+
+.hero-content { position: relative; z-index: 2; max-width: 56rem; }
+
+.hero-tokens { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0 0 2rem; }
+.hero-token {
+  display: inline-flex; align-items: center;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid rgba(223, 220, 212, 0.35);
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--hero-muted);
+}
+
+.hero-tagline {
+  font-weight: 800;
+  font-size: clamp(2.5rem, 5.8vw, 4.5rem);
+  line-height: 1.1; letter-spacing: -0.02em;
+  max-width: 18ch; margin: 0 0 2rem;
+  color: var(--hero-fg);
+  text-wrap: balance;
+}
+.hero-tagline em { font-style: normal; color: var(--hero-accent); }
+
+.hero-caption { font-size: 0.95rem; color: var(--hero-muted); margin: 0 0 2.5rem; letter-spacing: 0.01em; }
+
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+
+/* ---------------- Sections communes de l'accueil ---------------- */
+
+.section { padding: 4.5rem 0; border-top: 1px solid var(--line); }
+.hero + .section { border-top: none; }
+.section--tint { background: var(--surface-2); border-top: none; border-bottom: 1px solid var(--line); }
+
+.section-head {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.6rem 2.5rem;
+  max-width: 68ch;
+  margin-bottom: 3rem;
+}
+.section-head h2 { font-size: clamp(1.65rem, 3vw, 2.1rem); margin: 0; }
+.section-head p { margin: 0; color: var(--ink-body); }
+
+@media (min-width: 860px) {
+  .section-head { grid-template-columns: 11rem 1fr; align-items: start; max-width: none; }
+  .section-head .eyebrow { grid-column: 1; grid-row: 1 / 3; padding-top: 0.35rem; }
+  .section-head h2 { grid-column: 2; grid-row: 1; }
+  .section-head p { grid-column: 2; grid-row: 2; max-width: 52ch; }
+}
+
+.link-arrow {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-weight: 600; font-size: 0.95rem; color: var(--ink-heading);
+  text-decoration: none; padding-bottom: 2px;
+  border-bottom: 1px solid var(--line);
+}
+.link-arrow span { color: inherit; transition: transform 0.15s ease; }
+.link-arrow:hover { border-color: var(--accent-ink); color: var(--accent-ink); }
+.link-arrow:hover span { transform: translateX(3px); }
+
+/* ---------------- Domaines : liste éditoriale ---------------- */
+
+.domaines-list { border-top: 1px solid var(--line); }
+
+.domaine-row {
+  display: grid;
+  grid-template-columns: 2.75rem 1fr auto;
+  align-items: start;
+  gap: 1.25rem;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.domaine-index {
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-muted);
+}
+
+.domaine-row h3 { font-size: 1.2rem; margin-bottom: 0.4rem; }
+.domaine-row p { margin: 0; font-size: 1rem; line-height: 1.7; color: var(--ink-body); max-width: 52ch; }
+.domaine-row .link-arrow { align-self: center; white-space: nowrap; }
+
+@media (max-width: 640px) {
+  .domaine-row { grid-template-columns: 2.25rem 1fr; }
+  .domaine-row .link-arrow { grid-column: 2; margin-top: 0.75rem; }
+}
+
+.section-foot { margin-top: 2.25rem; }
+
+/* ---------------- Décisions obtenues ---------------- */
+
+.proof-list { display: grid; gap: 0; border-top: 1px solid var(--line); }
+.decision-row {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: 1.5rem;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.decision-row .juridiction { font-weight: 600; font-size: 0.85rem; color: var(--accent-ink); }
+.decision-row h4 { margin: 0 0 0.3rem; font-weight: 600; font-size: 1rem; color: var(--ink-heading); }
+.decision-row p { margin: 0; font-size: 0.9rem; color: var(--ink-muted); }
+.proof-note { margin: 1.25rem 0 0; font-size: 0.78rem; color: var(--ink-muted); font-style: italic; }
+
+@media (max-width: 560px) {
+  .decision-row { grid-template-columns: 1fr; gap: 0.35rem; }
+}
+
+/* ---------------- Blog : aperçu, liste et article ---------------- */
+
+.posts-list { border-top: 1px solid var(--line); }
+.post-row {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr auto;
+  align-items: start;
+  gap: 1.25rem;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.post-row time { font-size: 0.85rem; color: var(--ink-muted); font-variant-numeric: tabular-nums; }
+.post-row h3 { font-size: 1.1rem; margin: 0 0 0.35rem; }
+.post-row p { margin: 0; font-size: 0.92rem; color: var(--ink-body); max-width: 48ch; }
+.post-row .link-arrow { align-self: center; white-space: nowrap; }
+
+@media (max-width: 640px) {
+  .post-row { grid-template-columns: 1fr; gap: 0.5rem; }
+  .post-row .link-arrow { margin-top: 0.5rem; }
+}
+
+.empty-note {
+  color: var(--ink-muted);
+  font-size: 1.05rem;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.post-meta {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.95rem; color: var(--ink-muted);
+  margin: 1rem 0 0;
+}
+.post-meta time { font-variant-numeric: tabular-nums; }
+
+.post-share {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.9rem;
+  margin-top: 3rem; padding-top: 1.75rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem; color: var(--ink-muted);
+}
+.post-share a { color: var(--ink-heading); text-decoration: none; border-bottom: 1px solid var(--line); }
+.post-share a:hover { color: var(--accent-ink); border-color: var(--accent-ink); }
+
+.post-related { margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid var(--line); }
+.post-related h2 { margin-top: 0; }
+
+/* ---------------- Processus d'intervention ---------------- */
+
+.process-steps {
+  list-style: none; margin: 0; padding: 2.5rem 0 0;
+  border-top: 1px solid var(--line);
+  display: flex; flex-direction: column;
+}
+.process-step { display: flex; align-items: flex-start; gap: 1.1rem; }
+.process-step h3 { font-size: 1.15rem; margin: 0 0 0.4rem; }
+.process-step p { margin: 0; font-size: 0.95rem; color: var(--ink-body); max-width: 40ch; }
+
+.process-arrow {
+  display: flex; align-items: center; justify-content: center;
+  padding: 1.1rem 0;
+  color: var(--ink-heading); font-size: 2rem; line-height: 1;
+}
+.process-arrow::before { content: "↓"; }
+
+@media (min-width: 860px) {
+  .process-steps { flex-direction: row; align-items: stretch; }
+  .process-step { flex: 1 1 0; }
+  .process-arrow { padding: 0 1.5rem; flex: none; }
+  .process-arrow::before { content: "→"; }
+}
+
+/* ---------------- Bandeau CTA de fin de page ---------------- */
+
+.accent-band { background: var(--bg); border-bottom: 1px solid var(--line); padding: 4rem 0 4.5rem; }
+
+.accent-band-grid { display: grid; gap: 2rem; align-items: start; }
+@media (min-width: 860px) { .accent-band-grid { grid-template-columns: 1.3fr 0.7fr; align-items: end; } }
+
+.accent-band h2 { font-size: clamp(1.9rem, 3.6vw, 2.75rem); margin: 0.9rem 0 0; max-width: 20ch; }
+.accent-band h2 em { font-style: normal; color: var(--accent-ink); }
+
+.accent-band-actions { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+@media (min-width: 860px) { .accent-band-actions { justify-content: flex-end; } }
+
+/* ---------------- Footer ---------------- */
+
+.site-footer { background: var(--bg); border-top: 1px solid var(--line); padding: 3.25rem 0 1.75rem; font-size: 0.9rem; }
+
+.footer-grid { display: grid; gap: 2.25rem; grid-template-columns: 1.4fr 1fr 1fr 1.1fr; }
+@media (max-width: 800px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .footer-grid { grid-template-columns: 1fr; } }
+
+.site-footer h3 {
+  font-weight: 600; font-size: 0.82rem;
+  letter-spacing: 0.03em; text-transform: uppercase;
+  color: var(--ink-heading); margin: 0 0 1rem;
+}
+.site-footer p { color: var(--ink-muted); margin: 0; }
+.site-footer ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; }
+.site-footer a { text-decoration: none; color: var(--ink-body); }
+.site-footer a:hover { color: var(--accent-ink); }
+
+.footer-socials { display: flex; gap: 0.75rem; margin-top: 1.35rem; }
+.footer-socials a {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2.15rem; height: 2.15rem;
+  border: 1px solid var(--line);
+  color: var(--ink-muted);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.footer-socials a:hover { color: var(--accent-ink); border-color: var(--accent-ink); }
+.footer-socials svg { width: 1.05rem; height: 1.05rem; }
+
+.footer-bottom {
+  margin-top: 2.75rem; padding-top: 1.5rem; border-top: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between;
+  font-size: 0.8rem; color: var(--ink-muted);
+}
+.footer-bottom p { margin: 0; color: var(--ink-muted); }
+.footer-legal { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+
+/* ---------------- Page domaine (silo /domaines-intervention/) ---------------- */
+
+.page-header { padding-bottom: 2.5rem; }
+.page-header h1 {
+  font-size: clamp(2.1rem, 4.2vw, 3rem);
+  letter-spacing: -0.015em;
+  margin: 0.9rem 0 1.25rem;
+  text-wrap: balance;
+}
+.page-lede {
+  font-size: 1.15rem; line-height: 1.7;
+  color: var(--ink-body);
+  max-width: 65ch; margin: 0;
+}
+
+.page-domaine-content { max-width: 65ch; }
+.page-domaine-content > *:first-child { margin-top: 0; }
+.page-domaine-content p {
+  color: var(--ink-body);
+  line-height: 1.75; margin: 0 0 1.5rem;
+}
+.page-domaine-content h2 {
+  font-size: 1.5rem; letter-spacing: -0.01em;
+  margin: 2.5rem 0 1.25rem;
+  text-wrap: balance;
+}
+
+.feature-list {
+  list-style: none; margin: 0 0 1rem; padding: 0;
+  border-top: 1px solid var(--line);
+}
+.feature-list li {
+  padding: 0.9rem 0 0.9rem 1.5rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-body);
+  font-size: 1rem;
+  position: relative;
+}
+.feature-list li::before {
+  content: "—";
+  position: absolute; left: 0;
+  color: var(--accent-ink);
+}
+
+/* ---------------- Carte filet générique (réutilisée : votre-avocat, contact) ---------------- */
+
+.info-card {
+  border: 1px solid var(--line);
+  padding: 2rem;
+}
+.info-card h3 {
+  font-weight: 600; font-size: 0.82rem;
+  letter-spacing: 0.03em; text-transform: uppercase;
+  color: var(--ink-heading); margin: 0 0 1rem;
+}
+.info-card .action-btn { width: 100%; }
+
+/* ---------------- Mise en page à deux colonnes (réutilisée : votre-avocat, contact) ----------------
+   Contenu principal + colonne latérale de 44rem, empilés sous 1320px (seuil repoussé
+   d'autant pour laisser une largeur de lecture confortable à la colonne principale
+   une fois la colonne latérale élargie). */
+
+.split-layout { display: grid; gap: 3rem; }
+@media (min-width: 1320px) {
+  .split-layout { grid-template-columns: 1fr 44rem; align-items: start; }
+}
+
+/* ---------------- Page "Votre avocat" ---------------- */
+
+@media (min-width: 1320px) {
+  .avocat-card { position: sticky; top: 6rem; }
+}
+.avocat-portrait {
+  width: 100%;
+  height: auto;
   display: block;
-  padding-top: 56.25%;
+  margin-bottom: 1.25rem;
 }
-
-.ratio > * {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.avocat-name {
+  font-weight: 700; font-size: 1.15rem;
+  color: var(--ink-heading); margin: 0 0 0.25rem;
 }
+.avocat-title { font-size: 0.92rem; color: var(--ink-muted); margin: 0 0 1.5rem; }
 
-/* --- List Group --- */
-.list-group-item {
-  border: none;
-  box-shadow: var(--box-shadow);
-  margin-bottom: 1rem;
-  transition: var(--transition);
+.avocat-card .footer-socials { margin: 0 0 2rem; }
+.avocat-card h3 + .feature-list { margin-bottom: 2rem; }
+.avocat-card .feature-list:last-child { margin-bottom: 0; }
+
+/* ---------------- Page "Contact" ---------------- */
+
+.contact-split aside { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.info-list { margin: 0; }
+.info-list > div { padding: 1rem 0; border-bottom: 1px solid var(--line); }
+.info-list > div:first-child { padding-top: 0; }
+.info-list > div:last-child { border-bottom: none; padding-bottom: 0; }
+.info-list dt {
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase;
+  color: var(--ink-muted); margin: 0 0 0.35rem;
 }
+.info-list dd { margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--ink-body); }
+.info-list dd a { color: var(--ink-body); text-decoration: none; border-bottom: 1px solid var(--line); }
+.info-list dd a:hover { color: var(--accent-ink); border-color: var(--accent-ink); }
 
-.list-group-item:hover {
-  box-shadow: var(--box-shadow-lg);
-  transform: translateY(-2px);
+.map-embed { position: relative; width: 100%; aspect-ratio: 16 / 9; margin: 1.5rem 0 1rem; }
+.map-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+/* ---------------- Pages légales (mentions-legales, politique-confidentialite) ----------------
+   Réutilise .page-domaine-content (largeur, paragraphes justifiés) pour le texte courant ;
+   les règles ci-dessous n'ajoutent que la séparation des sections par filet (remplace les
+   <hr> Bootstrap) et le style des h3. */
+
+.legal-content h2 {
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
 }
+.legal-content h2:first-of-type { padding-top: 0; border-top: none; margin-top: 0; }
 
-/* --- Text muted --- */
-.text-muted {
-  color: #2e2e2e !important;
+.legal-content h3 {
+  font-size: 1.15rem; letter-spacing: -0.005em;
+  margin: 2.5rem 0 1rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--line);
 }
+.legal-content h3:first-of-type { padding-top: 0; border-top: none; }
 
-.small.text-muted {
-  color: #2e2e2e !important;
-}
+/* Bloc coordonnées (adresse/téléphone...) : lignes courtes séparées par <br>,
+   ne doit pas hériter du justify des paragraphes courants (créerait des espaces
+   disproportionnés sur des lignes qui ne remplissent pas la largeur). */
+.legal-content .legal-meta { text-align: left; hyphens: none; }
 
-/* ============================================
-   Responsive Adjustments
-   ============================================ */
-
-@media (max-width: 767.98px) {
-  .display-4 {
-    font-size: 2.5rem;
+@media (prefers-reduced-motion: reduce) {
+  .site-header, .brand-mark, .brand-name, .brand-title, .nav-links a, .burger, .burger svg,
+  .action-btn, .link-arrow span, .footer-socials a {
+    transition: none !important;
   }
-
-  .display-5 {
-    font-size: 2rem;
-  }
-
-  :root {
-    --h1-size: 2rem;
-    --h2-size: 1.75rem;
-    --h3-size: 1.5rem;
-  }
-}
-
-/* ============================================
-   Animations
-   ============================================ */
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in {
-  animation: fadeIn 0.5s ease-out;
-}
-
-/* ============================================
-   Fix Footer Visibility - Force override
-   ============================================ */
-.bg-dark * {
-  color: #fff !important;
-}
-.bg-dark .text-muted,
-footer .text-muted {
-  color: rgba(255, 255, 255, 0.7) !important;
-}
-.bg-dark .small.text-muted,
-footer .small.text-muted {
-  color: rgba(255, 255, 255, 0.7) !important;
-}
-.bg-dark a:not(.text-muted),
-footer a:not(.text-muted) {
-  color: rgba(255, 255, 255, 0.7) !important;
-}
-.bg-dark a:hover,
-footer a:hover {
-  color: #fff !important;
 }

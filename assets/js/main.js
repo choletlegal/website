@@ -1,108 +1,33 @@
 // ============================================
-// Main JavaScript - Cholet Legal
+// JavaScript — vanilla, aucune dépendance (Bootstrap retiré)
 // ============================================
 
-// --- DOM Ready ---
-document.addEventListener('DOMContentLoaded', function() {
-  // Initialize Bootstrap tooltips
-  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-  tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl);
+// --- Menu burger mobile (header natif, Piste B) ---
+(function () {
+  var btn = document.getElementById('burger-btn');
+  var panel = document.getElementById('mobile-panel');
+  if (!btn || !panel) return;
+  btn.addEventListener('click', function () {
+    var open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    panel.hidden = open;
+    btn.setAttribute('aria-label', open ? 'Ouvrir le menu' : 'Fermer le menu');
   });
+})();
 
-  // Initialize Bootstrap popovers
-  const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-  popoverTriggerList.map(function (popoverTriggerEl) {
-    return new bootstrap.Popover(popoverTriggerEl);
-  });
-
-  // Form validation
-  const forms = document.querySelectorAll('.needs-validation');
-  Array.from(forms).forEach(form => {
-    form.addEventListener('submit', function(event) {
-      if (!form.checkValidity()) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
-      form.classList.add('was-validated');
-    }, false);
-  });
-
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href');
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    });
-  });
-
-  // Add fade-in animation on scroll
-  const animateOnScroll = () => {
-    const elements = document.querySelectorAll('.fade-in');
-    elements.forEach(element => {
-      const elementPosition = element.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-      if (elementPosition < windowHeight - 100) {
-        element.classList.add('animated');
-      }
-    });
-  };
-
-  // Run on load and scroll
-  animateOnScroll();
-  window.addEventListener('scroll', animateOnScroll);
-
-  // Mobile menu close on click
-  const navbarToggler = document.querySelector('.navbar-toggler');
-  const navbarCollapse = document.querySelector('.navbar-collapse');
-  if (navbarToggler && navbarCollapse) {
-    document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        if (navbarCollapse.classList.contains('show')) {
-          navbarToggler.click();
-        }
-      });
-    });
+// --- Header : bascule des couleurs du hero vers l'apparence claire au scroll ---
+// N'a d'effet visuel que sur les pages avec `hero: true` en front matter
+// (cf. main.css, body.has-inverted-hero) ; inoffensif ailleurs.
+(function () {
+  var header = document.querySelector('.site-header');
+  if (!header) return;
+  var threshold = 40;
+  function onScroll() {
+    header.classList.toggle('is-scrolled', window.scrollY > threshold);
   }
-});
-
-// --- Timeline CSS (pour la page À propos) ---
-document.addEventListener('DOMContentLoaded', function() {
-  const style = document.createElement('style');
-  style.textContent = `
-    .timeline-marker {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      margin-top: 6px;
-      flex-shrink: 0;
-    }
-    
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 7px;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background-color: #e2e8f0;
-    }
-    
-    @media (max-width: 767.98px) {
-      .timeline::before {
-        left: 20px;
-      }
-    }
-  `;
-  document.head.appendChild(style);
-});
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
 
 // --- Google Analytics (à décommenter après configuration) ---
 // function loadGA() {
@@ -111,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
 //     function gtag(){dataLayer.push(arguments);}
 //     gtag('js', new Date());
 //     gtag('config', 'GA_MEASUREMENT_ID');
-//     
+//
 //     const script = document.createElement('script');
 //     script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
 //     script.async = true;

@@ -8,7 +8,7 @@ layout: base
   {% include head-seo.html %}
   {% include head-css.html %}
 </head>
-<body>
+<body{% if page.hero %} class="has-inverted-hero"{% endif %}>
   {% include header/navbar.html %}
   
   <main>

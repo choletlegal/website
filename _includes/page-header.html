@@ -1,0 +1,22 @@
+<!--- En-tête de page standard (eyebrow + h1 + chapô) — réutilisé par toutes les pages
+      statiques et les layouts domaine/post plutôt que dupliqué page par page.
+      Paramètres :
+        eyebrow_text  (obligatoire) — libellé de la puce au-dessus du titre
+        eyebrow_href  (optionnel)   — si fourni, la puce devient un lien
+        title         (optionnel)   — défaut : page.title
+        lede          (optionnel)   — paragraphe .page-lede (peut contenir du HTML,
+                                      utiliser un capture Liquid en amont si besoin)
+        after         (optionnel)   — contenu brut inséré à la place du chapô
+                                      (ex. .post-meta sur une fiche article) -->
+<header class="section page-header">
+  <div class="wrap">
+    {% if include.eyebrow_href %}
+    <a class="eyebrow" href="{{ include.eyebrow_href }}">{{ include.eyebrow_text }}</a>
+    {% else %}
+    <span class="eyebrow">{{ include.eyebrow_text }}</span>
+    {% endif %}
+    <h1>{{ include.title | default: page.title }}</h1>
+    {% if include.lede %}<p class="page-lede">{{ include.lede }}</p>{% endif %}
+    {% if include.after %}{{ include.after }}{% endif %}
+  </div>
+</header>

@@ -1,0 +1,38 @@
+/* ============================================
+   Design tokens — Piste B
+   Source unique des couleurs / typographie / espacements
+   pour tout le site (Bootstrap et son propre jeu de
+   variables ont été entièrement retirés).
+   ============================================ */
+
+:root {
+  /* --- Couleurs --- */
+  --bg: #FFFFFF;
+  --surface: #FFFFFF;
+  --surface-2: #F4F5F3;
+  --line: #E2E4E1;
+
+  --ink-heading: #202327;
+  --ink-body: #4A4E54;
+  --ink-muted: #767B82;
+
+  --accent: #8C2F39;       /* bordeaux — décoratif : liens, traits, chiffres */
+  --accent-ink: #8C2F39;   /* bordeaux — texte-safe : boutons, liens, CTA */
+  --accent-fill: #8C2F39;  /* fond plein des boutons (texte blanc dessus) */
+  --accent-on: #FFFFFF;    /* texte clair sur bouton/bandeau accent */
+
+  /* --- Bandeau hero : seule zone en couleurs inversées du site --- */
+  --hero-bg: #1C1E22;
+  --hero-fg: #DFDCD4;
+  --hero-muted: rgba(223, 220, 212, 0.62);
+  --hero-accent: #D9838D;
+
+  /* --- Typographie ---
+     Un seul nom de variable, volontairement distinct de --font-heading / --font-body
+     (déjà utilisées par les pages pas encore migrées dans main.css) pour éviter
+     toute collision de cascade entre les deux jeux de tokens. */
+  --font-display: "Inter", -apple-system, "Segoe UI", sans-serif;
+
+  /* --- Forme --- */
+  --radius-sm: 3px;
+}

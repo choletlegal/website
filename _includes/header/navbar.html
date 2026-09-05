@@ -1,44 +1,45 @@
-<!--- Navbar Responsive avec Bootstrap 5 -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
-  <div class="container">
-    <!-- Logo -->
-    <a class="navbar-brand d-flex align-items-center lh-sm fs-4" href="/">
-      <img src="/assets/images/favicon_avocat_antonin_cholet_150.webp" alt="Logo Antonin Cholet" height="100px">
-      <span class="fw-bold">{{ site.data.author.author.first_name }}
-      <span class="fw-bold text-uppercase">{{site.data.author.author.last_name }}</span></br>
-      <span class="fw-normal fst-italic">{{ site.data.author.author.titre }}</span>
+<!--- En-tête : logo, navigation, CTA, menu burger mobile.
+      Chrome partagé par toutes les pages (cf. CLAUDE.md, Direction visuelle).
+      Sur les pages avec un hero inversé (front matter `hero: true`), le header
+      démarre dans les couleurs du hero puis bascule au scroll — géré par les
+      tokens --nav-* dans main.css et la classe .is-scrolled posée par main.js. -->
+{% assign author = site.data.author.author %}
+<header class="site-header">
+  <nav class="site-nav wrap" aria-label="Navigation principale">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true">
+        {% include icons/logo-mark.svg.html %}
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">{{ author.first_name }} {{ author.last_name }}</span>
+        <span class="brand-title">{{ author.titre }}</span>
+      </span>
     </a>
 
-    <!-- Mobile Toggle Button -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <ul class="nav-links">
+      {% for item in site.data.nav %}
+      <li><a href="{{ item.url }}"{% if page.url contains item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+      {% endfor %}
+    </ul>
 
-    <!-- Navigation Links -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/">Accueil</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/equipe/antonin-cholet">Votre avocat</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/services/">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/blog/">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/contact/">Contact</a>
-        </li>
-      </ul>
-
-      <!-- Bouton CTA (prendre RDV) -->
-      <a href="/contact/" class="btn btn-primary ms-lg-3">
-        <i class="fas fa-calendar-alt me-1"></i> Prendre RDV
-      </a>
+    <div class="nav-actions">
+      <a class="action-btn action-btn-accent nav-cta" href="/contact/">Prendre rendez-vous</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="mobile-panel" id="burger-btn" aria-label="Ouvrir le menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <path d="M4 7h16"></path>
+          <path d="M4 12h16"></path>
+          <path d="M4 17h16"></path>
+        </svg>
+      </button>
     </div>
+  </nav>
+
+  <div class="mobile-panel" id="mobile-panel" hidden>
+    <ul>
+      {% for item in site.data.nav %}
+      <li><a href="{{ item.url }}"{% if page.url contains item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+      {% endfor %}
+    </ul>
+    <a class="action-btn action-btn-accent" href="/contact/">Prendre rendez-vous</a>
   </div>
-</nav>
+</header>
