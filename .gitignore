@@ -20,3 +20,4 @@ vendor
 # Node (si utilisé plus tard)
 node_modules/
 package-lock.json
+.tmp-screenshots/
