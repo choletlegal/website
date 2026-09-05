@@ -1,0 +1,26 @@
+---
+layout: default
+---
+{% assign domaine = site.data.domaines.domaines | where: "slug", page.domaine | first %}
+<article class="page-domaine">
+  {% include page-header.html eyebrow_text="Domaines d'intervention" eyebrow_href="/domaines-intervention/" lede=page.description %}
+
+  <div class="section">
+    <div class="wrap">
+      <div class="page-domaine-content">
+        {{ content }}
+
+        {% if domaine.features and domaine.features.size > 0 %}
+        <h2>Notre accompagnement</h2>
+        <ul class="feature-list">
+          {% for feature in domaine.features %}
+          <li>{{ feature | capitalize }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  {% include sections/cta.html %}
+</article>
