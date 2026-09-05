@@ -15,6 +15,12 @@ author:
   bio: "Avocat au Barreau de Besançon, en droit de l'urbanisme"
   avatar: "/assets/images/portrait_avocat_antonin_cholet.webp"
 
+# --- Permalinks ---
+# URL propre pour les articles de blog : pas de date ni de catégorie dans l'URL
+# (cf. CLAUDE.md, décision SEO). Les 16 articles publiés avant cette décision
+# gardent leur URL d'origine via un permalink explicite dans leur front matter.
+permalink: /blog/:title/
+
 # --- Default Front Matter ---
 defaults:
   - scope:

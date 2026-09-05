@@ -1,6 +1,7 @@
 ---
 layout: post
 date: 2019-01-09
+permalink: "/blog/droit administratif/2019/01/09/ordres-architectes-interet-agir.html"
 title: "Intérêt à agir des Ordres d'architectes contre un permis de construire pour faire respecter l’article L.431-1 du code de l'urbanisme"
 description: ""
 categories: ["Droit administratif"]

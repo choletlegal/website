@@ -1,6 +1,7 @@
 ---
 layout: post
 date: 2019-06-07
+permalink: "/blog/droit administratif/2019/06/07/l111-4-constructions-en-dehors-des-parties-urbanisees.html"
 title: "L.111-4 1° : Précisions sur les constructions autorisées en dehors des parties urbanisées"
 description: ""
 categories: ["Droit administratif"]

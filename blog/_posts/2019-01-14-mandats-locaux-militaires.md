@@ -1,6 +1,7 @@
 ---
 layout: post
 date: 2019-01-14
+permalink: "/blog/droit administratif/2019/01/14/mandats-locaux-militaires.html"
 title: "Conditions d'exercice de mandats locaux par des militaires d’active"
 description: ""
 categories: ["Droit administratif"]

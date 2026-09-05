@@ -1,6 +1,7 @@
 ---
 layout: post
 date: 2018-10-24
+permalink: "/blog/droit administratif/2018/10/24/autorite-chose-jugee-changement-situation-droit-fait.html"
 title: "Appréciation des modifications de la situation de droit ou de fait permettant de revenir sur l’autorité de chose jugée"
 description: ""
 categories: ["Droit administratif"]

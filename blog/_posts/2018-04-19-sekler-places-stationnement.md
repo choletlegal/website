@@ -1,6 +1,7 @@
 ---
 layout: post
 date: 2018-04-19
+permalink: "/blog/droit administratif/2018/04/19/sekler-places-stationnement.html"
 title: "Application de la jurisprudence Sekler au regard des obligations de création de places de stationnement"
 description: ""
 categories: ["Droit administratif"]

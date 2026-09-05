@@ -1,6 +1,7 @@
 ---
 layout: post
 date: 2018-04-18
+permalink: "/blog/droit administratif/2018/04/18/cristallisation-des-moyens-en-appel.html"
 title: "L'ordonnance de cristallisation des moyens en première instance s'impose en appel"
 description: ""
 categories: ["Droit administratif"]

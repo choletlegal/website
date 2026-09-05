@@ -1,6 +1,7 @@
 ---
 layout: post
 date: 2017-12-18
+permalink: "/blog/droit administratif/2017/12/18/notification-r600-1-membres-indivision.html"
 title: "R.600-1 : Précision sur la notification du recours à l'égard des membres d'une indivision"
 description: ""
 categories: ["Droit administratif"]

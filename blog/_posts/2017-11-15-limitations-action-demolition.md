@@ -1,6 +1,7 @@
 ---
 layout: post
 date: 2017-11-15
+permalink: "/blog/droit administratif/2017/11/15/limitations-action-demolition.html"
 title: "Limitations à l’action en démolition d’une construction – L’article L.480-13 1° du code de l’urbanisme"
 description: ""
 categories: ["Droit administratif"]

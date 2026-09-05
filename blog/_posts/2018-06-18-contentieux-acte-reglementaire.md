@@ -1,6 +1,7 @@
 ---
 layout: post
 date: 2018-06-18
+permalink: "/blog/droit administratif/2018/06/18/contentieux-acte-reglementaire.html"
 title: "Contentieux administratif : Nouveau régime contentieux des actes réglementaires"
 description: ""
 categories: ["Droit administratif"]
