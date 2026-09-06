@@ -17,13 +17,20 @@ author:
     country: "France"
   barreau: "Besançon"
   # Zone d'intervention pour le SEO/GEO local : Besançon en tête (zone
-  # principale, cohérente avec l'adresse du cabinet), puis le ressort de la
-  # Cour administrative d'appel de Nancy (Grand Est + Bourgogne-Franche-Comté)
-  # plutôt que la France entière — même si Me Cholet peut en théorie plaider
-  # devant tout TA/CAA.
+  # principale, cohérente avec l'adresse du cabinet), puis les autres sièges
+  # de tribunaux administratifs du ressort (Dijon, Nancy, Strasbourg), puis
+  # le ressort complet de la Cour administrative d'appel de Nancy (Grand Est
+  # + Bourgogne-Franche-Comté) — plutôt que la France entière, même si Me
+  # Cholet peut en théorie plaider devant tout TA/CAA.
   area_served:
     - type: City
       name: "Besançon"
+    - type: City
+      name: "Dijon"
+    - type: City
+      name: "Nancy"
+    - type: City
+      name: "Strasbourg"
     - type: State
       name: "Bourgogne-Franche-Comté"
     - type: State
