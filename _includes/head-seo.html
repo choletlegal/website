@@ -4,7 +4,7 @@
 {% assign site_url = site.url | append: site.baseurl %}
 {% assign author = site.data.author.author | default: site.author %}
 
-<!-- knowsAbout et sameAs calculés une seule fois, réutilisés par les schémas Person et LegalService ci-dessous -->
+<!-- knowsAbout et sameAs calculés une seule fois, réutilisés par les schémas Person et Attorney ci-dessous -->
 {% assign knows_about = site.data.domaines.domaines | map: "title" %}
 {% capture same_as_raw %}
 {% if author.social.linkedin %}https://{{ author.social.linkedin }}|{% endif %}
@@ -73,11 +73,11 @@
 }
 </script>
 
-<!-- ==== Schema.org (JSON-LD) - LegalService (pour SEO local) ==== -->
+<!-- ==== Schema.org (JSON-LD) - Attorney (pour SEO local) ==== -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LegalService",
+  "@type": "Attorney",
   "name": {{ site_name | jsonify }},
   "description": {{ site_description | strip_html | jsonify }},
   "address": {
