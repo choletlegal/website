@@ -352,7 +352,7 @@ body.has-inverted-hero .site-header:not(.is-scrolled) {
 .decision-row .juridiction { font-weight: 600; font-size: 0.85rem; color: var(--accent-ink); }
 .decision-row h4 { margin: 0 0 0.3rem; font-weight: 600; font-size: 1rem; color: var(--ink-heading); }
 .decision-row p { margin: 0; font-size: 0.9rem; color: var(--ink-muted); }
-.proof-note { margin: 1.25rem 0 0; font-size: 0.78rem; color: var(--ink-muted); font-style: italic; }
+.proof-note { margin: 1.25rem 0; font-size: 0.78rem; color: var(--ink-muted); font-style: italic; }
 
 @media (max-width: 560px) {
   .decision-row { grid-template-columns: 1fr; gap: 0.35rem; }
