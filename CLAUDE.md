@@ -46,12 +46,12 @@ Documentation de contexte pour les sessions Claude Code sur ce projet. À mettre
 │   ├── default.html          # header + footer
 │   ├── domaine.html          # page d'un domaine d'intervention — fait
 │   ├── post.html             # article de blog — fait (Piste B)
-│   └── decision.html         # fiche décision — pas encore créé (collection _decisions absente)
+│   └── decision.html         # fiche décision — fait
 │
 ├── assets/css/tokens.css     # couleurs, typographie, espacements — source unique des tokens (Piste B)
 │
 ├── blog/_posts/               # articles de blog — 16 articles réels (2017-2019), site.posts (Jekyll lit aussi un _posts niché hors racine)
-├── _decisions/                # fiches décisions obtenues — pas encore créée (aucune fiche réelle)
+├── _decisions/                # fiches décisions obtenues — 2 fiches réelles (PLUI Grand Dole)
 │
 ├── domaines-intervention/
 │   ├── index.md               # page pivot
@@ -120,24 +120,28 @@ Cette structure reflète l'arborescence en silo décrite plus bas — un dossier
 Veille juridique générale, commentaires de jurisprudence non liés à un dossier personnel.
 
 ### `_decisions` — Décisions obtenues (collection personnalisée)
-Objectif : preuve de compétence (E-E-A-T), affichée à la fois en archive dédiée et injectée sur la page du domaine concerné.
+Objectif : preuve de compétence (E-E-A-T), injectée sur la page du domaine concerné (fait) et sur l'accueil (3 plus récentes, fait) ; archive dédiée pas encore construite.
 
 ```yaml
 # _config.yml
 collections:
   decisions:
     output: true
-    permalink: /domaines-intervention/:domaine/:slug/
 ```
+
+**Pas de `permalink` de collection** : contrairement à ce qui avait été envisagé initialement, Jekyll ne sait pas résoudre un placeholder de permalink (`:domaine`) à partir d'un champ de front matter arbitraire — seul un jeu de clés fixe est supporté nativement (`:path`, `:title`, `:slug`, `:categories`, dates...), sans plugin custom (risqué si l'hébergement final est GitHub Pages). Chaque fiche fixe donc son propre `permalink:` explicite, comme le font déjà les anciens articles de blog.
 
 Front matter type d'une fiche décision :
 ```yaml
 ---
 domaine: permis-de-construire     # doit correspondre au slug du dossier domaine concerné
+permalink: /domaines-intervention/permis-de-construire/annulation-refus-permis/
 juridiction: "TA Besançon"
 date: 2026-05-12
 titre: "Annulation d'un refus de permis de construire"
-resume: "..."
+title: "Annulation d'un refus de permis de construire"   # identique à titre, requis par jekyll-seo-tag (page.title)
+description: "..."                # meta description SEO, distincte du resume affiché sur la page
+resume: "..."                     # réponse synthétique 40-60 mots (cf. checklist SEO/GEO)
 lien_texte_integral: ""           # Légifrance / CE / CAA
 ---
 ```
@@ -238,8 +242,8 @@ Palette et polices tranchées après plusieurs itérations sur une maquette visu
 - [x] ~~Migration Piste B de `votre-avocat/`, `contact/`, `mentions-legales/`, `politique-confidentialite/`, `blog/`~~ → fait (voir Journal ci-dessous)
 - [x] ~~URL des articles de blog (date/catégorie dans l'URL ?)~~ → tranché : `permalink: /blog/:title/` pour les nouveaux articles (pas de date ni catégorie — plus propre, meilleur pour le CTR sur du contenu evergreen ; la date reste affichée sur la page et dans les données structurées, ce qui est ce qui compte pour le SEO). Les 16 articles existants gardent leur URL d'origine (permalink explicite figé par article).
 - [ ] Hébergement final
-- [ ] Fiches `_decisions` réelles (collection pas encore configurée dans `_config.yml`, aucune fiche créée — la section "Décisions obtenues" de l'accueil utilise un contenu d'exemple clairement marqué comme tel)
-- [ ] `_layouts/decision.html` à créer quand la collection `_decisions` sera mise en place
+- [x] ~~Fiches `_decisions` réelles~~ → fait (voir Journal) : collection configurée, 2 premières fiches réelles publiées (PLUI Grand Dole) ; reste ouvert : archive dédiée (pas encore construite, cf. `_decisions` ci-dessus)
+- [x] ~~`_layouts/decision.html` à créer~~ → fait (voir Journal)
 - [x] ~~Données structurées Schema.org par page domaine (`Service`/`Attorney`)~~ → fait (voir Journal), ainsi qu'`Article` sur le blog
 - [x] ~~Page orpheline `services.md`~~ → supprimée, ainsi que le layout `page.html` (plus aucun usage)
 - [x] ~~Nettoyer le CSS Bootstrap mort dans `assets/css/main.css`~~ → fait, Bootstrap et Font Awesome entièrement retirés (CDN inclus)
@@ -299,4 +303,10 @@ Palette et polices tranchées après plusieurs itérations sur une maquette visu
   - Vérifié : build propre, 133 blocs JSON-LD sur tout le site validés (`json.loads`), 0 invalide, 0 champ vide inattendu.
 - **`areaServed` corrigé** (validé par le porteur du projet) : `Besançon` (`City`) unique remplacé par `Grand Est` + `Bourgogne-Franche-Comté` (deux `State`), sur le bloc cabinet et sur `Service` par domaine — reflète le ressort réel de la Cour administrative d'appel de Nancy, avec la Bourgogne ajoutée sur demande explicite (proximité de Dijon) plutôt que la France entière (trop large pour un signal SEO/GEO local) ou Besançon seule (trop restreint). Source unique : `author.area_served` dans `_data/author.yml`, consommée par un nouveau fragment `_includes/schema-area-served.html` injecté comme valeur (pas un bloc `<script>` autonome) dans les deux schémas. Bug trouvé au passage : le commentaire d'en-tête du fragment (en HTML `<!--- -->`) se retrouvait injecté tel quel dans le JSON puisqu'un fragment inliné en valeur ne doit contenir que le littéral JSON — corrigé en commentaire Liquid `{% comment %}`, supprimé au rendu.
 - **`@type` resserré de `LegalService` à `Attorney`** sur le bloc cabinet (`head-seo.html`) et partout où il est référencé (`provider` dans `schema-service.html`, `publisher` dans `schema-article.html`), sur demande explicite (« SEO précis ») : `Attorney` est un sous-type de `LegalService` spécifiquement prévu pour l'activité d'un avocat, donc plus précis pour les moteurs/IA. Règle rappelée au passage : les noms de `@type` du vocabulaire Schema.org restent toujours en anglais (identifiants du standard, jamais traduits), à la différence des valeurs de champs (`name`, `description`…) qui restent en français.
-- **Besançon réintroduite dans `areaServed`** en tête de liste (`City`), devant les deux régions (`State`) : `address.addressLocality` dit où est le cabinet, `areaServed` dit où il exerce — deux signaux distincts, et une ville précise en tête reste nécessaire pour ne pas diluer le signal local fort ("avocat urbanisme Besançon") derrière les deux régions plus larges. `author.area_served` dans `_data/author.yml` restructuré en liste d'objets `{type, name}` (au lieu de simples chaînes toutes typées `State`) pour permettre ce mélange City/State ; `schema-area-served.html` mis à jour en conséquence.
+- **Besançon réintroduite dans `areaServed`** en tête de liste (`City`), devant les deux régions (`State`) : `address.addressLocality` dit où est le cabinet, `areaServed` dit où il exerce — deux signaux distincts, et une ville précise en tête reste nécessaire pour ne pas diluer le signal local fort ("avocat urbanisme Besançon") derrière les deux régions plus larges. `author.area_served` dans `_data/author.yml` restructuré en liste d'objets `{type, name}` (au lieu de simples chaînes toutes typées `State`) pour permettre ce mélange City/State ; `schema-area-served.html` mis à jour en conséquence. Complété ensuite avec les sièges de tribunaux administratifs du ressort (Dijon, Nancy, Strasbourg), sur demande explicite : ordre final `[Besançon, Dijon, Nancy, Strasbourg, Bourgogne-Franche-Comté, Grand Est]`.
+- **Collection `_decisions` mise en place, avec 2 premières fiches réelles** (PLUI du Grand Dole, TA Besançon 2021 + CAA Nancy 2025, rattachées au domaine `plu-documents-urbanisme`) :
+  - Bug trouvé en testant avec du contenu réel : le `permalink` de collection documenté (`/domaines-intervention/:domaine/:slug/`) casse le build — Jekyll ne résout un placeholder de permalink qu'à partir d'un jeu de clés fixe (`path`, `title`, `slug`, `categories`, dates...), jamais d'un champ de front matter arbitraire comme `domaine`, sans plugin custom (risqué si l'hébergement final est GitHub Pages). Retiré du `_config.yml` ; chaque fiche fixe désormais son propre `permalink:` explicite, comme le font déjà les anciens articles de blog. Doc de la collection mise à jour en conséquence.
+  - Nouveau `_layouts/decision.html` (page-header avec titre/résumé en lede, méta juridiction+date, contenu, lien vers le texte intégral, retour au domaine, schema.org `Article` via `schema-article.html`) et `_includes/decision-row.html` (juridiction/titre/résumé), réutilisé par l'aperçu accueil et par la page domaine plutôt que dupliqué.
+  - `sections/decisions-preview.html` bascule du contenu d'exemple vers une vraie boucle sur `site.decisions` ; `_layouts/domaine.html` affiche désormais les décisions du domaine courant (filtre `where: "domaine", page.domaine`).
+  - Point de vigilance déontologique traité (validation explicite du porteur du projet) : la citation de l'arrêt CAA Nancy nommait la mandante — remplacée par "la requérante" dans le passage cité.
+  - Vérifié : build propre, JSON-LD `Article` valide sur les deux fiches, décisions affichées et triées par date décroissante sur l'accueil et sur `plu-documents-urbanisme/`, aucune occurrence du nom résiduelle dans le site généré.
