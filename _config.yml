@@ -33,6 +33,23 @@ defaults:
     values:
       layout: "post"
       author: "Maître Antonin Cholet"
+  - scope:
+      path: "_decisions"
+    values:
+      layout: "decision"
+      author: "Maître Antonin Cholet"
+
+# --- Collections ---
+# Décisions obtenues, distinctes du blog (_posts) : preuve de compétence,
+# imbriquées sous le domaine d'intervention concerné (cf. CLAUDE.md).
+# Pas de "permalink" de collection ici : Jekyll ne sait résoudre un placeholder
+# de permalink (ex. ":domaine") qu'à partir d'un jeu de clés fixe (path, title,
+# slug, categories, dates...), jamais d'un champ de front matter arbitraire,
+# sans plugin custom. Chaque fiche fixe donc son propre "permalink:" explicite
+# (même approche que les anciens articles de blog).
+collections:
+  decisions:
+    output: true
 
 # --- Plugins ---
 plugins:

@@ -19,6 +19,16 @@ layout: default
           {% endfor %}
         </ul>
         {% endif %}
+
+        {% assign domaine_decisions = site.decisions | where: "domaine", page.domaine | sort: "date" | reverse %}
+        {% if domaine_decisions.size > 0 %}
+        <h2>Décisions obtenues</h2>
+        <div class="proof-list">
+          {% for decision in domaine_decisions %}
+          {% include decision-row.html decision=decision %}
+          {% endfor %}
+        </div>
+        {% endif %}
       </div>
     </div>
   </div>

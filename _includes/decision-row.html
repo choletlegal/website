@@ -1,0 +1,11 @@
+<!--- Ligne d'une décision obtenue (juridiction + titre + résumé), réutilisée par
+      sections/decisions-preview.html (accueil) et _layouts/domaine.html (page
+      du domaine concerné, filtrée par domaine).
+      Paramètre requis : decision (un document de la collection site.decisions). -->
+<div class="decision-row">
+  <div class="juridiction">{{ include.decision.juridiction }}</div>
+  <div>
+    <h4><a href="{{ include.decision.url }}">{{ include.decision.titre }}</a></h4>
+    <p>{{ include.decision.resume }}</p>
+  </div>
+</div>
