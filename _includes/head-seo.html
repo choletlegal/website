@@ -4,6 +4,18 @@
 {% assign site_url = site.url | append: site.baseurl %}
 {% assign author = site.data.author.author | default: site.author %}
 
+<!-- knowsAbout et sameAs calculés une seule fois, réutilisés par les schémas Person et LegalService ci-dessous -->
+{% assign knows_about = site.data.domaines.domaines | map: "title" %}
+{% capture same_as_raw %}
+{% if author.social.linkedin %}https://{{ author.social.linkedin }}|{% endif %}
+{% if author.social.twitter %}https://twitter.com/{{ author.social.twitter | remove: '@' }}|{% endif %}
+{% if author.social.github %}https://{{ author.social.github }}|{% endif %}
+{% if author.social.facebook %}https://{{ author.social.facebook }}|{% endif %}
+{% if author.social.wsocial %}https://{{ author.social.wsocial }}|{% endif %}
+{% if author.social.avocat %}https://{{ author.social.avocat }}|{% endif %}
+{% endcapture %}
+{% assign same_as = same_as_raw | strip_newlines | split: "|" %}
+
 <!-- ==== Webmaster Verification ==== -->
 {% if site.webmaster_verifications.google != "" %}
 <meta name="google-site-verification" content="{{ site.webmaster_verifications.google }}" />
@@ -21,35 +33,24 @@
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "{{ author.name | xml_escape }}",
-  "description": "{{ author.bio | xml_escape }}",
+  "name": {{ author.name | jsonify }},
+  "description": {{ author.bio | jsonify }},
   "url": "{{ site_url }}",
   "image": "{{ site_url }}{{ author.avatar }}",
   "hasOccupation": {
     "@type": "Role",
     "name": "Avocat"
   },
-  "knowsAbout": [
-    "Droit de l'urbanisme",
-    "Permis de construire",
-    "Contentieux de l'urbanisme",
-    "Droit de la construction",
-    "Droit administratif"
-  ],
+  "knowsAbout": {{ knows_about | jsonify }},
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "{{ author.address.street | xml_escape }}",
-    "addressLocality": "{{ author.address.city | xml_escape }}",
+    "streetAddress": {{ author.address.street | jsonify }},
+    "addressLocality": {{ author.address.city | jsonify }},
     "postalCode": "{{ author.address.postal_code }}",
     "addressCountry": "{{ author.address.country }}"
   },
-  "telephone": "{{ author.phone | replace: ' ', '' }}"{% if author.social.linkedin %},
-  "sameAs": [
-    "https://{{ author.social.linkedin }}",
-    "https://twitter.com/{{ author.social.twitter | replace: '@', '' }}",
-    "https://{{ author.social.github }}",
-    "https://{{ author.social.facebook }}"
-  ]{% endif %}
+  "telephone": "{{ author.phone | replace: ' ', '' }}"{% if same_as.size > 0 %},
+  "sameAs": {{ same_as | jsonify }}{% endif %}
 }
 </script>
 
@@ -58,11 +59,11 @@
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "{{ site_name | xml_escape }}",
+  "name": {{ site_name | jsonify }},
   "url": "{{ site_url }}",
   "author": {
     "@type": "Person",
-    "name": "{{ author.name | xml_escape }}"
+    "name": {{ author.name | jsonify }}
   },
   "potentialAction": {
     "@type": "SearchAction",
@@ -77,24 +78,19 @@
 {
   "@context": "https://schema.org",
   "@type": "LegalService",
-  "name": "{{ site_name | xml_escape }}",
-  "description": "{{ site_description | strip_html | xml_escape }}",
+  "name": {{ site_name | jsonify }},
+  "description": {{ site_description | strip_html | jsonify }},
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "{{ author.address.street | xml_escape }}",
-    "addressLocality": "{{ author.address.city | xml_escape }}",
+    "streetAddress": {{ author.address.street | jsonify }},
+    "addressLocality": {{ author.address.city | jsonify }},
     "postalCode": "{{ author.address.postal_code }}",
     "addressCountry": "{{ author.address.country }}"
   },
   "telephone": "{{ author.phone | replace: ' ', '' }}",
   "openingHours": "Mo,Tu,We,Th,Fr 09:00-18:00",
-  "hasMap": "https://www.google.com/maps/place/24+Rue+de+la+Pr%C3%A9fecture,+25000+Besan%C3%A7on",
-  "sameAs": [
-    "https://{{ author.social.linkedin }}",
-    "https://twitter.com/{{ author.social.twitter | replace: '@', '' }}",
-    "https://{{ author.social.github }}",
-    "https://{{ author.social.facebook }}"
-  ],
+  "hasMap": "https://www.openstreetmap.org/?mlat=47.2341014&mlon=6.0233971#map=19/47.2341014/6.0233971",
+  {% if same_as.size > 0 %}"sameAs": {{ same_as | jsonify }},{% endif %}
   "logo": {
     "@type": "ImageObject",
     "url": "{{ site_url }}/assets/images/logo_avocat_antonin_cholet_1200.webp",
