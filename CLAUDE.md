@@ -107,6 +107,7 @@ Cette structure reflète l'arborescence en silo décrite plus bas — un dossier
 /domaines-intervention/fonction-publique/
 /honoraires/                                       Page à créer (absente du site actuel)
 /blog/                                              Actualités juridiques générales
+/decisions/                                         Archive de toutes les décisions obtenues (hors nav principale)
 /contact/
 /mentions-legales/
 /politique-confidentialite/
@@ -120,7 +121,7 @@ Cette structure reflète l'arborescence en silo décrite plus bas — un dossier
 Veille juridique générale, commentaires de jurisprudence non liés à un dossier personnel.
 
 ### `_decisions` — Décisions obtenues (collection personnalisée)
-Objectif : preuve de compétence (E-E-A-T), injectée sur la page du domaine concerné (fait) et sur l'accueil (3 plus récentes, fait) ; archive dédiée pas encore construite.
+Objectif : preuve de compétence (E-E-A-T), injectée sur la page du domaine concerné (fait), sur l'accueil (3 plus récentes, fait) et en archive dédiée `/decisions/` (fait — liée depuis l'accueil et le domaine via un lien "Voir toutes les décisions", pas encore ajoutée à la nav principale).
 
 ```yaml
 # _config.yml
@@ -242,7 +243,7 @@ Palette et polices tranchées après plusieurs itérations sur une maquette visu
 - [x] ~~Migration Piste B de `votre-avocat/`, `contact/`, `mentions-legales/`, `politique-confidentialite/`, `blog/`~~ → fait (voir Journal ci-dessous)
 - [x] ~~URL des articles de blog (date/catégorie dans l'URL ?)~~ → tranché : `permalink: /blog/:title/` pour les nouveaux articles (pas de date ni catégorie — plus propre, meilleur pour le CTR sur du contenu evergreen ; la date reste affichée sur la page et dans les données structurées, ce qui est ce qui compte pour le SEO). Les 16 articles existants gardent leur URL d'origine (permalink explicite figé par article).
 - [ ] Hébergement final
-- [x] ~~Fiches `_decisions` réelles~~ → fait (voir Journal) : collection configurée, 2 premières fiches réelles publiées ; reste ouvert : archive dédiée (voir entrée suivante)
+- [x] ~~Fiches `_decisions` réelles~~ → fait (voir Journal) : collection configurée, 2 premières fiches réelles publiées, archive dédiée `/decisions/` créée
 - [x] ~~`_layouts/decision.html` à créer~~ → fait (voir Journal)
 - [x] ~~Données structurées Schema.org par page domaine (`Service`/`Attorney`)~~ → fait (voir Journal), ainsi qu'`Article` sur le blog
 - [x] ~~Page orpheline `services.md`~~ → supprimée, ainsi que le layout `page.html` (plus aucun usage)
@@ -310,3 +311,5 @@ Palette et polices tranchées après plusieurs itérations sur une maquette visu
   - `sections/decisions-preview.html` bascule du contenu d'exemple vers une vraie boucle sur `site.decisions` ; `_layouts/domaine.html` affiche désormais les décisions du domaine courant (filtre `where: "domaine", page.domaine`).
   - Point de vigilance déontologique traité (validation explicite du porteur du projet) : la citation de l'arrêt CAA Nancy nommait la mandante — remplacée par "la requérante" dans le passage cité.
   - Vérifié : build propre, JSON-LD `Article` valide sur les deux fiches, décisions affichées et triées par date décroissante sur l'accueil et sur `plu-documents-urbanisme/`, aucune occurrence du nom résiduelle dans le site généré.
+- **Archive dédiée `/decisions/` créée** (sur demande explicite) : nouvelle page `decisions.html` listant `site.decisions` (triées par date décroissante), réutilisant `page-header.html` et `decision-row.html` plutôt que dupliqué. Liée depuis l'aperçu de l'accueil et — pour rester cohérent — un lien "Voir toutes les décisions" (`.section-foot`/`.link-arrow`, motif déjà utilisé par `blog-preview.html`) ajouté sous l'aperçu accueil ; aperçu accueil désormais masqué si `site.decisions` est vide (même garde que `blog-preview.html`). Pas encore ajoutée à `_data/nav.yml` (nav principale à 4 liens, décision volontairement pas prise ici) — à trancher avec le porteur du projet.
+- Mentions d'une affaire cliente précise retirées du journal CLAUDE.md (ce fichier documente le projet, pas les dossiers clients) — contenu des fiches elles-mêmes inchangé.

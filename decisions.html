@@ -1,0 +1,27 @@
+---
+layout: default
+title: "Décisions obtenues"
+description: "Décisions obtenues par Maître Antonin Cholet devant les juridictions administratives (tribunaux administratifs, cours administratives d'appel) en droit public et droit de l'urbanisme."
+permalink: /decisions/
+---
+
+{% capture lede %}
+Un aperçu des décisions obtenues devant les juridictions administratives, à l'appui des dossiers
+suivis par Maître Antonin Cholet en droit public et droit de l'urbanisme.
+{% endcapture %}
+{% include page-header.html eyebrow_text="Décisions obtenues" title="Décisions obtenues" lede=lede %}
+
+<div class="section">
+  <div class="wrap">
+    {% assign all_decisions = site.decisions | sort: "date" | reverse %}
+    {% if all_decisions.size > 0 %}
+    <div class="proof-list">
+      {% for decision in all_decisions %}
+      {% include decision-row.html decision=decision %}
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="empty-note">Aucune décision publiée pour l'instant.</p>
+    {% endif %}
+  </div>
+</div>

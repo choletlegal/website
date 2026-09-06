@@ -1,6 +1,7 @@
 <!--- Aperçu "Décisions obtenues" (accueil) — boucle sur site.decisions
       (triée par date décroissante, limitée à 3). -->
 {% assign recent_decisions = site.decisions | sort: "date" | reverse | limit: 3 %}
+{% if recent_decisions.size > 0 %}
 <section class="section section--tint">
   <div class="wrap">
     <div class="section-head">
@@ -13,5 +14,10 @@
       {% include decision-row.html decision=decision %}
       {% endfor %}
     </div>
+
+    <div class="section-foot">
+      <a class="link-arrow" href="/decisions/">Voir toutes les décisions <span aria-hidden="true">→</span></a>
+    </div>
   </div>
 </section>
+{% endif %}
