@@ -1,0 +1,24 @@
+<!--- Schema.org (JSON-LD) - Service, pour une page de domaine d'intervention.
+      Paramètre requis : domaine (un item de site.data.domaines.domaines). -->
+{% assign site_url = site.url | append: site.baseurl %}
+{% assign author = site.data.author.author | default: site.author %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": {{ domaine.title | jsonify }},
+  "name": {{ domaine.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "url": {{ site_url | append: domaine.url | jsonify }},
+  "areaServed": {
+    "@type": "City",
+    "name": "Besançon"
+  },
+  "provider": {
+    "@type": "LegalService",
+    "name": {{ site.title | jsonify }},
+    "url": {{ site_url | jsonify }},
+    "telephone": {{ author.phone | replace: ' ', '' | jsonify }}
+  }
+}
+</script>

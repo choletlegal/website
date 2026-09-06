@@ -2,6 +2,7 @@
 layout: default
 ---
 {% assign domaine = site.data.domaines.domaines | where: "slug", page.domaine | first %}
+{% include schema-service.html domaine=domaine %}
 <article class="page-domaine">
   {% include page-header.html eyebrow_text="Domaines d'intervention" eyebrow_href="/domaines-intervention/" lede=page.description %}
 
