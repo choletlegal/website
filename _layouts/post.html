@@ -1,6 +1,25 @@
 ---
 layout: default
 ---
+{% assign site_url = site.url | append: site.baseurl %}
+{% assign article_description = page.description %}
+{% if article_description.size == 0 %}
+  {% assign article_description = page.excerpt | strip_html | strip_newlines | truncatewords: 40 %}
+{% endif %}
+{% assign article_image = site_url | append: page.image %}
+{% assign article_logo = site_url | append: "/assets/images/logo_avocat_antonin_cholet_1200.webp" %}
+{% assign article_date_published = page.date | date_to_xmlschema %}
+{% assign article_author = page.author | default: site.author.name %}
+{% assign article_url = page.url | absolute_url %}
+{% include schema-article.html
+  headline=page.title
+  description=article_description
+  image=article_image
+  date_published=article_date_published
+  author_name=article_author
+  url=article_url
+  logo_url=article_logo
+%}
 {% assign post_category = page.categories | first | default: "Blog" %}
 {% capture post_meta %}
 <p class="post-meta">

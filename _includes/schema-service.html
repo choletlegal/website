@@ -6,10 +6,10 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "serviceType": {{ domaine.title | jsonify }},
-  "name": {{ domaine.title | jsonify }},
+  "serviceType": {{ include.domaine.title | jsonify }},
+  "name": {{ include.domaine.title | jsonify }},
   "description": {{ page.description | jsonify }},
-  "url": {{ site_url | append: domaine.url | jsonify }},
+  "url": {{ site_url | append: include.domaine.url | jsonify }},
   "areaServed": {
     "@type": "City",
     "name": "Besançon"

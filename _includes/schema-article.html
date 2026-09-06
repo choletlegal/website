@@ -1,0 +1,31 @@
+<!--- Schema.org (JSON-LD) - Article, générique pour tout contenu éditorial daté
+      (articles de blog, et plus tard fiches _decisions).
+      Paramètres requis : headline, description, image, date_published, author_name, url, logo_url.
+      Paramètre optionnel : date_modified. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ include.headline | jsonify }},
+  "description": {{ include.description | jsonify }},
+  "image": {{ include.image | jsonify }},
+  "datePublished": {{ include.date_published | jsonify }}{% if include.date_modified %},
+  "dateModified": {{ include.date_modified | jsonify }}{% endif %},
+  "author": {
+    "@type": "Person",
+    "name": {{ include.author_name | jsonify }}
+  },
+  "publisher": {
+    "@type": "LegalService",
+    "name": {{ site.title | jsonify }},
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ include.logo_url | jsonify }}
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ include.url | jsonify }}
+  }
+}
+</script>
