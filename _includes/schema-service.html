@@ -10,10 +10,7 @@
   "name": {{ include.domaine.title | jsonify }},
   "description": {{ page.description | jsonify }},
   "url": {{ site_url | append: include.domaine.url | jsonify }},
-  "areaServed": {
-    "@type": "City",
-    "name": "Besançon"
-  },
+  "areaServed": {% include schema-area-served.html %},
   "provider": {
     "@type": "LegalService",
     "name": {{ site.title | jsonify }},

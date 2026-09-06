@@ -1,0 +1,9 @@
+{% comment %}
+  Fragment JSON-LD réutilisable : tableau areaServed (liste de State),
+  à utiliser comme valeur d'une clé "areaServed" dans un bloc Schema.org.
+  Source unique : _data/author.yml (author.area_served). Autonome (ne dépend
+  d'aucune variable définie par l'appelant). Contrairement aux autres includes
+  schema-*.html, ce fragment ne doit produire QUE le littéral JSON ci-dessous
+  (pas de commentaire HTML ni de <script> englobant) puisqu'il est inliné en
+  valeur au milieu d'un objet JSON, pas inclus comme bloc autonome.
+{% endcomment %}{% assign author = site.data.author.author | default: site.author %}[{% for area in author.area_served %}{ "@type": "State", "name": {{ area | jsonify }} }{% unless forloop.last %},{% endunless %}{% endfor %}]

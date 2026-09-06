@@ -16,6 +16,12 @@ author:
     postal_code: "25000"
     country: "France"
   barreau: "Besançon"
+  # Zone d'intervention pour le SEO/GEO local : ressort de la Cour administrative
+  # d'appel de Nancy (Grand Est + Bourgogne-Franche-Comté), plutôt que la France
+  # entière — même si Me Cholet peut en théorie plaider devant tout TA/CAA.
+  area_served:
+    - "Grand Est"
+    - "Bourgogne-Franche-Comté"
   specializations:
     - "Droit de l'urbanisme"
     - "Permis de construire"
