@@ -25,9 +25,9 @@ author:
     - type: City
       name: "Besançon"
     - type: State
-      name: "Grand Est"
-    - type: State
       name: "Bourgogne-Franche-Comté"
+    - type: State
+      name: "Grand Est"
   specializations:
     - "Droit de l'urbanisme"
     - "Permis de construire"
