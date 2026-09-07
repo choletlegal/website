@@ -59,11 +59,7 @@ Documentation de contexte pour les sessions Claude Code sur ce projet. À mettre
 │   ├── declaration-prealable.md
 │   ├── contentieux-urbanisme.md
 │   ├── plu-documents-urbanisme.md
-│   ├── fonction-publique.md
-│   ├── environnement-icpe.md
-│   ├── domaine-public.md
-│   ├── responsabilite-administrative.md
-│   └── police-administrative.md
+│   └── fonction-publique.md
 │
 ├── assets/
 │   ├── css/main.css          # reset de base sur les tokens Piste B (body/headings/liens/code) + composants Piste B — Bootstrap entièrement retiré
@@ -109,10 +105,6 @@ Cette structure reflète l'arborescence en silo décrite plus bas — un dossier
 /domaines-intervention/contentieux-urbanisme/
 /domaines-intervention/plu-documents-urbanisme/
 /domaines-intervention/fonction-publique/
-/domaines-intervention/environnement-icpe/
-/domaines-intervention/domaine-public/
-/domaines-intervention/responsabilite-administrative/
-/domaines-intervention/police-administrative/
 /honoraires/                                       Page à créer (absente du site actuel)
 /blog/                                              Actualités juridiques générales
 /decisions/                                         Archive de toutes les décisions obtenues (hors nav principale)
@@ -121,7 +113,7 @@ Cette structure reflète l'arborescence en silo décrite plus bas — un dossier
 /politique-confidentialite/
 ```
 
-**Granularité des domaines** : 9 domaines — pas d'éclatement du "Contentieux de l'Urbanisme". Aux 4 domaines urbanisme initiaux et à "Droit de la Fonction Publique" (discipline, avancement, rémunération, accident de service) se sont ajoutés 4 domaines droit public complémentaires : "Droit de l'Environnement et des ICPE", "Domaine Public", "Responsabilité Administrative", "Police Administrative" (cf. Journal). Chaque page a un contenu substantiel propre, pas de page vide.
+**Granularité des domaines** : tranché — 5 domaines, pas d'éclatement du "Contentieux de l'Urbanisme". Un 5ᵉ domaine, "Droit de la Fonction Publique", a été ajouté (discipline, avancement, rémunération, accident de service) en plus des 4 domaines urbanisme existants. Chaque page a un contenu substantiel propre, pas de page vide.
 
 ## Collections Jekyll
 
@@ -327,5 +319,3 @@ Palette et polices tranchées après plusieurs itérations sur une maquette visu
 - **Boutons de filtre par domaine sur `/decisions/`** : `.filter-bar` générée en Liquid depuis les domaines réellement représentés dans `site.decisions` (`map: "domaine" | uniq`, titres résolus via `_data/domaines.yml`) — s'auto-adapte à l'ajout de fiches, n'apparaît que si plus d'un domaine est représenté (inutile avec un seul groupe). `data-domaine` posé sur chaque `.decision-row` (`decision-row.html`), filtrage vanilla JS dans `main.js` (aucune dépendance ajoutée), dégradation sans JS via l'attribut `hidden` par défaut sur la barre (toutes les décisions restent visibles si JS désactivé). Testé en simulant temporairement 2 domaines pour vérifier le rendu, changement de test annulé avant commit.
 - **Champ `titre` fusionné dans `title`** sur les fiches `_decisions` (doublon repéré par le porteur du projet) : les deux valaient toujours la même chaîne (contrairement à `resume`/`description`, délibérément distincts par contenu et longueur), `titre` servait uniquement l'affichage (`decision-row.html`, h1 de `_layouts/decision.html`) pendant que `title` restait requis pour `jekyll-seo-tag`/`<title>`. Toutes les références basculées sur `title` (déjà exposé nativement par Jekyll sur tout document) ; le paramètre `title=` devenu redondant retiré de l'appel à `page-header.html` dans `_layouts/decision.html`, qui utilise déjà `page.title` par défaut. Rendu vérifié strictement identique (h1, listes, `headline` JSON-LD).
 - **Question posée sur d'éventuels plugins de placeholders de permalink personnalisés** (`jekyll_custom_permalink`, `jekyll-placeholders`), maintenant que le déploiement passe par une Action GitHub Actions avec Gemfile propre (donc hors du bac à sable `github-pages`) : les deux existent et fonctionneraient techniquement, mais tous deux abandonnés depuis 2018-2019 (une seule release 0.0.1 pour le premier, installation Git sans release pour le second, aucune compatibilité Jekyll 4.x déclarée) — écartés au profit de la solution `:path` déjà en place, qui produit la même URL sans dépendance tierce. Pas d'action de code, juste une clarification à conserver si la question revient.
-- **2 fiches `_decisions` corrigées de domaine** : `distance-reciprocite-100-metres-elevage-bovin-zone-montagne` et `suspension-refere-permis-construire-distance-reciprocite-zone-agricole-defavorisee`, initialement rangées par erreur à la racine de `_decisions/` (préfixe de date + `permalink:` explicite en doublon), puis dans `plu-documents-urbanisme/` par erreur d'attribution — corrigées en `permis-de-construire/` (leur domaine réel), `domaine:` mis à jour en conséquence. URL publique impactée (`/domaines-intervention/permis-de-construire/...`) mais sans casse puisque jamais déployée en production.
-- **Granularité des domaines étendue de 5 à 9** (décision explicite du porteur du projet) : ajout de 4 domaines droit public complémentaires aux 5 existants — "Droit de l'Environnement et des ICPE", "Domaine Public", "Responsabilité Administrative", "Police Administrative". Chaque page suit le même gabarit que les 5 existantes (`layout: domaine`, front matter `domaine`/`title`/`description`/`permalink`, contenu éditorial substantiel propre en 3 paragraphes) ; entrées correspondantes ajoutées dans `_data/domaines.yml` (titre, description courte, `features`, pas d'image pour l'instant — champ `image` déjà inutilisé par les templates même sur les domaines existants). Page pivot `domaines-intervention/index.md` mise à jour ("cinq" → "neuf" domaines, meta description recomposée). Contenu rédigé sans validation métier préalable (avocat non consulté sur le texte précis) — **à faire relire par le porteur du projet avant publication**, au même titre que le contrôle déontologique déjà en place pour les fiches `_decisions`. Pas de sous-dossiers `_decisions/<nouveau-domaine>/` créés à ce stade : git ne suit pas les dossiers vides, ils seront créés naturellement à l'ajout d'une première fiche réelle pour un de ces domaines. Vérifié : build propre, un seul H1 par nouvelle page, JSON-LD `Service` valide (aucun champ vide) sur les 4 pages, 9 domaines listés sur l'accueil et la page pivot.
