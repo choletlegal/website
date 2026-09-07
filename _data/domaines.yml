@@ -28,6 +28,17 @@ domaines:
       - "Recours en cas de refus"
       - "Conseil sur les seuils"
 
+  - slug: permis-amenager
+    title: "Permis d'Aménager"
+    description: "Accompagnement pour les opérations de lotissement et les autres aménagements soumis à permis d'aménager"
+    image: ""
+    url: /domaines-intervention/permis-amenager/
+    features:
+      - "permis d'aménager pour lotissement"
+      - "recours contre un refus ou une opposition"
+      - "permis d'aménager modificatif"
+      - "conformité des travaux d'équipement"
+
   - slug: contentieux-urbanisme
     title: "Contentieux de l'Urbanisme"
     description: "Défense de vos droits devant les juridictions administratives"
@@ -47,8 +58,6 @@ domaines:
     features:
       - "Élaboration et révision de PLU"
       - "Contentieux des PLU"
-      - "Permis d'aménager"
-      - "Lotissements"
 
   - slug: fonction-publique
     title: "Droit de la fonction publique"
