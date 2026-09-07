@@ -17,6 +17,16 @@ suivis par Maître Antonin Cholet en droit public et droit de l'urbanisme.
 
     {% assign all_decisions = site.decisions | sort: "date" | reverse %}
     {% if all_decisions.size > 0 %}
+    {% assign domaine_slugs = all_decisions | map: "domaine" | uniq %}
+    {% if domaine_slugs.size > 1 %}
+    <div class="filter-bar" role="group" aria-label="Filtrer par domaine" hidden>
+      <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">Tous</button>
+      {% for slug in domaine_slugs %}
+      {% assign domaine = site.data.domaines.domaines | where: "slug", slug | first %}
+      <button type="button" class="filter-btn" data-filter="{{ slug }}" aria-pressed="false">{{ domaine.title }}</button>
+      {% endfor %}
+    </div>
+    {% endif %}
     <div class="proof-list">
       {% for decision in all_decisions %}
       {% include decision-row.html decision=decision %}

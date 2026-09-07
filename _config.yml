@@ -42,14 +42,18 @@ defaults:
 # --- Collections ---
 # Décisions obtenues, distinctes du blog (_posts) : preuve de compétence,
 # imbriquées sous le domaine d'intervention concerné (cf. CLAUDE.md).
-# Pas de "permalink" de collection ici : Jekyll ne sait résoudre un placeholder
-# de permalink (ex. ":domaine") qu'à partir d'un jeu de clés fixe (path, title,
-# slug, categories, dates...), jamais d'un champ de front matter arbitraire,
-# sans plugin custom. Chaque fiche fixe donc son propre "permalink:" explicite
-# (même approche que les anciens articles de blog).
+# Jekyll ne sait résoudre un placeholder de permalink (ex. ":domaine") qu'à
+# partir d'un jeu de clés fixe (path, title, slug, categories, dates...),
+# jamais d'un champ de front matter arbitraire, sans plugin custom. Le
+# placeholder ":path" FAIT partie de ce jeu fixe et retient l'arborescence de
+# dossiers relative à la racine de la collection : en rangeant chaque fiche
+# dans _decisions/<domaine>/<slug>.md (sans préfixe de date dans le nom de
+# fichier), ":path" vaut "<domaine>/<slug>" et reproduit l'URL voulue sans
+# aucun "permalink:" à écrire fiche par fiche.
 collections:
   decisions:
     output: true
+    permalink: /domaines-intervention/:path/
 
 # --- Plugins ---
 plugins:

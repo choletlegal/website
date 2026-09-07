@@ -128,15 +128,15 @@ Objectif : preuve de compétence (E-E-A-T), injectée sur la page du domaine con
 collections:
   decisions:
     output: true
+    permalink: /domaines-intervention/:path/
 ```
 
-**Pas de `permalink` de collection** : contrairement à ce qui avait été envisagé initialement, Jekyll ne sait pas résoudre un placeholder de permalink (`:domaine`) à partir d'un champ de front matter arbitraire — seul un jeu de clés fixe est supporté nativement (`:path`, `:title`, `:slug`, `:categories`, dates...), sans plugin custom (risqué si l'hébergement final est GitHub Pages). Chaque fiche fixe donc son propre `permalink:` explicite, comme le font déjà les anciens articles de blog.
+**Permalink dynamique via `:path`, pas de champ `permalink:` par fiche** : Jekyll ne sait pas résoudre un placeholder de permalink (`:domaine`) à partir d'un champ de front matter arbitraire — seul un jeu de clés fixe est supporté nativement (`:path`, `:title`, `:slug`, `:categories`, dates...), sans plugin custom (risqué si l'hébergement final est GitHub Pages). `:path` fait partie de ce jeu fixe et retient l'arborescence de dossiers relative à la racine de la collection : en rangeant chaque fiche dans `_decisions/<domaine>/<slug>.md` (nom de fichier **sans préfixe de date**), `:path` vaut `<domaine>/<slug>` et reproduit l'URL voulue automatiquement — le dossier + le nom de fichier suffisent, plus besoin d'écrire de `permalink:` fiche par fiche (à la différence des anciens articles de blog, qui gardent chacun le leur).
 
-Front matter type d'une fiche décision :
+Front matter type d'une fiche décision (`_decisions/permis-de-construire/annulation-refus-permis.md`) :
 ```yaml
 ---
-domaine: permis-de-construire     # doit correspondre au slug du dossier domaine concerné
-permalink: /domaines-intervention/permis-de-construire/annulation-refus-permis/
+domaine: permis-de-construire     # doit correspondre au slug du dossier domaine concerné (= nom du sous-dossier _decisions)
 juridiction: "TA Besançon"
 date: 2026-05-12
 titre: "Annulation d'un refus de permis de construire"
@@ -144,8 +144,11 @@ title: "Annulation d'un refus de permis de construire"   # identique à titre, r
 description: "..."                # meta description SEO, distincte du resume affiché sur la page
 resume: "..."                     # réponse synthétique 40-60 mots (cf. checklist SEO/GEO)
 lien_texte_integral: ""           # Légifrance / CE / CAA
+tags: ["PLUi", "vice de procédure"]   # optionnel, libre — prépare un futur filtre par tag (pas encore d'UI dédiée)
 ---
 ```
+
+**Filtre par domaine sur `/decisions/`** : une barre de boutons (`.filter-bar`, vanilla JS dans `main.js`) apparaît automatiquement dès que les fiches publiées couvrent plus d'un domaine (générée depuis `site.decisions | map: "domaine" | uniq`, titres résolus via `_data/domaines.yml`) — rien à maintenir manuellement à l'ajout d'une fiche. Dégradation sans JS : la barre reste masquée (`hidden`), toutes les décisions restent visibles.
 
 **Point de vigilance déontologique — à valider avec l'Ordre avant publication** : anonymisation des parties, accord du client si nécessaire, respect du secret professionnel même sur des décisions publiques. Ne pas publier de fiche sans ce contrôle.
 
@@ -196,9 +199,9 @@ lien_texte_integral: ""           # Légifrance / CE / CAA
 4. Vérifier les liens vers les pages domaine concernées (maillage interne).
 
 ### Ajouter une fiche décision obtenue
-1. Créer `_decisions/AAAA-MM-JJ-slug.md` avec le front matter décrit plus haut (`domaine`, `juridiction`, `date`, `titre`, `resume`, `lien_texte_integral`).
+1. Créer `_decisions/<domaine>/<slug>.md` (sous-dossier = slug du domaine, nom de fichier = slug de la fiche, **sans préfixe de date**) avec le front matter décrit plus haut (`domaine`, `juridiction`, `date`, `titre`, `resume`, `lien_texte_integral`, `tags` optionnel) — pas de champ `permalink:` à ajouter, il est généré automatiquement par la collection.
 2. **Vérifier l'anonymisation / absence de risque déontologique avant tout commit** (voir point de vigilance plus haut).
-3. Vérifier que la page du domaine concerné affiche bien la nouvelle fiche (filtre par `domaine`).
+3. Vérifier que la page du domaine concerné affiche bien la nouvelle fiche (filtre par `domaine`), et que la barre de filtre apparaît sur `/decisions/` si la fiche introduit un nouveau domaine.
 
 ### Mettre à jour les données du cabinet ou la liste des domaines
 - Modifier `_data/cabinet.yml` (coordonnées, réseaux) ou `_data/domaines.yml` (ajout/retrait d'un domaine) plutôt que de toucher les templates un par un.
@@ -313,3 +316,5 @@ Palette et polices tranchées après plusieurs itérations sur une maquette visu
   - Vérifié : build propre, JSON-LD `Article` valide sur les deux fiches, décisions affichées et triées par date décroissante sur l'accueil et sur `plu-documents-urbanisme/`, aucune occurrence du nom résiduelle dans le site généré.
 - **Archive dédiée `/decisions/` créée** (sur demande explicite) : nouvelle page `decisions.html` listant `site.decisions` (triées par date décroissante), réutilisant `page-header.html` et `decision-row.html` plutôt que dupliqué. Liée depuis l'aperçu de l'accueil et — pour rester cohérent — un lien "Voir toutes les décisions" (`.section-foot`/`.link-arrow`, motif déjà utilisé par `blog-preview.html`) ajouté sous l'aperçu accueil ; aperçu accueil désormais masqué si `site.decisions` est vide (même garde que `blog-preview.html`). Pas encore ajoutée à `_data/nav.yml` (nav principale à 4 liens, décision volontairement pas prise ici) — à trancher avec le porteur du projet.
 - Mentions d'une affaire cliente précise retirées du journal CLAUDE.md (ce fichier documente le projet, pas les dossiers clients) — contenu des fiches elles-mêmes inchangé.
+- **Permalink de collection `_decisions` rendu dynamique via `:path`** (suite à une question du porteur du projet sur la maintenance des `permalink:` en dur) : le blocage initial documenté ci-dessus ne concernait que `:domaine` (champ arbitraire) — `:path`, lui, fait partie du jeu de placeholders fixes que Jekyll résout nativement et retient l'arborescence de dossiers relative à la racine de la collection. `permalink: /domaines-intervention/:path/` ajouté une fois dans `_config.yml` ; les 2 fiches existantes déplacées dans `_decisions/plu-documents-urbanisme/` (nom de fichier sans préfixe de date), leur `permalink:` explicite retiré. URLs générées vérifiées identiques à l'existant (aucun lien cassé). Conséquence pour l'avenir : plus aucun `permalink:` à écrire pour une nouvelle fiche, juste la ranger au bon endroit (`_decisions/<domaine>/<slug>.md`). Champ `tags:` optionnel ajouté au passage (pas encore d'UI de filtre associée, prématuré à 2 fiches).
+- **Boutons de filtre par domaine sur `/decisions/`** : `.filter-bar` générée en Liquid depuis les domaines réellement représentés dans `site.decisions` (`map: "domaine" | uniq`, titres résolus via `_data/domaines.yml`) — s'auto-adapte à l'ajout de fiches, n'apparaît que si plus d'un domaine est représenté (inutile avec un seul groupe). `data-domaine` posé sur chaque `.decision-row` (`decision-row.html`), filtrage vanilla JS dans `main.js` (aucune dépendance ajoutée), dégradation sans JS via l'attribut `hidden` par défaut sur la barre (toutes les décisions restent visibles si JS désactivé). Testé en simulant temporairement 2 domaines pour vérifier le rendu, changement de test annulé avant commit.
