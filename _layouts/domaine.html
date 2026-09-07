@@ -15,7 +15,7 @@ layout: default
         <h2>Notre accompagnement</h2>
         <ul class="feature-list">
           {% for feature in domaine.features %}
-          <li>{{ feature | capitalize }}</li>
+          <li>{{ feature | slice: 0, 1 | upcase }}{{ feature | slice: 1, feature.size }}</li>
           {% endfor %}
         </ul>
         {% endif %}
