@@ -6,11 +6,11 @@
 # ============================================
 
 domaines:
-  - slug: permis-de-construire
+  - slug: permis-construire
     title: "Permis de Construire"
     description: "Accompagnement pour l'obtention et la défense de vos permis de construire"
     image: "/assets/images/services/permis-construire.jpg"
-    url: /domaines-intervention/permis-de-construire/
+    url: /domaines-intervention/permis-construire/
     features:
       - "Dépôt de dossier de permis de construire"
       - "Recours contre les refus de permis"

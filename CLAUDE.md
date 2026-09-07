@@ -55,7 +55,7 @@ Documentation de contexte pour les sessions Claude Code sur ce projet. À mettre
 │
 ├── domaines-intervention/
 │   ├── index.md               # page pivot
-│   ├── permis-de-construire.md
+│   ├── permis-construire.md
 │   ├── declaration-prealable.md
 │   ├── contentieux-urbanisme.md
 │   ├── plu-documents-urbanisme.md
@@ -104,7 +104,7 @@ Cette structure reflète l'arborescence en silo décrite plus bas — un dossier
 /                                                  Accueil
 /votre-avocat/                                     Présentation de Me Cholet
 /domaines-intervention/                            Page pivot (silo SEO)
-/domaines-intervention/permis-de-construire/
+/domaines-intervention/permis-construire/
 /domaines-intervention/declaration-prealable/
 /domaines-intervention/contentieux-urbanisme/
 /domaines-intervention/plu-documents-urbanisme/
@@ -141,10 +141,10 @@ collections:
 
 **Permalink dynamique via `:path`, pas de champ `permalink:` par fiche** : Jekyll ne sait pas résoudre un placeholder de permalink (`:domaine`) à partir d'un champ de front matter arbitraire — seul un jeu de clés fixe est supporté nativement (`:path`, `:title`, `:slug`, `:categories`, dates...), sans plugin custom (risqué si l'hébergement final est GitHub Pages). `:path` fait partie de ce jeu fixe et retient l'arborescence de dossiers relative à la racine de la collection : en rangeant chaque fiche dans `_decisions/<domaine>/<slug>.md` (nom de fichier **sans préfixe de date**), `:path` vaut `<domaine>/<slug>` et reproduit l'URL voulue automatiquement — le dossier + le nom de fichier suffisent, plus besoin d'écrire de `permalink:` fiche par fiche (à la différence des anciens articles de blog, qui gardent chacun le leur).
 
-Front matter type d'une fiche décision (`_decisions/permis-de-construire/annulation-refus-permis.md`) :
+Front matter type d'une fiche décision (`_decisions/permis-construire/annulation-refus-permis.md`) :
 ```yaml
 ---
-domaine: permis-de-construire     # doit correspondre au slug du dossier domaine concerné (= nom du sous-dossier _decisions)
+domaine: permis-construire     # doit correspondre au slug du dossier domaine concerné (= nom du sous-dossier _decisions)
 juridiction: "TA Besançon"
 date: 2026-05-12
 title: "Annulation d'un refus de permis de construire"   # titre affiché (h1, listes) ET requis par jekyll-seo-tag (page.title) — un seul champ, pas de doublon
@@ -162,7 +162,7 @@ tags: ["PLUi", "vice de procédure"]   # optionnel, libre — prépare un futur 
 ## Bonnes pratiques
 
 ### Convention de nommage
-- Fichiers et dossiers : minuscules, mots séparés par des tirets (`permis-de-construire.md`, `contentieux-urbanisme/`), jamais d'espace ni d'accent dans un nom de fichier.
+- Fichiers et dossiers : minuscules, mots séparés par des tirets (`permis-construire.md`, `contentieux-urbanisme/`), jamais d'espace ni d'accent dans un nom de fichier.
 - Slugs d'URL identiques aux noms de fichiers/dossiers pour éviter toute divergence entre arborescence physique et URL publiée.
 - Images : `nom-descriptif-sujet.webp` (voir ci-dessous), pas de noms génériques (`image1.jpg`, `IMG_2024.png`).
 
@@ -329,3 +329,4 @@ Palette et polices tranchées après plusieurs itérations sur une maquette visu
 - **Question posée sur d'éventuels plugins de placeholders de permalink personnalisés** (`jekyll_custom_permalink`, `jekyll-placeholders`), maintenant que le déploiement passe par une Action GitHub Actions avec Gemfile propre (donc hors du bac à sable `github-pages`) : les deux existent et fonctionneraient techniquement, mais tous deux abandonnés depuis 2018-2019 (une seule release 0.0.1 pour le premier, installation Git sans release pour le second, aucune compatibilité Jekyll 4.x déclarée) — écartés au profit de la solution `:path` déjà en place, qui produit la même URL sans dépendance tierce. Pas d'action de code, juste une clarification à conserver si la question revient.
 - **2 fiches `_decisions` corrigées de domaine** : `distance-reciprocite-100-metres-elevage-bovin-zone-montagne` et `suspension-refere-permis-construire-distance-reciprocite-zone-agricole-defavorisee`, initialement rangées par erreur à la racine de `_decisions/` (préfixe de date + `permalink:` explicite en doublon), puis dans `plu-documents-urbanisme/` par erreur d'attribution — corrigées en `permis-de-construire/` (leur domaine réel), `domaine:` mis à jour en conséquence. URL publique impactée (`/domaines-intervention/permis-de-construire/...`) mais sans casse puisque jamais déployée en production.
 - **Granularité des domaines étendue de 5 à 9** (décision explicite du porteur du projet) : ajout de 4 domaines droit public complémentaires aux 5 existants — "Droit de l'Environnement et des ICPE", "Domaine Public", "Responsabilité Administrative", "Police Administrative". Chaque page suit le même gabarit que les 5 existantes (`layout: domaine`, front matter `domaine`/`title`/`description`/`permalink`, contenu éditorial substantiel propre en 3 paragraphes) ; entrées correspondantes ajoutées dans `_data/domaines.yml` (titre, description courte, `features`, pas d'image pour l'instant — champ `image` déjà inutilisé par les templates même sur les domaines existants). Page pivot `domaines-intervention/index.md` mise à jour ("cinq" → "neuf" domaines, meta description recomposée). Contenu rédigé sans validation métier préalable (avocat non consulté sur le texte précis) — **à faire relire par le porteur du projet avant publication**, au même titre que le contrôle déontologique déjà en place pour les fiches `_decisions`. Pas de sous-dossiers `_decisions/<nouveau-domaine>/` créés à ce stade : git ne suit pas les dossiers vides, ils seront créés naturellement à l'ajout d'une première fiche réelle pour un de ces domaines. Vérifié : build propre, un seul H1 par nouvelle page, JSON-LD `Service` valide (aucun champ vide) sur les 4 pages, 9 domaines listés sur l'accueil et la page pivot.
+- **Slug du domaine "Permis de Construire" renommé `permis-de-construire` → `permis-construire`** (proposition du porteur du projet), pour cohérence avec "Permis d'Aménager" (`permis-amenager`, sans la préposition) : `slug`/`url` dans `_data/domaines.yml`, fichier `domaines-intervention/permis-de-construire.md` → `permis-construire.md` (`domaine:`/`permalink:` mis à jour), dossier `_decisions/permis-de-construire/` → `permis-construire/` (`domaine:` mis à jour dans les 2 fiches qu'il contient). Le `title` affiché ("Permis de Construire") ne change pas, seuls le slug technique et les URLs sont concernés. Vérifié avant renommage que `Hébergement final` restait une décision en attente (case non cochée) : le site n'étant pas encore déployé publiquement, aucun lien externe ni indexation moteur à casser. Vérifié après renommage : build propre, ancien slug totalement absent du site généré, page domaine et fiches décisions accessibles à la nouvelle URL, `/decisions/` et la page domaine `permis-construire/` toujours cohérentes.
