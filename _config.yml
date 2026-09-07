@@ -97,6 +97,7 @@ exclude:
   - README.md
   - LICENSE
   - AGENTS.md
+  - CLAUDE.md
 
 # --- Include (fichiers normalement exclus) ---
 include:
