@@ -1,6 +1,5 @@
 ---
 domaine: plu-documents-urbanisme
-permalink: /domaines-intervention/plu-documents-urbanisme/annulation-plui-grand-dole/
 juridiction: "CAA Nancy"
 date: 2025-02-10
 titre: "Annulation du PLUI du Grand Dole"
@@ -8,6 +7,7 @@ title: "Annulation du PLUI du Grand Dole"
 description: "La Cour administrative d'appel de Nancy annule totalement le PLUI de la Communauté d'agglomération du Grand Dole, après rejet en première instance par le TA de Besançon."
 resume: "La Cour administrative d'appel de Nancy a prononcé l'annulation totale du plan local d'urbanisme intercommunal (PLUI) de la Communauté d'agglomération du Grand Dole, après un rejet en première instance : les ouvertures à l'urbanisation autorisées par arrêtés préfectoraux postérieurs à l'enquête publique ne figuraient pas dans le projet initialement soumis à cette enquête."
 lien_texte_integral: "https://www.legifrance.gouv.fr/ceta/id/CETATEXT000051154132"
+tags: ["PLUi", "enquête publique"]
 ---
 
 ## En bref
