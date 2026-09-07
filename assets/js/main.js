@@ -29,6 +29,30 @@
   onScroll();
 })();
 
+// --- Décisions obtenues : filtre par domaine (page /decisions/) ---
+// N'a d'effet que si la page contient un .filter-bar (posé par decisions.html
+// uniquement quand les décisions couvrent plus d'un domaine) ; masqué par
+// défaut via l'attribut "hidden" pour ne pas afficher des boutons inertes si
+// le JS est désactivé — toutes les décisions restent alors visibles.
+(function () {
+  var bar = document.querySelector('.filter-bar');
+  if (!bar) return;
+  var rows = document.querySelectorAll('.proof-list .decision-row');
+  var buttons = bar.querySelectorAll('.filter-btn');
+  bar.hidden = false;
+  bar.addEventListener('click', function (e) {
+    var btn = e.target.closest('.filter-btn');
+    if (!btn) return;
+    var filter = btn.getAttribute('data-filter');
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].setAttribute('aria-pressed', String(buttons[i] === btn));
+    }
+    for (var j = 0; j < rows.length; j++) {
+      rows[j].hidden = filter !== 'all' && rows[j].getAttribute('data-domaine') !== filter;
+    }
+  });
+})();
+
 // --- Google Analytics (à décommenter après configuration) ---
 // function loadGA() {
 //   if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {

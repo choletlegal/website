@@ -341,6 +341,18 @@ body.has-inverted-hero .site-header:not(.is-scrolled) {
 
 /* ---------------- Décisions obtenues ---------------- */
 
+.filter-bar { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0 0 1.75rem; }
+.filter-btn {
+  font: inherit; font-size: 0.85rem; font-weight: 600;
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--line); border-radius: var(--radius-sm);
+  background: transparent; color: var(--ink-body);
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.filter-btn:hover { border-color: var(--ink-heading); }
+.filter-btn[aria-pressed="true"] { background: var(--accent-fill); border-color: var(--accent-fill); color: var(--accent-on); }
+
 .proof-list { display: grid; gap: 0; border-top: 1px solid var(--line); }
 .decision-row {
   display: grid;
