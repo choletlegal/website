@@ -59,9 +59,10 @@ plugins:
 
 # --- SEO Tag Configuration ---
 # (jekyll-seo-tag utilise site.title et site.description par défaut)
-# Pour éviter la duplication du titre, on configure le séparateur comme vide
-jekyll-seo-tag:
-  title_separator: ""
+# Pas de "title_separator" ici : cette clé n'existe pas dans jekyll-seo-tag
+# (son séparateur " | " est une constante codée en dur dans le gem, non
+# configurable) — l'avoir mise ici n'a jamais eu d'effet. La duplication de
+# titre sur l'accueil est traitée directement dans _layouts/base.html.
 
 # --- Webmaster Verifications ---
 webmaster_verifications:

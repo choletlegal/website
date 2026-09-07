@@ -6,7 +6,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% comment %}
+    Sur l'accueil, page.title est déjà un titre complet et optimisé
+    (nom + spécialités) : lui accoler site.title via {% seo %} double
+    le contenu et dépasse la longueur affichée par Google. Ailleurs,
+    le motif standard "Page | Site" de jekyll-seo-tag reste voulu.
+  {% endcomment %}
+  {% if page.url == "/" %}
+  <title>{{ page.title | strip_html }}</title>
+  {% seo title=false %}
+  {% else %}
   {% seo %}
+  {% endif %}
 </head>
 <body>
   {{ content }}
