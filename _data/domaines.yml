@@ -61,3 +61,47 @@ domaines:
       - "rémunération"
       - "accident de service"
 
+  - slug: environnement-icpe
+    title: "Droit de l'Environnement et des ICPE"
+    description: "Conseil et défense des exploitants dans les autorisations environnementales et le contentieux des installations classées"
+    image: ""
+    url: /domaines-intervention/environnement-icpe/
+    features:
+      - "autorisation environnementale"
+      - "contentieux des installations classées"
+      - "mise en demeure et sanctions administratives"
+      - "recours contre arrêté préfectoral"
+
+  - slug: domaine-public
+    title: "Domaine Public"
+    description: "Accompagnement pour l'occupation, la gestion et la protection du domaine public"
+    image: ""
+    url: /domaines-intervention/domaine-public/
+    features:
+      - "autorisation d'occupation temporaire (AOT)"
+      - "contentieux de la domanialité"
+      - "contravention de grande voirie"
+      - "concessions et conventions d'occupation"
+
+  - slug: responsabilite-administrative
+    title: "Responsabilité Administrative"
+    description: "Recherche et défense de la responsabilité de l'administration et indemnisation des préjudices"
+    image: ""
+    url: /domaines-intervention/responsabilite-administrative/
+    features:
+      - "responsabilité pour faute et sans faute"
+      - "dommages de travaux publics"
+      - "indemnisation des préjudices"
+      - "recours indemnitaire préalable"
+
+  - slug: police-administrative
+    title: "Police Administrative"
+    description: "Conseil et contentieux des mesures de police administrative générale et spéciale"
+    image: ""
+    url: /domaines-intervention/police-administrative/
+    features:
+      - "arrêtés de police du maire"
+      - "polices administratives spéciales"
+      - "référé-liberté et référé-suspension"
+      - "mise en demeure et sanctions"
+
