@@ -1,5 +1,5 @@
 ---
-domaine: plu-documents-urbanisme
+domaine: permis-de-construire
 juridiction: "CAA Nancy"
 date: 2024-07-02
 title: "Distance de réciprocité de 100 mètres pour un élevage bovin : la réduction en zone de montagne suppose une dérogation préfectorale"

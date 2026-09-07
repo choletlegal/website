@@ -1,5 +1,5 @@
 ---
-domaine: plu-documents-urbanisme
+domaine: permis-de-construire
 juridiction: "TA Besançon"
 date: 2025-05-05
 title: "Suspension en référé d'un permis de construire : le classement en zone agricole défavorisée ne vaut pas dérogation à la distance de réciprocité de 100 mètres"
