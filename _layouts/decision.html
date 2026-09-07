@@ -9,7 +9,7 @@ layout: default
 {% assign article_author = page.author | default: site.author.name %}
 {% assign article_url = page.url | absolute_url %}
 {% include schema-article.html
-  headline=page.titre
+  headline=page.title
   description=page.resume
   image=article_image
   date_published=article_date_published
@@ -23,7 +23,7 @@ layout: default
   <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d/%m/%Y" }}</time>
 </p>
 {% endcapture %}
-{% include page-header.html eyebrow_text="Décisions obtenues" eyebrow_href="/domaines-intervention/" title=page.titre lede=page.resume after=decision_meta %}
+{% include page-header.html eyebrow_text="Décisions obtenues" eyebrow_href="/domaines-intervention/" lede=page.resume after=decision_meta %}
 
 <div class="section">
   <div class="wrap">

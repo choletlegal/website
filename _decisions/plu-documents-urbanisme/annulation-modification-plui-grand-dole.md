@@ -2,7 +2,6 @@
 domaine: plu-documents-urbanisme
 juridiction: "TA Besançon"
 date: 2021-10-26
-titre: "Annulation d'une modification du PLUI du Grand Dole"
 title: "Annulation d'une modification du PLUI du Grand Dole"
 description: "Le Tribunal administratif de Besançon annule, pour vice de procédure, une délibération modifiant le PLUI de la Communauté d'agglomération du Grand Dole."
 resume: "Le Tribunal administratif de Besançon a annulé, pour vice de procédure, une délibération modifiant le plan local d'urbanisme intercommunal (PLUI) du Grand Dole : la collectivité avait pris une délibération complémentaire pour tenir compte tardivement des observations préfectorales, sans respecter la procédure de modification prévue par le code de l'urbanisme."
