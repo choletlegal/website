@@ -1,2 +1,6 @@
-<!--- JavaScript : vanilla, aucune dépendance (Bootstrap retiré) -->
-<script src="/assets/js/main.js"></script>
+<!--- JavaScript : vanilla, aucune dépendance (Bootstrap retiré).
+      `defer` : le script est déjà placé juste avant </body> (tout le DOM utile est déjà
+      parsé au moment où il s'exécute, comportement inchangé), mais sans cet attribut
+      l'audit Lighthouse "Requêtes de blocage du rendu" le compte quand même comme
+      bloquant — `defer` le sort explicitement du chemin critique. -->
+<script src="/assets/js/main.js" defer></script>
