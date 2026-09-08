@@ -10,4 +10,4 @@ Le domaine public — voirie, cours d'eau, dépendances communales — obéit à
 
 Maître Cholet accompagne les collectivités gestionnaires du domaine comme les occupants — commerçants, riverains, entreprises de réseaux — dans la négociation et la contestation des conventions d'occupation temporaire (AOT), la défense contre une contravention de grande voirie, le contentieux du déclassement ou de l'incorporation d'une parcelle au domaine public, et les litiges relatifs aux servitudes et empiétements.
 
-Une matière fréquemment liée au droit de l'urbanisme et aux opérations d'aménagement, traitée avec la même rigueur procédurale devant les juridictions administratives.
+Une matière fréquemment liée au [droit de l'urbanisme](/domaines-intervention/) et aux opérations d'aménagement, traitée avec la même rigueur procédurale devant les juridictions administratives.
