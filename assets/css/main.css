@@ -55,6 +55,22 @@ pre code {
   padding: 0;
 }
 
+/* Masque visuellement sans retirer du DOM/de l'arbre d'accessibilité —
+   sert notamment à insérer un niveau de titre intermédiaire (h2) requis
+   par une hiérarchie de titres séquentielle, sans ajouter de titre visible
+   redondant avec le h1 de page-header.html. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ============================================================
    Piste B — composants natifs du site (header/footer + pages)
    Cf. CLAUDE.md, section "Direction visuelle". Utilisent les
@@ -362,7 +378,7 @@ body.has-inverted-hero .site-header:not(.is-scrolled) {
   border-bottom: 1px solid var(--line);
 }
 .decision-row .juridiction { font-weight: 600; font-size: 0.85rem; color: var(--accent-ink); }
-.decision-row h4 { margin: 0 0 0.3rem; font-weight: 600; font-size: 1rem; color: var(--ink-heading); }
+.decision-row h3 { margin: 0 0 0.3rem; font-weight: 600; font-size: 1rem; color: var(--ink-heading); }
 .decision-row p { margin: 0; font-size: 0.9rem; color: var(--ink-muted); }
 .proof-note { margin: 1.25rem 0; font-size: 0.78rem; color: var(--ink-muted); font-style: italic; }
 
