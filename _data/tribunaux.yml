@@ -1,0 +1,41 @@
+# ============================================
+# Tribunaux administratifs et cour administrative d'appel du ressort
+# Source unique : slug, nom, adresse, ressort — utilisée par la page pivot
+# /tribunaux-administratifs/ et par chaque page tribunal (_layouts/tribunal.html).
+# "juridictions" liste les valeurs exactes du champ `juridiction:` des fiches
+# _decisions à rattacher à cette page (une ville peut regrouper plusieurs
+# juridictions, ex. Nancy = TA + CAA).
+# ============================================
+
+tribunaux:
+  - slug: besancon
+    nom: "Tribunal administratif de Besançon"
+    ville: "Besançon"
+    adresse: "30 rue Charles Nodier, 25044 Besançon Cedex 3"
+    ressort: "Doubs, Haute-Saône, Jura et Territoire de Belfort"
+    url: /tribunaux-administratifs/besancon/
+    juridictions: ["TA Besançon"]
+
+  - slug: dijon
+    nom: "Tribunal administratif de Dijon"
+    ville: "Dijon"
+    adresse: "22 rue d'Assas, 21000 Dijon"
+    ressort: "Côte-d'Or, Nièvre, Saône-et-Loire et Yonne"
+    url: /tribunaux-administratifs/dijon/
+    juridictions: ["TA Dijon"]
+
+  - slug: nancy
+    nom: "Tribunal administratif et cour administrative d'appel de Nancy"
+    ville: "Nancy"
+    adresse: "5 place de la Carrière, 54000 Nancy (TA) — 6 rue du Haut-Bourgeois, 54035 Nancy Cedex (CAA)"
+    ressort: "TA : Meurthe-et-Moselle, Meuse et Vosges. CAA (en appel) : ressort des TA de Besançon, Châlons-en-Champagne, Nancy et Strasbourg"
+    url: /tribunaux-administratifs/nancy/
+    juridictions: ["TA Nancy", "CAA Nancy"]
+
+  - slug: strasbourg
+    nom: "Tribunal administratif de Strasbourg"
+    ville: "Strasbourg"
+    adresse: "31 avenue de la Paix, 67070 Strasbourg"
+    ressort: "Bas-Rhin, Haut-Rhin et Moselle"
+    url: /tribunaux-administratifs/strasbourg/
+    juridictions: ["TA Strasbourg"]

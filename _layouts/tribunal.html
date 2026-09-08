@@ -1,0 +1,44 @@
+---
+layout: default
+---
+{% assign tribunal = site.data.tribunaux.tribunaux | where: "slug", page.tribunal | first %}
+{% assign site_url = site.url | append: site.baseurl %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Représentation en contentieux administratif",
+  "name": {{ tribunal.nom | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "url": {{ site_url | append: tribunal.url | jsonify }},
+  "areaServed": {{ tribunal.ressort | jsonify }},
+  "provider": {
+    "@type": "Attorney",
+    "name": {{ site.title | jsonify }},
+    "url": {{ site_url | jsonify }}
+  }
+}
+</script>
+<article class="page-domaine">
+  {% include page-header.html eyebrow_text="Tribunaux administratifs" eyebrow_href="/tribunaux-administratifs/" title=tribunal.nom lede=page.description %}
+
+  <div class="section">
+    <div class="wrap">
+      <div class="page-domaine-content">
+        {{ content }}
+
+        {% assign tribunal_decisions = site.decisions | where_exp: "d", "tribunal.juridictions contains d.juridiction" | sort: "date" | reverse %}
+        {% if tribunal_decisions.size > 0 %}
+        <h2>Décisions obtenues</h2>
+        <div class="proof-list">
+          {% for decision in tribunal_decisions %}
+          {% include decision-row.html decision=decision %}
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  {% include sections/cta.html %}
+</article>
