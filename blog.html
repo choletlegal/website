@@ -14,6 +14,7 @@ de l'urbanisme, par Maître Antonin Cholet, avocat au Barreau de Besançon.
 <div class="section">
   <div class="wrap">
     {% if site.posts.size > 0 %}
+    <h2 class="sr-only">Liste des articles</h2>
     <div class="posts-list">
       {% for post in site.posts %}
       {% include post-row.html post=post %}

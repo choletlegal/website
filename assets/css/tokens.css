@@ -14,7 +14,7 @@
 
   --ink-heading: #202327;
   --ink-body: #4A4E54;
-  --ink-muted: #767B82;
+  --ink-muted: #676C73;  /* contraste ≥ 4.5:1 sur --bg et --surface-2 (initialement #767B82, ~4.27:1, insuffisant) */
 
   --accent: #8C2F39;       /* bordeaux — décoratif : liens, traits, chiffres */
   --accent-ink: #8C2F39;   /* bordeaux — texte-safe : boutons, liens, CTA */
