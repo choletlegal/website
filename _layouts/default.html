@@ -9,6 +9,7 @@ layout: base
   {% include head-css.html %}
 </head>
 <body{% if page.hero %} class="has-inverted-hero"{% endif %}>
+  <div id="scroll-sentinel" aria-hidden="true"></div>
   {% include header/navbar.html %}
   
   <main>

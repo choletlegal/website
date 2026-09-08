@@ -123,6 +123,21 @@ pre code {
 
 /* ---------------- Header / Nav ---------------- */
 
+/* Sentinelle invisible utilisée par l'IntersectionObserver de main.js pour détecter
+   le franchissement du seuil de scroll (cf. .is-scrolled ci-dessous) sans jamais lire
+   window.scrollY — cette lecture forçait un reflow synchrone en présence du header
+   en position sticky (mesuré via Lighthouse, cf. CLAUDE.md). Hauteur = ancien seuil
+   de 40px ; position absolute pour ne pas pousser le contenu (aucun impact visuel). */
+#scroll-sentinel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 40px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .site-header {
   --nav-bg: var(--bg);
   --nav-fg: var(--ink-heading);
