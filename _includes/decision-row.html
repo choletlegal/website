@@ -1,9 +1,16 @@
 <!--- Ligne d'une décision obtenue (juridiction + titre + résumé), réutilisée par
-      sections/decisions-preview.html (accueil) et _layouts/domaine.html (page
-      du domaine concerné, filtrée par domaine).
-      Paramètre requis : decision (un document de la collection site.decisions). -->
+      sections/decisions-preview.html (accueil), _layouts/domaine.html (page du
+      domaine concerné) et _layouts/juridiction.html (page du tribunal/de la
+      cour concernée).
+      Paramètre requis : decision (un document de la collection site.decisions).
+      Le libellé de juridiction est lié vers sa page dédiée quand elle existe
+      (_data/juridictions.yml, champ juridiction_labels) — ex. "CE" (Conseil
+      d'État) n'a pas de page sur ce site et reste en texte simple. -->
+{% assign decision_juridiction = site.data.juridictions.juridictions | where_exp: "j", "j.juridiction_labels contains include.decision.juridiction" | first %}
 <div class="decision-row" data-domaine="{{ include.decision.domaine }}">
-  <div class="juridiction">{{ include.decision.juridiction }}</div>
+  <div class="juridiction">
+    {% if decision_juridiction %}<a href="{{ decision_juridiction.url }}">{{ include.decision.juridiction }}</a>{% else %}{{ include.decision.juridiction }}{% endif %}
+  </div>
   <div>
     <h3><a href="{{ include.decision.url }}">{{ include.decision.title }}</a></h3>
     <p>{{ include.decision.resume }}</p>
