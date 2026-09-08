@@ -265,6 +265,10 @@ body.has-inverted-hero .site-header:not(.is-scrolled) {
 
 .hero-content { position: relative; z-index: 2; max-width: 56rem; }
 
+/* Modificateur de .eyebrow (cf. page-header.html) : même patron, couleur
+   adaptée au fond sombre du hero via le token --hero-muted. */
+.hero-eyebrow { color: var(--hero-muted); margin: 0 0 1rem; }
+
 .hero-tokens { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0 0 2rem; }
 .hero-token {
   display: inline-flex; align-items: center;
