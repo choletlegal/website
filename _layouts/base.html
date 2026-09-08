@@ -7,17 +7,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% comment %}
+    <title> composé manuellement partout, plutôt que via le motif "Page |
+    site.title" de jekyll-seo-tag : site.title sert aussi de name aux
+    champs JSON-LD (WebSite/Attorney, cf. head-seo.html) et ne contient pas
+    "Besançon" — le laisser piloter le <title> privait toutes les pages
+    intérieures de ce signal local (cf. CLAUDE.md, décision SEO locale).
+    title_suffix est un texte court dédié au <title>, indépendant de
+    site.title : "Besançon" apparaît tout de suite après le " | ", pour
+    survivre à la troncature Google même sur les titres de page longs.
     Sur l'accueil, page.title est déjà un titre complet et optimisé
-    (nom + spécialités) : lui accoler site.title via {% seo %} double
-    le contenu et dépasse la longueur affichée par Google. Ailleurs,
-    le motif standard "Page | Site" de jekyll-seo-tag reste voulu.
+    (nom + spécialités) : pas de suffixe, pour éviter la duplication.
   {% endcomment %}
+  {% assign title_suffix = "Antonin Cholet — Avocat à Besançon" %}
   {% if page.url == "/" %}
   <title>{{ page.title | strip_html }}</title>
-  {% seo title=false %}
   {% else %}
-  {% seo %}
+  <title>{{ page.title | strip_html }} | {{ title_suffix }}</title>
   {% endif %}
+  {% seo title=false %}
 </head>
 <body>
   {{ content }}
