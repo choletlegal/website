@@ -10,4 +10,4 @@ La police administrative — générale, exercée par le maire ou le préfet au 
 
 Maître Cholet conseille les collectivités dans l'exercice de leurs pouvoirs de police — sécurisation d'un arrêté, mise en demeure, procédure contradictoire préalable — et défend les administrés destinataires d'une mesure de police contestable : recours contre un arrêté de péril, de fermeture ou d'interdiction, référé-suspension ou référé-liberté contre une mesure d'urgence, contestation d'une sanction administrative.
 
-Une matière transversale, souvent imbriquée avec le contentieux de l'urbanisme et de l'environnement, qui exige une réaction rapide compte tenu des délais de recours souvent brefs applicables aux mesures de police.
+Une matière transversale, souvent imbriquée avec le [contentieux de l'urbanisme](/domaines-intervention/contentieux-urbanisme/) et de l'[environnement](/domaines-intervention/environnement-icpe/), qui exige une réaction rapide compte tenu des délais de recours souvent brefs applicables aux mesures de police.

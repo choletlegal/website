@@ -10,4 +10,4 @@ La déclaration préalable de travaux s'applique aux projets de moindre ampleur 
 
 Le régime déclaratif ne signifie pas absence de risque : l'administration dispose d'un délai d'instruction pour s'opposer au projet ou imposer des prescriptions, et une déclaration obtenue peut, comme un permis, faire l'objet d'un recours de tiers dans les deux mois de son affichage.
 
-Maître Cholet vérifie en amont que votre projet relève bien de ce régime plutôt que du permis de construire — une erreur de qualification expose à une régularisation forcée voire à une démolition — et défend votre dossier en cas de refus, d'opposition ou de recours d'un tiers.
+Maître Cholet vérifie en amont que votre projet relève bien de ce régime plutôt que du [permis de construire](/domaines-intervention/permis-construire/) — une erreur de qualification expose à une régularisation forcée voire à une démolition — et défend votre dossier en cas de refus, d'opposition ou de [recours d'un tiers](/domaines-intervention/contentieux-urbanisme/).
