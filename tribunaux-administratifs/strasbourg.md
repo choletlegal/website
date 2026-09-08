@@ -1,5 +1,5 @@
 ---
-layout: tribunal
+layout: juridiction
 tribunal: strasbourg
 title: "Tribunal administratif de Strasbourg"
 description: "Maître Antonin Cholet intervient devant le tribunal administratif de Strasbourg (Bas-Rhin, Haut-Rhin, Moselle) en droit public et droit de l'urbanisme, quel que soit le lieu de résidence du client ou de situation du bien."

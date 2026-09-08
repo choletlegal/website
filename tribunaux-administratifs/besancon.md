@@ -1,5 +1,5 @@
 ---
-layout: tribunal
+layout: juridiction
 tribunal: besancon
 title: "Tribunal administratif de Besançon"
 description: "Maître Antonin Cholet, avocat au Barreau de Besançon, plaide régulièrement devant le tribunal administratif de Besançon (Doubs, Haute-Saône, Jura, Territoire de Belfort) : permis de construire, PLU, fonction publique, contentieux administratif général."
@@ -15,4 +15,4 @@ d'urbanisme, contentieux de la fonction publique territoriale ou hospitalière.
 
 Son ressort couvre le Doubs, la Haute-Saône, le Jura et le Territoire de Belfort. En appel, les
 jugements rendus à Besançon sont portés devant la
-[cour administrative d'appel de Nancy](/tribunaux-administratifs/nancy/).
+[cour administrative d'appel de Nancy](/cours-administratives-appel/nancy/).

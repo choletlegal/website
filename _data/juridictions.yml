@@ -1,0 +1,57 @@
+# ============================================
+# Juridictions administratives du ressort — tribunaux de 1ère instance (TA)
+# et cour administrative d'appel (CAA). Source unique : slug, type, nom,
+# adresse, ressort. Utilisée par deux silos distincts :
+#   /tribunaux-administratifs/       (type: TA)
+#   /cours-administratives-appel/    (type: CAA)
+# via _layouts/juridiction.html et _includes/juridictions-list.html
+# (paramétré par include.type). "juridiction_labels" liste les valeurs
+# exactes du champ `juridiction:` des fiches _decisions à rattacher à
+# cette page.
+# ============================================
+
+juridictions:
+  - slug: besancon
+    type: TA
+    nom: "Tribunal administratif de Besançon"
+    ville: "Besançon"
+    adresse: "30 rue Charles Nodier, 25044 Besançon Cedex 3"
+    ressort: "Doubs, Haute-Saône, Jura et Territoire de Belfort"
+    url: /tribunaux-administratifs/besancon/
+    juridiction_labels: ["TA Besançon"]
+
+  - slug: dijon
+    type: TA
+    nom: "Tribunal administratif de Dijon"
+    ville: "Dijon"
+    adresse: "22 rue d'Assas, 21000 Dijon"
+    ressort: "Côte-d'Or, Nièvre, Saône-et-Loire et Yonne"
+    url: /tribunaux-administratifs/dijon/
+    juridiction_labels: ["TA Dijon"]
+
+  - slug: nancy
+    type: TA
+    nom: "Tribunal administratif de Nancy"
+    ville: "Nancy"
+    adresse: "5 place de la Carrière, 54000 Nancy"
+    ressort: "Meurthe-et-Moselle, Meuse et Vosges"
+    url: /tribunaux-administratifs/nancy/
+    juridiction_labels: ["TA Nancy"]
+
+  - slug: strasbourg
+    type: TA
+    nom: "Tribunal administratif de Strasbourg"
+    ville: "Strasbourg"
+    adresse: "31 avenue de la Paix, 67070 Strasbourg"
+    ressort: "Bas-Rhin, Haut-Rhin et Moselle"
+    url: /tribunaux-administratifs/strasbourg/
+    juridiction_labels: ["TA Strasbourg"]
+
+  - slug: nancy
+    type: CAA
+    nom: "Cour administrative d'appel de Nancy"
+    ville: "Nancy"
+    adresse: "6 rue du Haut-Bourgeois, 54035 Nancy Cedex"
+    ressort: "Ressort des TA de Besançon, Châlons-en-Champagne, Nancy et Strasbourg"
+    url: /cours-administratives-appel/nancy/
+    juridiction_labels: ["CAA Nancy"]

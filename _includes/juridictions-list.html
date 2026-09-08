@@ -1,0 +1,20 @@
+<!--- Liste éditoriale des juridictions d'un type donné — lit
+      _data/juridictions.yml, filtré par include.type ("TA" ou "CAA").
+      Même patron visuel que domaines-list.html (.domaines-list/.domaine-row),
+      réutilisé tel quel plutôt que dupliqué avec de nouvelles classes.
+      Partagée entre les pivots /tribunaux-administratifs/ et
+      /cours-administratives-appel/.
+      Paramètre requis : type ("TA" ou "CAA"). -->
+{% assign items = site.data.juridictions.juridictions | where: "type", include.type %}
+<div class="domaines-list">
+  {% for juridiction in items %}
+  <article class="domaine-row">
+    <span class="domaine-index" aria-hidden="true">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+    <div>
+      <h3>{{ juridiction.nom }}</h3>
+      <p>Ressort : {{ juridiction.ressort }}.</p>
+    </div>
+    <a class="link-arrow" href="{{ juridiction.url }}">En savoir plus <span aria-hidden="true">→</span></a>
+  </article>
+  {% endfor %}
+</div>

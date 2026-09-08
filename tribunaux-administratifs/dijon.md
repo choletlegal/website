@@ -1,5 +1,5 @@
 ---
-layout: tribunal
+layout: juridiction
 tribunal: dijon
 title: "Tribunal administratif de Dijon"
 description: "Maître Antonin Cholet intervient devant le tribunal administratif de Dijon (Côte-d'Or, Nièvre, Saône-et-Loire, Yonne) en droit public et droit de l'urbanisme, sans que la distance ne constitue un frein réel à la défense de votre dossier."
