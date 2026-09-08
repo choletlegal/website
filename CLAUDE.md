@@ -6,7 +6,7 @@ Documentation de contexte pour les sessions Claude Code sur ce projet. À mettre
 
 - Refonte complète du site vitrine d'un avocat en droit public / droit de l'urbanisme, Barreau de Besançon.
 - Objectifs : crédibilité professionnelle, acquisition de clientèle, bon référencement moteurs de recherche **et** IA génératives (GEO).
-- Le site actuel (cholet-avocat.fr) est conservé comme référence de structure, mais entièrement reconstruit.
+- Le site cholet-avocat.fr a servi de référence de structure au départ, mais a été entièrement reconstruit — la refonte (Piste B) est désormais celle qui est **en ligne en production** (voir Hébergement ci-dessous).
 - Publication : le porteur du projet gère lui-même le `git push` / déploiement final. Claude Code travaille sur le repo local.
 
 ## Stack technique
@@ -14,7 +14,7 @@ Documentation de contexte pour les sessions Claude Code sur ce projet. À mettre
 - **Générateur** : Jekyll (dernière version stable).
 - **CSS** : CSS natif (variables CSS, Flexbox/Grid). **Pas de Bootstrap** — retiré intentionnellement pour la performance (Core Web Vitals). Pas de framework CSS lourd sauf décision contraire explicite. **Fait** : CDN Bootstrap (CSS+JS) et tout le CSS de compatibilité associé entièrement retirés (voir Journal).
 - **JS** : vanilla JS minimal (menu burger mobile uniquement a priori). Pas de jQuery.
-- **Hébergement cible** : à confirmer (GitHub Pages / Netlify pressenti).
+- **Hébergement** : **tranché et en production** — GitHub Pages, déploiement via GitHub Actions (`.github/workflows/jekyll-gh-pages.yml`, build+deploy sur chaque push vers `master`), domaine personnalisé `www.cholet-avocat.fr` (fichier `CNAME` à la racine).
 - **Icônes** : SVG inline ou petit set auto-hébergé — pas de CDN Font Awesome (poids + requête externe superflue, contraire à l'objectif de performance). **Fait** : CDN Font Awesome retiré, plus aucune page ne l'utilise.
 
 ## Structure du repo
@@ -183,7 +183,8 @@ tags: ["PLUi", "vice de procédure"]   # optionnel, libre — prépare un futur 
 - [x] Données structurées Schema.org pertinentes : `Attorney` sur les pages cabinet (tranché — plus précis que le `LegalService` générique, cf. Journal), `Article` (avec auteur) sur blog ; reste à faire : `FAQPage` si section FAQ (`honoraires/`), `Article` sur les futures fiches `_decisions`
 - [ ] Contenu sourcé : textes de loi, jurisprudence citée précisément (CE, CAA, TA)
 - [ ] Sitemap XML (`jekyll-sitemap`) et `robots.txt` à jour
-- [ ] Google Search Console + Bing Webmaster Tools : balises de vérification à renseigner (vides sur le site actuel)
+- [x] Google Search Console : propriété **Domaine** `cholet-avocat.fr` vérifiée côté porteur du projet via enregistrement DNS TXT (pas la méthode balise HTML — `webmaster_verifications.google` reste donc vide dans `_config.yml` à raison, cf. Journal). Sitemap (`https://www.cholet-avocat.fr/sitemap.xml`, HTTP 200 vérifié) soumis dans la propriété.
+- [x] Bing Webmaster Tools : configuré côté porteur du projet via "Importer depuis Google Search Console" — propriété `cholet-avocat.fr` et sitemap récupérés automatiquement, pas de balise HTML (`webmaster_verifications.bing` reste donc vide dans `_config.yml` à raison, même logique que pour Google).
 
 ### Performance
 - Aucune dépendance JS/CSS lourde ajoutée sans justification explicite (cohérent avec le retrait de Bootstrap et Font Awesome).
@@ -254,7 +255,7 @@ Palette et polices tranchées après plusieurs itérations sur une maquette visu
 - [x] ~~Choix définitif des polices et des couleurs exactes~~ → tranché : Inter (titres + corps), fond clair + accent bordeaux unique, hero inversé en exception assumée (voir Direction visuelle ci-dessus)
 - [x] ~~Migration Piste B de `votre-avocat/`, `contact/`, `mentions-legales/`, `politique-confidentialite/`, `blog/`~~ → fait (voir Journal ci-dessous)
 - [x] ~~URL des articles de blog (date/catégorie dans l'URL ?)~~ → tranché : `permalink: /blog/:title/` pour les nouveaux articles (pas de date ni catégorie — plus propre, meilleur pour le CTR sur du contenu evergreen ; la date reste affichée sur la page et dans les données structurées, ce qui est ce qui compte pour le SEO). Les 16 articles existants gardent leur URL d'origine (permalink explicite figé par article).
-- [ ] Hébergement final
+- [x] ~~Hébergement final~~ → tranché : GitHub Pages + domaine personnalisé (voir Stack technique et Journal)
 - [x] ~~Fiches `_decisions` réelles~~ → fait (voir Journal) : collection configurée, 2 premières fiches réelles publiées, archive dédiée `/decisions/` créée
 - [x] ~~`_layouts/decision.html` à créer~~ → fait (voir Journal)
 - [x] ~~Données structurées Schema.org par page domaine (`Service`/`Attorney`)~~ → fait (voir Journal), ainsi qu'`Article` sur le blog
@@ -338,3 +339,6 @@ Palette et polices tranchées après plusieurs itérations sur une maquette visu
   - Contraste insuffisant : `--ink-muted` (`#767B82`, ~4.27:1 sur fond blanc) sous le seuil WCAG AA de 4.5:1 pour du texte de taille normale — utilisé pour les eyebrows de section, dates d'articles, méta des décisions, footer, donc visible sur presque toutes les pages. Assombri en `#676C73` (~5.3:1 sur `--bg`, ~4.8:1 sur `--surface-2`), même famille de gris, rendu quasi identique.
   - Hiérarchie de titres non séquentielle (`heading-order`) : `decision-row.html` utilisait un `<h4>` alors que ses sections parentes (`decisions-preview` sur l'accueil, "Décisions obtenues" sur une page domaine) n'ouvrent qu'un `<h2>` — corrigé en `<h3>`, cohérent avec `domaines-list.html`/`post-row.html` qui suivent déjà ce patron. `blog.html`, `decisions.html` et `domaines-intervention/index.md` enchaînaient en plus directement le `<h1>` de `page-header.html` sur les `<h3>` de leurs listes, sautant le niveau 2 — un `<h2>` masqué visuellement (nouvelle classe utilitaire `.sr-only` dans `main.css`) ajouté juste avant chaque liste plutôt que de dupliquer le titre de page à l'écran.
   - Vérifié : build propre, plus aucun `<h4>` dans le site généré, séquences `h1→h2→h3` sans saut sur l'accueil/`/decisions/`/`/blog/`/page pivot des domaines/une page domaine, rendu visuel inchangé. Pas de nouveau passage Lighthouse en local (nécessiterait Chrome headless) — à reconfirmer par un passage PageSpeed Insights une fois déployé.
+- **Hébergement final tranché : GitHub Pages, site en production** (confirmé par le porteur du projet) — déploiement via GitHub Actions (`.github/workflows/jekyll-gh-pages.yml`, build+deploy Jekyll sur chaque push vers `master`), domaine personnalisé `www.cholet-avocat.fr` porté par le fichier `CNAME` à la racine. Vérifié à cette occasion : `https://www.cholet-avocat.fr/` répond HTTP 200 et sert bien la refonte Piste B (présence de `tokens.css`/`Inter`, absence de Bootstrap/Font Awesome) — l'ancien site Bootstrap n'est plus en ligne, la case "Hébergement final" et les mentions de site "jamais déployé en production" dans les entrées de journal précédentes sont donc obsolètes à partir de cette date. Conséquence pratique : les futures vérifications de non-régression (renommage de slug, suppression de page...) doivent désormais tenir compte de liens externes/indexation moteur réels, ce qui n'était pas le cas avant ce passage.
+- **Google Search Console configuré** (confirmé par le porteur du projet) : propriété **Domaine** `cholet-avocat.fr` déjà vérifiée via enregistrement DNS TXT (le DNS du domaine porte à la fois le TXT Google et le `CNAME`/A vers GitHub Pages). Méthode volontairement distincte de la balise HTML déjà câblée dans `_config.yml`/`head-seo.html` (`webmaster_verifications.google`) : la vérification par domaine DNS couvre `www`/apex en un seul enregistrement et ne dépend pas d'un déploiement de code, donc ce champ reste vide à raison — ne pas le remplir par réflexe si la question revient. Bing Webmaster Tools encore à faire, via import depuis Search Console plutôt que sa propre balise HTML, pour la même raison.
+- **Bing Webmaster Tools configuré** (confirmé par le porteur du projet), via "Importer depuis Google Search Console" : propriété `cholet-avocat.fr` et sitemap repris automatiquement de la propriété Google déjà vérifiée, sans balise HTML dédiée ni nouvelle démarche DNS — `webmaster_verifications.bing` reste vide dans `_config.yml` à raison, même logique que pour Google. Checklist SEO/GEO Search Console + Bing entièrement soldée (les deux moteurs configurés, sitemap soumis).
