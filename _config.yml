@@ -108,3 +108,4 @@ exclude:
 include:
   - robots.txt
   - .htaccess
+  - 57e601dcf265611d76ba71b8f09c978d.txt
