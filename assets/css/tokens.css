@@ -5,6 +5,30 @@
    variables ont été entièrement retirés).
    ============================================ */
 
+/* Inter auto-hébergée (assets/fonts/) plutôt que Google Fonts CDN : supprime la
+   dépendance à fonts.googleapis.com/fonts.gstatic.com (2 origines tierces, DNS+TLS
+   en plus) du chemin critique. Fichiers récupérés depuis la réponse réelle de l'API
+   Google Fonts (css2, sous-ensemble "latin" — couvre tous les caractères français
+   usuels y compris œ) : Google sert désormais Inter en police variable, un seul
+   fichier romain couvrant tout l'axe de graisse 400-800 (`font-weight: 400 800`,
+   syntaxe standard CSS Fonts Module 4) plutôt que 6 fichiers statiques séparés —
+   vérifié en rendu réel (5 graisses + italique bien distincts). ~73 Ko/2 fichiers
+   au lieu de ~191 Ko/6 fichiers mesurés précédemment (cf. CLAUDE.md). */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("/assets/fonts/inter-roman.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/inter-italic.woff2") format("woff2");
+}
+
 :root {
   /* --- Couleurs --- */
   --bg: #FFFFFF;
