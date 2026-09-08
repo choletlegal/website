@@ -5,8 +5,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<!-- Google Fonts: Inter -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<!-- Google Fonts: Inter — chargée en asynchrone (preload + bascule au onload) pour ne pas
+     bloquer le rendu initial : la police externe n'est pas nécessaire au premier paint
+     puisque font-display=swap affiche déjà la police système de repli entre-temps.
+     <noscript> couvre le cas sans JS (identique au <link rel="stylesheet"> direct d'avant). -->
+<link rel="preload" as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"></noscript>
 
 <!-- Design tokens (Piste B — header/footer/accueil) -->
 <link rel="stylesheet" href="/assets/css/tokens.css">
