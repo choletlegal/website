@@ -18,15 +18,21 @@
 // --- Header : bascule des couleurs du hero vers l'apparence claire au scroll ---
 // N'a d'effet visuel que sur les pages avec `hero: true` en front matter
 // (cf. main.css, body.has-inverted-hero) ; inoffensif ailleurs.
+// IntersectionObserver sur une sentinelle (#scroll-sentinel, cf. main.css) plutôt qu'un
+// listener `scroll` + lecture de `window.scrollY` : cette lecture forçait un reflow
+// synchrone (~104ms mesurés via Lighthouse, cf. CLAUDE.md) car le header est en
+// `position: sticky` — connu de Chrome pour forcer un recalcul de mise en page dès
+// qu'une géométrie de scroll est interrogée après une invalidation de style. L'IO
+// ne lit jamais de géométrie depuis le fil principal et ne s'exécute pas à chaque
+// frame de scroll, ce qui élimine le problème à la racine plutôt que de le déplacer.
 (function () {
   var header = document.querySelector('.site-header');
-  if (!header) return;
-  var threshold = 40;
-  function onScroll() {
-    header.classList.toggle('is-scrolled', window.scrollY > threshold);
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  var sentinel = document.getElementById('scroll-sentinel');
+  if (!header || !sentinel || !('IntersectionObserver' in window)) return;
+  var observer = new IntersectionObserver(function (entries) {
+    header.classList.toggle('is-scrolled', !entries[0].isIntersecting);
+  });
+  observer.observe(sentinel);
 })();
 
 // --- Décisions obtenues : filtre par domaine (page /decisions/) ---
