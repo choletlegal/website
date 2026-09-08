@@ -89,7 +89,12 @@
   },
   "telephone": "{{ author.phone | replace: ' ', '' }}",
   "openingHours": "Mo,Tu,We,Th,Fr 09:00-18:00",
-  "hasMap": "https://www.openstreetmap.org/?mlat=47.2341014&mlon=6.0233971#map=19/47.2341014/6.0233971",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": {{ author.address.latitude }},
+    "longitude": {{ author.address.longitude }}
+  },
+  "hasMap": "https://www.openstreetmap.org/?mlat={{ author.address.latitude }}&mlon={{ author.address.longitude }}#map=19/{{ author.address.latitude }}/{{ author.address.longitude }}",
   {% if same_as.size > 0 %}"sameAs": {{ same_as | jsonify }},{% endif %}
   "logo": {
     "@type": "ImageObject",
