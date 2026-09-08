@@ -17,9 +17,11 @@ layout: default
   url=article_url
   logo_url=article_logo
 %}
+{% assign decision_juridiction = site.data.juridictions.juridictions | where_exp: "j", "j.juridiction_labels contains page.juridiction" | first %}
 {% capture decision_meta %}
 <p class="post-meta">
-  {{ page.juridiction }} <span aria-hidden="true">·</span>
+  {% if decision_juridiction %}<a href="{{ decision_juridiction.url }}">{{ page.juridiction }}</a>{% else %}{{ page.juridiction }}{% endif %}
+  <span aria-hidden="true">·</span>
   <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d/%m/%Y" }}</time>
 </p>
 {% endcapture %}
