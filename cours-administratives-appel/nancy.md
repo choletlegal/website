@@ -2,18 +2,32 @@
 layout: juridiction
 cour_appel: nancy
 title: "Cour administrative d'appel de Nancy"
-description: "La cour administrative d'appel de Nancy est la juridiction d'appel de l'ensemble du ressort — Besançon, Châlons-en-Champagne, Nancy, Strasbourg — devant laquelle Maître Antonin Cholet défend les jugements rendus en première instance, notamment à Besançon."
+description: "Maître Antonin Cholet, avocat au Barreau de Besançon, voit ses dossiers plaidés devant le tribunal administratif de Besançon jugés en appel par la cour administrative d'appel de Nancy, également compétente pour les tribunaux administratifs de Châlons-en-Champagne, Nancy et Strasbourg."
 permalink: /cours-administratives-appel/nancy/
 ---
 
-La cour administrative d'appel de Nancy, [6 rue du Haut-Bourgeois](https://www.openstreetmap.org/search?query=6%20rue%20du%20Haut-Bourgeois%2C%20Nancy),
-est la juridiction d'appel de l'ensemble du ressort : les tribunaux administratifs de
-[Besançon](/tribunaux-administratifs/besancon/), de Châlons-en-Champagne, de
-[Nancy](/tribunaux-administratifs/nancy/) et de [Strasbourg](/tribunaux-administratifs/strasbourg/).
-C'est donc systématiquement devant elle que sont portés, en appel, les jugements rendus à
-Besançon — la juridiction de proximité du cabinet.
+La [cour administrative d'appel de Nancy](https://nancy.cour-administrative-appel.fr/) est la
+juridiction d'appel de l'ensemble des jugements rendus par le
+[tribunal administratif de Besançon](/tribunaux-administratifs/besancon/), ce qui en fait une
+juridiction de recours incontournable pour le cabinet en
+[droit de l'urbanisme](/domaines-intervention/) et en droit public. Elle est également
+compétente pour les appels des tribunaux administratifs de Châlons-en-Champagne, de
+[Nancy](/tribunaux-administratifs/nancy/) et de
+[Strasbourg](/tribunaux-administratifs/strasbourg/).
 
-Cette place particulière dans le ressort explique la pratique régulière du cabinet devant cette
-cour, en [droit de l'urbanisme](/domaines-intervention/) comme en
-[droit de la fonction publique](/domaines-intervention/fonction-publique/) : confirmation ou
-infirmation d'un jugement de première instance, appel incident, exécution des arrêts rendus.
+La cour administrative d'appel siège depuis 1989 à l'hôtel de Fontenoy, bâti au début du XVIIIe
+siècle par l'architecte Germain Boffrand. Elle est située au
+[6 rue du Haut-Bourgeois](https://www.openstreetmap.org/search?query=6%20rue%20du%20Haut-Bourgeois%2C%20Nancy),
+à Nancy.
+
+Le délai moyen de jugement est de 1 an, 1 mois et 24 jours, avec près de 3 100 dossiers jugés
+chaque année, qui se répartissent principalement entre le droit des étrangers (64 %), la
+fonction publique (7 %) et l'urbanisme et l'aménagement (5 %), domaine de prédilection du
+cabinet (chiffres 2025).
+
+Le ressort de la cour s'étend à l'ensemble des tribunaux administratifs de Besançon,
+Châlons-en-Champagne, Nancy et Strasbourg.
+
+Les arrêts rendus par la cour administrative d'appel de Nancy ne sont susceptibles que d'un
+pourvoi en cassation devant le [Conseil d'État](https://www.conseil-etat.fr/), qui ne rejuge pas
+l'affaire au fond mais contrôle la légalité de la décision.
