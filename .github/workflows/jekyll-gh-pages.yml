@@ -67,3 +67,18 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Notify IndexNow (Bing, Yandex, Naver, Seznam, Yep)
+        run: |
+          key="57e601dcf265611d76ba71b8f09c978d"
+          urls=$(curl -s "https://www.cholet-avocat.fr/sitemap.xml" | grep -oP '(?<=<loc>)[^<]+' | jq -R . | jq -s .)
+          payload=$(jq -n \
+            --arg host "www.cholet-avocat.fr" \
+            --arg key "$key" \
+            --arg keyLocation "https://www.cholet-avocat.fr/${key}.txt" \
+            --argjson urlList "$urls" \
+            '{host: $host, key: $key, keyLocation: $keyLocation, urlList: $urlList}')
+          curl -s -o /dev/null -w "IndexNow response: %{http_code}\n" \
+            -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "$payload"
