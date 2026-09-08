@@ -1,0 +1,62 @@
+---
+layout: default
+---
+{% comment %}
+  Layout partagé par les deux silos /tribunaux-administratifs/ (front matter
+  `tribunal: <slug>`) et /cours-administratives-appel/ (front matter
+  `cour_appel: <slug>`), plutôt que dupliqué : même structure (page-header,
+  contenu, décisions filtrées par juridiction, schema.org Service), seule la
+  clé de recherche dans _data/juridictions.yml (type TA ou CAA) change.
+{% endcomment %}
+{% if page.cour_appel %}
+  {% assign slug = page.cour_appel %}
+  {% assign type = "CAA" %}
+  {% assign eyebrow_text = "Cours administratives d'appel" %}
+  {% assign eyebrow_href = "/cours-administratives-appel/" %}
+{% else %}
+  {% assign slug = page.tribunal %}
+  {% assign type = "TA" %}
+  {% assign eyebrow_text = "Tribunaux administratifs" %}
+  {% assign eyebrow_href = "/tribunaux-administratifs/" %}
+{% endif %}
+{% assign juridiction = site.data.juridictions.juridictions | where: "slug", slug | where: "type", type | first %}
+{% assign site_url = site.url | append: site.baseurl %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Représentation en contentieux administratif",
+  "name": {{ juridiction.nom | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "url": {{ site_url | append: juridiction.url | jsonify }},
+  "areaServed": {{ juridiction.ressort | jsonify }},
+  "provider": {
+    "@type": "Attorney",
+    "name": {{ site.title | jsonify }},
+    "url": {{ site_url | jsonify }}
+  }
+}
+</script>
+<article class="page-domaine">
+  {% include page-header.html eyebrow_text=eyebrow_text eyebrow_href=eyebrow_href title=juridiction.nom lede=page.description %}
+
+  <div class="section">
+    <div class="wrap">
+      <div class="page-domaine-content">
+        {{ content }}
+
+        {% assign juridiction_decisions = site.decisions | where_exp: "d", "juridiction.juridiction_labels contains d.juridiction" | sort: "date" | reverse %}
+        {% if juridiction_decisions.size > 0 %}
+        <h2>Décisions obtenues</h2>
+        <div class="proof-list">
+          {% for decision in juridiction_decisions %}
+          {% include decision-row.html decision=decision %}
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  {% include sections/cta.html %}
+</article>
