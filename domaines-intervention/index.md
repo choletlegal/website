@@ -14,6 +14,7 @@ administrative — auprès des particuliers, des entreprises et des collectivit�
 
 <div class="section">
   <div class="wrap">
+    <h2 class="sr-only">Liste des domaines d'intervention</h2>
     {% include domaines-list.html %}
   </div>
 </div>
