@@ -183,7 +183,7 @@ tags: ["PLUi", "vice de procédure"]   # optionnel, libre — prépare un futur 
 - [x] Données structurées Schema.org pertinentes : `Attorney` sur les pages cabinet (tranché — plus précis que le `LegalService` générique, cf. Journal), `Article` (avec auteur) sur blog ; reste à faire : `FAQPage` si section FAQ (`honoraires/`), `Article` sur les futures fiches `_decisions`
 - [ ] Contenu sourcé : textes de loi, jurisprudence citée précisément (CE, CAA, TA)
 - [ ] Sitemap XML (`jekyll-sitemap`) et `robots.txt` à jour
-- [x] Google Search Console : propriété **Domaine** `cholet-avocat.fr` vérifiée côté porteur du projet via enregistrement DNS TXT (pas la méthode balise HTML — `webmaster_verifications.google` reste donc vide dans `_config.yml` à raison, cf. Journal). Reste à faire : soumettre/vérifier le sitemap (`https://www.cholet-avocat.fr/sitemap.xml`) dans la propriété.
+- [x] Google Search Console : propriété **Domaine** `cholet-avocat.fr` vérifiée côté porteur du projet via enregistrement DNS TXT (pas la méthode balise HTML — `webmaster_verifications.google` reste donc vide dans `_config.yml` à raison, cf. Journal). Sitemap (`https://www.cholet-avocat.fr/sitemap.xml`, HTTP 200 vérifié) soumis dans la propriété.
 - [ ] Bing Webmaster Tools : pas encore configuré — à faire via "Importer depuis Google Search Console" (récupère automatiquement propriété + sitemap sans nouvelle vérification), plutôt que la méthode balise HTML.
 
 ### Performance
