@@ -59,18 +59,19 @@
   });
 })();
 
-// --- Google Analytics (à décommenter après configuration) ---
-// function loadGA() {
-//   if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
-//     window.dataLayer = window.dataLayer || [];
-//     function gtag(){dataLayer.push(arguments);}
-//     gtag('js', new Date());
-//     gtag('config', 'GA_MEASUREMENT_ID');
-//
-//     const script = document.createElement('script');
-//     script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
-//     script.async = true;
-//     document.head.appendChild(script);
-//   }
-// }
-// loadGA();
+// --- Google Analytics (GA4) ---
+// Chargé dynamiquement plutôt qu'en <script> statique dans head-js.html pour ne
+// jamais peser sur le rendu (aucun impact LCP/FCP) ; désactivé sur localhost pour
+// ne pas polluer les statistiques avec le trafic de développement.
+(function loadGA() {
+  if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') return;
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-LVMH7WLBL6');
+
+  var script = document.createElement('script');
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-LVMH7WLBL6';
+  script.async = true;
+  document.head.appendChild(script);
+})();
