@@ -3,6 +3,7 @@ layout: post
 date: 2018-10-15
 permalink: "/blog/droit administratif/2018/10/15/interdiction-generale-parties-distinctes-ouvrage-public.html"
 title: "Visite pieds nus à la citadelle de Besançon : Précisions sur les justifications des interdictions générales d’un règlement d’ouvrage public"
+seo_title: "Citadelle de Besançon : interdictions d'un ouvrage public"
 description: ""
 categories: ["Droit administratif"]
 ---

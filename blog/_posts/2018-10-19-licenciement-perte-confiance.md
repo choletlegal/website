@@ -3,6 +3,7 @@ layout: post
 date: 2018-10-19
 permalink: "/blog/droit administratif/2018/10/19/licenciement-perte-confiance.html"
 title: "Licenciement d'un agent public contractuel : le seul motif tiré de la perte de confiance ne suffit pas"
+seo_title: "Licenciement d'un contractuel pour perte de confiance"
 description: ""
 categories: ["Droit administratif"]
 ---

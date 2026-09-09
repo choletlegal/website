@@ -17,12 +17,20 @@
     survivre à la troncature Google même sur les titres de page longs.
     Sur l'accueil, page.title est déjà un titre complet et optimisé
     (nom + spécialités) : pas de suffixe, pour éviter la duplication.
+
+    seo_title (optionnel, front matter) permet à une page dont le titre
+    éditorial (h1, page.title) est volontairement long/descriptif — cas des
+    articles de blog — de fournir un <title> court distinct, sans toucher au
+    h1 ni au titre affiché dans les listes. Ne change que le <title> : le h1
+    (page-header.html, post-row.html...) et og:title/twitter:title restent
+    sur page.title, comme avant.
   {% endcomment %}
   {% assign title_suffix = "Antonin Cholet — Avocat à Besançon" %}
+  {% assign display_title = page.seo_title | default: page.title %}
   {% if page.url == "/" %}
-  <title>{{ page.title | strip_html }}</title>
+  <title>{{ display_title | strip_html }}</title>
   {% else %}
-  <title>{{ page.title | strip_html }} | {{ title_suffix }}</title>
+  <title>{{ display_title | strip_html }} | {{ title_suffix }}</title>
   {% endif %}
   {% seo title=false %}
 </head>
