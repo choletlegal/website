@@ -25,9 +25,11 @@ par une décision motivée, après avis de la chambre d'agriculture.</p>
 
 <div class="callout">
   <p><strong>Délai de recours : deux mois.</strong> Un permis de construire ou d'aménager délivré à
-  proximité de votre exploitation ne peut être contesté que dans un délai de deux mois à compter de
-  son affichage sur le terrain. Passé ce délai, le recours n'est plus recevable — mieux vaut
-  vérifier la situation sans attendre.</p>
+  proximité de votre exploitation peut être contesté dans un délai de deux mois à compter de son
+  affichage régulier et continu sur le terrain. C'est au bénéficiaire du permis, s'il entend opposer
+  ce délai, de prouver la réalité et la régularité de cet affichage : à défaut, le recours reste
+  recevable même après deux mois. Cette question s'apprécie au cas par cas — mieux vaut vérifier
+  votre situation avant de présumer un dossier hors délai.</p>
 </div>
 
 <p>Cette décision peut concerner tout exploitant bovin confronté à un projet de construction à
