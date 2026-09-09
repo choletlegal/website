@@ -3,6 +3,7 @@ layout: post
 date: 2019-01-17
 permalink: "/blog/droit administratif/2019/01/17/mobilité-compte-epargne-temps.html"
 title: "Compte épargne temps et mobilité dans la fonction publique ou vers le privé"
+seo_title: "Compte épargne temps et mobilité professionnelle"
 description: ""
 categories: ["Droit administratif"]
 ---

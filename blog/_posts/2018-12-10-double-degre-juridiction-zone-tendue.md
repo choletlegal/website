@@ -3,6 +3,7 @@ layout: post
 date: 2018-12-10
 permalink: "/blog/droit administratif/2018/12/10/double-degre-juridiction-zone-tendue.html"
 title: "Un permis de construire en zone dite tendue ne créant pas de logements supplémentaires est soumis au double degré de juridiction"
+seo_title: "Permis en zone tendue : double degré de juridiction"
 description: ""
 categories: ["Droit administratif"]
 ---

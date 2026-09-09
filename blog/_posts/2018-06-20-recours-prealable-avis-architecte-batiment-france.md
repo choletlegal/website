@@ -3,6 +3,7 @@ layout: post
 date: 2018-06-20
 permalink: "/blog/droit administratif/2018/06/20/recours-prealable-avis-architecte-batiment-france.html"
 title: "Instruction du recours préalable sur l'avis de l'Architecte des bâtiments de France"
+seo_title: "Recours préalable sur l'avis de l'ABF"
 description: ""
 categories: ["Droit administratif"]
 ---

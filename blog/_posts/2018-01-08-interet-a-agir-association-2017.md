@@ -3,6 +3,7 @@ layout: post
 date: 2018-01-08
 permalink: "/blog/droit administratif/2018/01/08/interet-a-agir-association-2017.html"
 title: "De l’intérêt à agir d'une association contre un permis de construire au regard des décisions rendues en 2017"
+seo_title: "Intérêt à agir d'une association contre un permis"
 description: ""
 categories: ["Droit administratif"]
 ---
