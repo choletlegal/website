@@ -658,6 +658,30 @@ body.has-inverted-hero .site-header:not(.is-scrolled) {
    disproportionnés sur des lignes qui ne remplissent pas la largeur). */
 .legal-content .legal-meta { text-align: left; hyphens: none; }
 
+/* ---------------- Encart d'alerte (délai, information importante) ----------------
+   Réutilisable partout où une information doit ressortir du flux de paragraphes
+   courants (ex. délai de recours) sans recourir à une couleur d'alerte agressive. */
+
+.callout {
+  border-left: 3px solid var(--accent-ink);
+  background: var(--surface-2);
+  padding: 1.25rem 1.5rem;
+  margin: 0 0 1.5rem;
+}
+.callout p { margin: 0; color: var(--ink-body); }
+
+/* ---------------- Bandeau temporaire (campagne éleveurs bovins, sept. 2026) ----------------
+   À retirer avec son include une fois la campagne terminée (cf. CLAUDE.md, _config.yml). */
+
+.campaign-banner { background: var(--surface-2); border-bottom: 1px solid var(--line); }
+.campaign-banner-inner { padding: 0.75rem 0; text-align: center; }
+.campaign-banner p { margin: 0; font-size: 0.92rem; color: var(--ink-body); }
+.campaign-banner a {
+  color: var(--accent-ink); font-weight: 600;
+  text-decoration: none; border-bottom: 1px solid var(--accent-ink);
+}
+.campaign-banner a:hover { opacity: 0.85; }
+
 @media (prefers-reduced-motion: reduce) {
   .site-header, .brand-mark, .brand-name, .brand-title, .nav-links a, .burger, .burger svg,
   .action-btn, .link-arrow span, .footer-socials a {

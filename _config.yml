@@ -73,6 +73,12 @@ webmaster_verifications:
   google: ""
   bing: ""
 
+# --- Campagne temporaire : courrier éleveurs bovins (sept. 2026) ---
+# Active le bandeau d'accueil (_includes/campagne-banner.html, appelé depuis index.html)
+# qui renvoie vers /eleveurs-bovins-urbanisation/. Passer à false une fois l'effet du
+# courrier épuisé (cf. CLAUDE.md) — pas besoin de toucher au layout ni à l'include.
+campagne_eleveurs_active: true
+
 # --- Feed ---
 feed:
   path: /feed.xml
