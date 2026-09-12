@@ -109,6 +109,7 @@ exclude:
   - LICENSE
   - AGENTS.md
   - CLAUDE.md
+  - scripts/ # automatisation de veille (Gemfile/script Ruby dédiés) — jamais servi par le site
 
 # --- Include (fichiers normalement exclus) ---
 include:

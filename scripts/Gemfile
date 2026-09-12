@@ -1,0 +1,7 @@
+source "https://rubygems.org"
+
+# Dépendances de l'automatisation de veille jurisprudentielle (scripts/veille_conseil_etat.rb),
+# volontairement séparées du Gemfile principal du site Jekyll (racine du repo) : ce script n'est
+# jamais exécuté au moment du build/déploiement du site, seulement par le workflow GitHub Actions
+# dédié (.github/workflows/veille-conseil-etat.yml).
+gem "anthropic", "~> 1.0"

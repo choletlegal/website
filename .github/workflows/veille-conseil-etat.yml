@@ -1,0 +1,45 @@
+name: Veille Conseil d'État (droit de l'urbanisme)
+
+# Reproduit l'automatisation n8n de référence ("fil public") sur le repo GitHub, sous forme
+# d'un job planifié qui propose des Pull Requests de relecture plutôt que de publier
+# directement — voir scripts/veille_conseil_etat.rb pour la logique complète et CLAUDE.md
+# pour le contexte de la décision.
+
+on:
+  schedule:
+    # Lundi 7h heure de Paris ≈ 6h UTC en hiver / 5h UTC en été (CEST) — même cadence que le
+    # flux n8n d'origine (triggerAtDay: lundi, triggerAtHour: 7). Un décalage d'une heure selon
+    # la saison est sans conséquence pour une veille hebdomadaire.
+    - cron: "0 6 * * 1"
+  workflow_dispatch: {} # déclenchement manuel depuis l'onglet Actions, pour tester sans attendre lundi
+
+permissions:
+  contents: write # le script crée une branche et y pousse le nouvel article
+  pull-requests: write # et ouvre une Pull Request (brouillon) par décision nouvelle
+
+jobs:
+  veille:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # historique complet : nécessaire pour créer les branches veille-ce/*
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+          working-directory: scripts # Gemfile dédié, séparé de celui du site (voir scripts/Gemfile)
+
+      - name: Lancer la veille
+        working-directory: scripts
+        run: bundle exec ruby veille_conseil_etat.rb
+        env:
+          PISTE_CLIENT_ID: ${{ secrets.PISTE_CLIENT_ID }}
+          PISTE_CLIENT_SECRET: ${{ secrets.PISTE_CLIENT_SECRET }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_BASE_BRANCH: ${{ github.event.repository.default_branch }}

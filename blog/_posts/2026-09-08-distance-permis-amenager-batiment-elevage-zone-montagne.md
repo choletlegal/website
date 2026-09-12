@@ -4,6 +4,7 @@ title: "Distance entre habitations et bâtiments d'élevage : la réduction à 2
 seo_title: "Distance élevage bovin : réduction à 25 m non automatique"
 description: "Saisi d'un permis d'aménager délivré à proximité d'un élevage bovin, le Conseil d'État juge que la réduction à 25 mètres de la distance ICPE en zone de montagne relève du seul préfet, à la demande de l'exploitant, et que l'autorité d'urbanisme ne peut déroger à la règle de réciprocité de l'article L.111-3 du code rural que par une décision motivée."
 categories: ["Droit de l'urbanisme"]
+ce_numero: "498934"
 ---
 
 Saisi d'un permis d'aménager délivré à proximité d'un élevage bovin, le Conseil d'État juge que la distance ICPE de 100 mètres ne peut être ramenée à 25 mètres en zone de montagne que par le préfet, à la demande de l'exploitant. L'autorité d'urbanisme ne peut, quant à elle, que déroger à la réciprocité par décision motivée.
