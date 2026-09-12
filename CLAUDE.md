@@ -71,6 +71,10 @@ Documentation de contexte pour les sessions Claude Code sur ce projet. À mettre
 │   ├── js/main.js             # menu burger + bascule couleur du header au scroll
 │   └── images/
 │
+├── scripts/                  # automatisation de veille (Gemfile propre, exclu du build Jekyll — voir Workflows)
+│   ├── Gemfile / Gemfile.lock
+│   └── veille_conseil_etat.rb
+│
 └── votre-avocat.md, contact.md, mentions-legales.md, politique-confidentialite.md, blog.html   # toutes migrées Piste B — honoraires/ reste à créer
 ```
 
@@ -224,6 +228,20 @@ tags: ["PLUi", "vice de procédure"]   # optionnel, libre — prépare un futur 
 
 ### Mettre à jour les données du cabinet ou la liste des domaines
 - Modifier `_data/cabinet.yml` (coordonnées, réseaux) ou `_data/domaines.yml` (ajout/retrait d'un domaine) plutôt que de toucher les templates un par un.
+
+### Veille automatique Conseil d'État (droit de l'urbanisme)
+Automatisation hebdomadaire (`.github/workflows/veille-conseil-etat.yml`, cron lundi 7h Paris + déclenchement manuel), équivalent GitHub Actions d'un flux n8n de référence fourni par le porteur du projet. Logique complète dans `scripts/veille_conseil_etat.rb` (dépendances Ruby séparées du site dans `scripts/Gemfile`, exclu du build via `_config.yml`) :
+1. Authentification à l'API PISTE, recherche des 5 dernières décisions du Conseil d'État sur "urbanisme" (tri `DATE_DESC`, pas de plage de dates codée en dur — contrairement au flux n8n d'origine, qui se serait périmée à chaque exécution). Le filtre de recherche `PUBLICATION_RECUEIL: PUBLIE` sélectionne déjà exclusivement les classifications **A** (publiée au recueil Lebon) et **B** (mentionnée aux tables), jamais C (inédit) — aucun second contrôle nécessaire côté script.
+2. Dédoublonnage par numéro de décision (`ce_numero`, champ de front matter caché écrit sur chaque article généré, comparé aux articles déjà présents dans `blog/_posts/`) — pas de registre séparé à maintenir, la source unique reste les articles publiés.
+3. Pour chaque décision non encore commentée, rédaction d'un article en français via l'API Claude (modèle `claude-opus-5`, sortie structurée forcée par tool use) — **collection réutilisée : `_posts` (blog), pas de nouvelle collection** : cette veille correspond exactement à la définition déjà donnée à `_posts` plus haut (« commentaires de jurisprudence non liés à un dossier personnel »), une collection dédiée aurait dupliqué layout et structure d'URL pour rien. Format très largement repris du gabarit du skill `redaction-fiches-decisions` (`_decisions`), adapté à un commentaire de veille générale plutôt qu'à un dossier plaidé par le cabinet :
+   - Bloc de référence en tête d'article — **construit déterministiquement par le script, pas par le modèle** (format trop normé pour risquer une erreur de mise en forme IA) : `**Conseil d'État, [date en lettres], n° [numéro]**` (gras, sans « Arrêt »/« Jugement »), puis une ligne italique `*Consulter [la décision sur Légifrance](...) et [sur Ariane Web](...).*`.
+   - Corps rédigé par Claude : paragraphe de synthèse (40-60 mots), puis `## Les faits`, puis `## La portée de la décision` (raisonnement, citation en blockquote/italique/guillemets français, conclusion) — pas de `## En bref`/`## En pratique` ni de "notre mandant" : il n'y a ni cabinet ni client dans cette affaire, contrairement aux fiches `_decisions`.
+   - Aucun lien hypertexte vers un article de code ou une autre décision citée dans le texte (contrairement au gabarit `_decisions`) : le script n'a pas d'outil de recherche Légifrance en direct pour vérifier ces URLs secondaires, un lien fabriqué serait pire qu'aucun lien — mention en texte simple seulement.
+   - `tags` (2-3, mêmes règles de sélection que le gabarit) ajoutés au front matter et reliés au JSON-LD (`schema-article.html` prend désormais un paramètre optionnel `keywords`, alimenté par `page.tags` dans `_layouts/post.html`).
+   - Maillage interne vers les pages de domaines pertinentes, jamais d'autre source citée que la décision fournie.
+4. Ouverture d'une **Pull Request en brouillon par décision** (jamais de commit direct sur `master`) — la PR rappelle explicitement que le contenu est généré par IA et doit être relu avant fusion (exactitude juridique, fidélité des citations, absence de mention inutile d'une personne physique partie à l'instance), même logique que le point de vigilance déontologique déjà en place pour les fiches `_decisions`.
+
+Secrets GitHub requis (Settings > Secrets and variables > Actions), à configurer côté porteur du projet : `PISTE_CLIENT_ID`, `PISTE_CLIENT_SECRET` (compte API PISTE), `ANTHROPIC_API_KEY` (console Anthropic). `GITHUB_TOKEN` est fourni automatiquement par Actions.
 
 ## Commandes utiles
 
