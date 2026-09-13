@@ -196,8 +196,10 @@ ARTICLE_TOOL = {
       tags: {
         type: "array",
         items: { type: "string" },
-        minItems: 2,
-        maxItems: 3,
+        # Pas de minItems/maxItems ici : l'API refuse toute valeur autre que 0 ou 1 pour un
+        # tableau dès que strict:true est activé sur l'outil (400 invalid_request_error,
+        # constaté en conditions réelles) — la contrainte "2 à 3" reste portée par la
+        # description ci-dessous et par le prompt système.
         description: "2 à 3 mots-clés courts désignant les notions juridiques/procédurales " \
                       "centrales de la décision, complémentaires du titre (pas une reformulation) " \
                       "— jamais un terme générique déjà couvert par la catégorie (ex. \"urbanisme\"). " \
