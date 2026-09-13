@@ -81,6 +81,12 @@ def piste_access_token
 end
 
 # --- 2. Recherche des 5 dernières décisions "urbanisme" -------------------------
+#
+# Le fond "CETAT" de Légifrance couvre en réalité tout le contentieux administratif
+# (Conseil d'État, mais aussi CAA et TA) — pas seulement le Conseil d'État, contrairement à
+# ce que le nom du fond laisse penser (constaté en conditions réelles, une décision de CAA
+# de Paris étant remontée). Le filtrage sur le seul Conseil d'État se fait donc après coup,
+# sur le champ `juridiction` de chaque décision (voir `main`).
 
 def search_last_decisions(access_token)
   body = {
@@ -167,6 +173,7 @@ end
 ARTICLE_TOOL = {
   name: "publier_article",
   description: "Soumet l'article de blog rédigé, prêt à être intégré au site.",
+  strict: true, # garantit que l'appel d'outil contient exactement les champs requis
   input_schema: {
     type: "object",
     properties: {
@@ -281,7 +288,11 @@ def draft_article(client, decision)
   tool_use = message.content.find { |block| block.type == :tool_use }
   raise "Réponse Claude sans appel d'outil (stop_reason=#{message.stop_reason})" unless tool_use
 
-  tool_use.input
+  article = tool_use.input
+  manquants = %w[title seo_title description tags body] - article.keys
+  raise "Réponse Claude incomplète, champs manquants : #{manquants.join(', ')}" unless manquants.empty?
+
+  article
 end
 
 # --- 6. Fichier + branche + Pull Request ----------------------------------------
@@ -419,6 +430,10 @@ def main
     next unless text_id
 
     decision = fetch_decision(access_token, text_id)
+    unless decision["juridiction"].to_s.downcase.start_with?("conseil d")
+      puts "Décision #{decision['juridiction'].inspect} ignorée (pas le Conseil d'État)"
+      next
+    end
     numero = decision["num"].to_s
     next if numero.empty? || deja_publiees.include?(numero)
 
