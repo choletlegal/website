@@ -11,6 +11,7 @@ layout: default
 {% assign article_date_published = page.date | date_to_xmlschema %}
 {% assign article_author = page.author | default: site.author.name %}
 {% assign article_url = page.url | absolute_url %}
+{% assign article_keywords = page.tags | join: ", " %}
 {% include schema-article.html
   headline=page.title
   description=article_description
@@ -19,6 +20,7 @@ layout: default
   author_name=article_author
   url=article_url
   logo_url=article_logo
+  keywords=article_keywords
 %}
 {% assign post_category = page.categories | first | default: "Blog" %}
 {% capture post_meta %}
