@@ -290,7 +290,12 @@ def draft_article(client, decision)
   tool_use = message.content.find { |block| block.type == :tool_use }
   raise "Réponse Claude sans appel d'outil (stop_reason=#{message.stop_reason})" unless tool_use
 
-  article = tool_use.input
+  # transform_keys(&:to_s) : le gem anthropic renvoie l'input de l'appel d'outil avec des clés
+  # Symbol (:title...) — sans cette normalisation, la comparaison ci-dessous avec des clés String
+  # (et tous les accès article["..."] plus loin dans le script) considérerait à tort tous les
+  # champs comme manquants (constaté en conditions réelles : les 5 champs rapportés absents alors
+  # que l'appel avait réussi).
+  article = tool_use.input.transform_keys(&:to_s)
   manquants = %w[title seo_title description tags body] - article.keys
   raise "Réponse Claude incomplète, champs manquants : #{manquants.join(', ')}" unless manquants.empty?
 
