@@ -1,0 +1,37 @@
+---
+layout: post
+title: "Renouvellement du classement d'un parc naturel régional après l'expiration du classement initial : la régularité tient à la date d'engagement de la procédure"
+seo_title: "Parc naturel régional : renouveler après l'expiration"
+description: "Le Conseil d'État juge qu'un décret de renouvellement de classement d'un parc naturel régional peut intervenir après l'expiration du classement précédent dès lors que la procédure a été engagée avant ce terme, sans proroger rétroactivement l'ancien classement ni entraîner la dissolution du syndicat mixte."
+categories: ["Droit de l'urbanisme"]
+tags: ["parc naturel régional", "charte", "syndicat mixte"]
+ce_numero: "494977"
+---
+
+**Conseil d'État, 27 mai 2026, n° 494977**
+
+*Consulter [la décision sur Légifrance](https://www.legifrance.gouv.fr/ceta/id/CETATEXT000054148461) et [sur Ariane Web](https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2026-05-27/494977).*
+
+Le Conseil d'État juge qu'un décret de renouvellement de classement d'un parc naturel régional peut légalement intervenir après l'expiration du classement précédent, dès lors que la procédure a été engagée par délibération régionale avant ce terme. Ce décret ne proroge pas rétroactivement l'ancien classement et l'expiration de celui-ci n'entraîne pas la dissolution du syndicat mixte.
+
+## Les faits
+
+Le parc naturel régional des Grands Causses avait été classé par un décret du 16 avril 2008. Ce classement a été prorogé une première fois par un décret du 5 janvier 2018, puis une seconde fois par l'article 232 de la loi du 22 août 2021 portant lutte contre le dérèglement climatique et renforcement de la résilience face à ses effets, qui prévoit une prorogation de douze mois des décrets de classement venant à échéance avant le 31 décembre 2024. Le classement expirait ainsi le 5 mai 2023.
+
+Entre-temps, le conseil régional d'Occitanie avait, par une délibération du 28 mars 2019, engagé la procédure de révision de la charte et de renouvellement du classement, conformément au III de l'article L. 333-1 du code de l'environnement. Par une convention du 3 juin 2019, la région a confié au **syndicat mixte d'aménagement et de gestion du parc** la conduite de cette procédure de renouvellement, faculté ouverte par le I de l'article L. 333-3 du même code. Le syndicat mixte a approuvé la charte révisée par une délibération du 23 juin 2023, soit postérieurement à l'expiration du classement, et le renouvellement a finalement été prononcé par un décret du 10 avril 2024.
+
+Deux associations de protection de l'environnement ont saisi le Conseil d'État d'un **recours pour excès de pouvoir** dirigé contre ce décret. Elles soutenaient, en premier lieu, que la procédure était irrégulière, faute pour le renouvellement d'être intervenu avant l'expiration du classement précédent, et que le syndicat mixte avait été dissous de plein droit, en application de l'article L. 5721-7 du code général des collectivités territoriales, à la date à laquelle il a approuvé la charte révisée. Elles critiquaient ensuite l'insuffisance de l'**évaluation environnementale** de la charte, l'**erreur manifeste d'appréciation** entachant selon elles le contenu de la charte au regard de la protection de l'avifaune et des paysages, et enfin l'absence, dans la charte, de dispositions assurant la transposition de ses orientations dans les documents d'urbanisme.
+
+## La portée de la décision
+
+Le Conseil d'État écarte l'ensemble de ces moyens et apporte, sur le premier d'entre eux, une précision destinée aux tables du recueil Lebon. Le raisonnement repose sur la distinction entre la date d'**engagement** de la procédure de renouvellement — qui procède, aux termes du III de l'article L. 333-1 du code de l'environnement, d'une délibération de la région prescrivant la révision de la charte et définissant le périmètre d'étude — et la date d'**adoption** du décret de renouvellement du classement. Seule la première doit se situer avant l'expiration du classement en cours :
+
+> « *si le décret attaqué du 10 avril 2024 est intervenu après l'expiration du classement adopté par le décret du 16 avril 2008 lequel avait été prorogé, successivement, par le décret du 5 janvier 2018 portant prorogation du classement du parc naturel régional des Grands Causses puis par l'article 232 de la loi du 22 août 2021 cité ci-dessus, jusqu'au 5 mai 2023, il ressort des pièces du dossier que la procédure de révision de la charte et de renouvellement du classement a été engagée par une délibération du conseil régional de la région Occitanie en date du 28 mars 2019, soit avant l'expiration du classement. Par suite et contrairement à ce que soutiennent les associations requérantes, le décret litigieux, dont l'entrée en vigueur n'a pas eu pour effet de proroger rétroactivement les effets du précédent classement, pouvait être régulièrement adopté au terme d'une procédure de renouvellement.* »
+
+Cette solution est doublement utile. D'un côté, elle sécurise les procédures de renouvellement dont la longueur — élaboration du projet de charte, enquête publique, approbation par les communes à la majorité qualifiée, approbation régionale, décret — excède fréquemment la durée résiduelle du classement en vigueur. De l'autre, elle en délimite strictement les effets : le décret de renouvellement ne comble pas rétroactivement la période intercalaire durant laquelle le territoire n'était plus classé. L'**opposabilité** de la charte, et notamment le rapport de compatibilité qu'elle impose aux documents d'urbanisme, ne joue donc que pour l'avenir, ce dont les auteurs de [documents d'urbanisme](/domaines-intervention/plu-documents-urbanisme/) devront tenir compte.
+
+Le Conseil d'État écarte parallèlement le grief tiré de la dissolution de plein droit du syndicat mixte : dès lors que la région lui avait confié, par convention, la procédure de renouvellement du classement, l'expiration du précédent classement n'a pas mis fin à l'opération qu'il avait pour objet de conduire, au sens de l'article L. 5721-7 du code général des collectivités territoriales, et ne pouvait donc entraîner sa disparition.
+
+Sur les autres moyens, la décision confirme un contrôle mesuré. L'évaluation environnementale, jugée « riche et documentée » par l'Autorité environnementale, avait été complétée par les réponses du syndicat mixte aux recommandations formulées, réponses portées à la connaissance du public lors de l'enquête publique : aucune insuffisance de nature à vicier la procédure n'est retenue. Le contrôle du contenu de la charte se limite à l'erreur manifeste d'appréciation, le juge relevant notamment que les zones potentielles d'implantation de parcs éoliens représentent moins de 2 % du territoire classé. Enfin, la Haute juridiction juge **inopérant** le moyen tiré de l'absence, dans la charte, de dispositions organisant la transposition de ses orientations : ni le V de l'article L. 333-1 du code de l'environnement, ni aucun autre texte ou principe — pas même le principe de sécurité juridique — n'impose une telle exigence, le rapport de compatibilité s'imposant par lui-même aux SCoT, PLU et cartes communales. Les praticiens du [contentieux de l'urbanisme](/domaines-intervention/contentieux-urbanisme/) retiendront que l'articulation entre charte et documents locaux se règle au stade de ces derniers, et non de la charte.
+
+La requête est rejetée, de même que les conclusions présentées au titre de l'article L. 761-1 du code de justice administrative.
