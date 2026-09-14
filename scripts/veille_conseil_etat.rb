@@ -372,9 +372,8 @@ end
 def reference_block(decision)
   # Bloc de référence construit ici, déterministe (pas par Claude) : c'est un format très normé
   # (gras/italique/liens exacts) où une erreur de mise en forme par le modèle serait plus
-  # difficile à repérer qu'à éviter en amont. Ariane Web en premier, Légifrance en second : ordre
-  # propre aux articles de blog (source privilégiée pour les décisions du Conseil d'État sur ce
-  # site), à l'inverse du gabarit des fiches décisions qui place Légifrance en principal.
+  # difficile à repérer qu'à éviter en amont. Ariane Web en premier, Légifrance en second — source
+  # privilégiée pour les décisions du Conseil d'État sur ce site, les deux liens restant présents.
   <<~REF
     **Conseil d'État, #{date_en_lettres(decision['date_iso'])}, n° #{decision['num']}**
 
@@ -404,7 +403,7 @@ def write_and_open_pr(article, decision)
   FM
 
   # Ordre : synthèse (première chose lue), puis référence de la décision, puis développement —
-  # la référence n'est jamais avant la synthèse (voir gabarit blog du porteur du projet).
+  # la référence n'est jamais avant la synthèse.
   body = "#{article['synthese'].strip}\n\n#{reference_block(decision)}\n#{article['corps'].strip}\n"
   File.write(File.join(REPO_ROOT, relative_path), front_matter + body)
 
