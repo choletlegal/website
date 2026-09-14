@@ -1,0 +1,41 @@
+---
+layout: post
+title: "Dérogation espèces protégées : la raison impérative d'intérêt public majeur n'exige pas de situation critique locale (A69)"
+seo_title: "RIIPM : pas de situation critique locale exigée (A69)"
+description: "Saisi des autorisations environnementales de l'autoroute A69, le Conseil d'État juge que la raison impérative d'intérêt public majeur n'impose pas de caractériser une situation critique locale et peut tenir compte de la déclaration d'utilité publique et du caractère structurant du projet. Il précise aussi la consultation des communes intéressées et la portée de la convention d'Aarhus."
+categories: ["Droit de l'urbanisme"]
+tags: ["RIIPM", "espèces protégées", "autorisation environnementale"]
+ce_numero: "512448"
+---
+
+**Conseil d'État, 29 juin 2026, n° 512448**
+
+*Consulter [la décision sur Légifrance](https://www.legifrance.gouv.fr/ceta/id/CETATEXT000054370519) et [sur Ariane Web](https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2026-06-29/512448).*
+
+Saisi des autorisations environnementales de la liaison autoroutière A69, le Conseil d'État juge que la **raison impérative d'intérêt public majeur** n'impose pas de caractériser une situation critique locale et peut tenir compte de la déclaration d'utilité publique et du caractère structurant du projet. La décision précise en outre la consultation des communes intéressées et la portée de la convention d'Aarhus.
+
+## Les faits
+
+Par un arrêté conjoint du 1er mars 2023, les préfets de la Haute-Garonne et du Tarn ont délivré à la société concessionnaire une **autorisation environnementale**, au titre de l'article L. 181-1 du code de l'environnement, en vue de la réalisation de la liaison autoroutière entre Verfeil et Castres, dite A69. Par un arrêté du lendemain, le préfet de la Haute-Garonne a autorisé, sur le même fondement, la mise à deux fois deux voies de l'A680 entre Castelmaurou et Verfeil. Ces autorisations tenaient lieu, notamment, de **dérogation à l'interdiction de destruction d'espèces protégées** (4° du I de l'article L. 411-2 du code de l'environnement) et d'autorisation au titre des abords de monuments historiques (articles L. 621-32 et L. 632-1 du code du patrimoine).
+
+Plusieurs associations de protection de l'environnement, des fédérations syndicales, une commune et des sociétés riveraines ont saisi le tribunal administratif de Toulouse, qui a annulé les deux arrêtés par deux jugements du 27 février 2025. Sur appel de la ministre chargée de l'environnement et des deux sociétés pétitionnaires, la cour administrative d'appel de Toulouse a, par un arrêt du 30 décembre 2025, annulé ces jugements et rejeté l'ensemble des demandes de première instance. Trois pourvois et deux requêtes à fin de **sursis à exécution** ont été formés devant le Conseil d'État, joints pour être jugés ensemble.
+
+Un point de procédure méritait d'être tranché à titre liminaire. Une association nationale agréée, simplement **intervenante en demande** devant le tribunal, s'était pourvue en cassation contre l'arrêt d'appel. Le Conseil d'État rappelle que la voie de la cassation n'est ouverte qu'aux personnes ayant eu la qualité de partie dans l'instance ayant donné lieu à la décision attaquée. L'intervenant en demande de première instance n'acquiert la qualité de partie en défense en appel que s'il aurait eu, à défaut d'intervention, qualité pour former **tierce-opposition** au jugement rejetant la demande d'annulation. Dès lors que les arrêtés attaqués ne préjudiciaient pas à ses droits — l'association ayant seulement qualité pour introduire elle-même le recours —, sa mise en cause pour observations par la cour ne lui conférait pas la qualité de partie : son pourvoi est irrecevable, seules ses interventions au soutien des autres pourvois étant admises.
+
+Sur la régularité de l'arrêt, la Haute juridiction écarte le grief d'**impartialité** tiré de la participation, à la formation de jugement au fond, de magistrats ayant statué sur le sursis à exécution des jugements de première instance : eu égard à l'office provisoire du juge du sursis, une telle participation n'est pas, par elle-même, irrégulière, sous réserve qu'il n'ait pas préjugé l'issue du litige au-delà de ce qu'implique nécessairement cet office.
+
+## La portée de la décision
+
+L'apport principal concerne la première des trois conditions cumulatives de la dérogation « espèces protégées ». Le Conseil d'État valide l'appréciation de la cour ayant retenu l'existence d'une raison impérative d'intérêt public majeur au vu de la réduction d'un tiers du temps de trajet, de l'amélioration de la desserte d'un bassin d'activité de plus de 130 000 habitants, du renforcement de sa liaison avec la métropole toulousaine, de l'amélioration du cadre de vie des riverains de la route nationale et des conditions de sécurité routière :
+
+> « *En jugeant qu'un tel projet répondait à une raison impérative d'intérêt public majeur, la cour, qui n'était pas tenue de rechercher l'existence d'une situation critique d'enclavement ou de décrochage démographique et économique du bassin de vie de Castres et qui a pu, à bon droit, relever que la création de l'autoroute A69 et l'élargissement de l'autoroute A680 avaient déjà été reconnues d'utilité publique et prendre en compte, de façon globale, les différents bénéfices attendus du projet en relevant son caractère structurant, a, par un arrêt suffisamment motivé, exactement qualifié les faits qui lui étaient soumis.* »
+
+Trois enseignements en découlent pour la pratique. D'abord, la démonstration d'une **situation critique locale** — enclavement, décrochage démographique ou économique — n'est pas une condition de la RIIPM. Ensuite, la **déclaration d'utilité publique** antérieure du projet constitue un élément que le juge peut prendre en compte, sans pour autant lier son appréciation. Enfin, les bénéfices attendus s'apprécient globalement, le caractère structurant de l'infrastructure pouvant être retenu. La décision précise par ailleurs que l'**absence de solution alternative satisfaisante** s'apprécie au regard des besoins à satisfaire, des moyens susceptibles d'être employés et des objectifs poursuivis, la cour ayant pu écarter les alternatives ferroviaire, d'aménagement de l'existant et de mise à deux fois deux voies de la route nationale.
+
+Sur la procédure, la décision précise utilement l'articulation entre le II de l'article L. 181-10 du code de l'environnement et l'article R. 181-38 du même code : le préfet doit saisir pour avis, parmi les communes mentionnées au III de l'article R. 123-11 ou au I de l'article R. 123-46-1, celles seulement qui sont **intéressées par le projet**, notamment au regard de ses incidences environnementales notables sur leur territoire. Une commune située dans la seule aire d'étude éloignée, ou dont le territoire est seulement susceptible d'être affecté, n'a donc pas à être consultée à ce titre. Un enseignement à retenir pour l'instruction des grands projets et la sécurisation des procédures de consultation, dont le [contentieux de l'urbanisme](/domaines-intervention/contentieux-urbanisme/) et de l'[environnement](/domaines-intervention/environnement-icpe/) fait un terrain privilégié de moyens de légalité externe.
+
+Autre précision notable : ni l'article 6 de la **convention d'Aarhus** du 25 juin 1998 ni l'article L. 123-1 du code de l'environnement n'imposent à l'autorité compétente d'indiquer, dans la motivation de sa décision, la manière dont elle a pris en considération les observations reçues, ni les motifs l'ayant conduit à ne pas suivre certaines d'entre elles. Le visa du rapport et des conclusions de la commission d'enquête suffit à cet égard.
+
+Enfin, en matière de patrimoine, les recommandations dont sont assortis les avis de l'**architecte des Bâtiments de France**, estimant « souhaitable » ou « fortement recommandé » un tracé plus éloigné d'un château, ne constituent pas des réserves conditionnant le caractère favorable de l'accord exigé par l'article L. 632-2 du code du patrimoine — appréciation souveraine des juges du fond, exempte de dénaturation.
+
+Les pourvois sont rejetés, l'arrêt d'appel validant les deux autorisations environnementales est confirmé, et il n'y a plus lieu de statuer sur les requêtes à fin de sursis à exécution, devenues sans objet.
