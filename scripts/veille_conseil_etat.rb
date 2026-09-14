@@ -4,7 +4,7 @@
 # Veille automatique des décisions du Conseil d'État en droit de l'urbanisme.
 #
 # Exécuté chaque semaine par .github/workflows/veille-conseil-etat.yml : interroge Légifrance
-# (API PISTE) pour les 5 dernières décisions contenant le mot "urbanisme" (le filtre de recherche
+# (API PISTE) pour les dernières décisions contenant le mot "urbanisme" (le filtre de recherche
 # `PUBLICATION_RECUEIL: PUBLIE` ne sélectionne déjà que les classifications A — publiée au recueil
 # Lebon — et B — mentionnée aux tables —, jamais C/inédit : pas de second contrôle nécessaire côté
 # script), écarte celles déjà commentées sur le blog (dédoublonnage par numéro de décision, cf.
@@ -14,8 +14,8 @@
 #
 # Reproduit l'intention du flux n8n "fil public" fourni en référence, avec deux corrections :
 #   - le filtre de date codé en dur (une plage fixe, qui se serait périmée à chaque exécution)
-#     est remplacé par un simple tri DATE_DESC + pageSize 5 (les 5 décisions les plus récentes,
-#     sans plage à remettre à jour manuellement) ;
+#     est remplacé par un simple tri DATE_DESC (les décisions les plus récentes, cf.
+#     RECHERCHE_PAGE_SIZE, sans plage à remettre à jour manuellement) ;
 #   - le nœud IA de sélection de "la" décision la plus importante n'était en réalité relié à
 #     rien dans le flux d'origine : ici, un article est rédigé pour CHAQUE décision parmi les 5
 #     qui n'a pas déjà été commentée (cf. échange avec le porteur du projet).
@@ -174,6 +174,30 @@ rescue Errno::ENOENT, Psych::SyntaxError
   ""
 end
 
+def decisions_pour_maillage
+  # Liste "url (titre)" des fiches décisions déjà publiées (collection _decisions), pour que
+  # l'article puisse lier un précédent déjà commenté sur le site au fil du texte. L'URL est
+  # dérivée de l'emplacement du fichier (dossier = domaine, nom de fichier = slug), exactement
+  # comme le permalink `:path` de la collection dans _config.yml — pas du champ `domaine:` du
+  # front matter, dont la cohérence avec le dossier réel n'est pas garantie (cf. CLAUDE.md).
+  Dir.glob(File.join(REPO_ROOT, "_decisions", "*", "*.md")).filter_map do |path|
+    content = File.read(path, encoding: "UTF-8")
+    next unless content.start_with?("---")
+
+    _, front_matter, = content.split(/^---\s*$/, 3)
+    next unless front_matter
+
+    data = YAML.safe_load(front_matter, permitted_classes: [Date, Time])
+    next unless data && data["title"]
+
+    domaine = File.basename(File.dirname(path))
+    slug = File.basename(path, ".md")
+    "- /domaines-intervention/#{domaine}/#{slug}/ (#{data['title']})"
+  rescue Psych::SyntaxError
+    nil
+  end.join("\n")
+end
+
 def date_en_lettres(date_iso)
   annee, mois, jour = date_iso.split("-").map(&:to_i)
   "#{jour} #{MOIS_FR.fetch(mois - 1)} #{annee}"
@@ -215,15 +239,22 @@ ARTICLE_TOOL = {
                       "Casse naturelle : un sigle garde sa forme d'usage (\"PLUi\", \"ICPE\"), une " \
                       "expression courante s'écrit en minuscules (\"vice de procédure\")."
       },
-      body: {
+      synthese: {
         type: "string",
-        description: "Corps de l'article en Markdown (sans front matter, sans bloc de référence " \
-                      "— ajouté séparément), 800 à 1200 mots : un paragraphe de synthèse (40-60 " \
-                      "mots, proche de `description`, sans titre au-dessus), puis \"## Les faits\", " \
-                      "puis \"## La portée de la décision\"."
+        description: "Paragraphe de synthèse d'ouverture, 40 à 60 mots, sans titre au-dessus — " \
+                      "répond directement à la question posée par `title`, proche de " \
+                      "`description` mais rédigé pour être lu en tête d'article (featured " \
+                      "snippet). Ne contient ni lien ni référence de la décision : la référence " \
+                      "est ajoutée séparément juste après, sous forme de bloc dédié."
+      },
+      corps: {
+        type: "string",
+        description: "Développement en Markdown (sans front matter, sans le paragraphe de " \
+                      "synthèse ni le bloc de référence — ajoutés séparément), 800 à 1200 mots : " \
+                      "\"## Les faits\" puis \"## La portée de la décision\"."
       }
     },
-    required: %w[title seo_title description tags body],
+    required: %w[title seo_title description tags synthese corps],
     additionalProperties: false
   }
 }.freeze
@@ -238,18 +269,20 @@ def draft_article(client, decision)
     ses clients serait partie à l'affaire ou l'aurait plaidée — commente la décision comme un
     tiers extérieur au litige.
 
-    Structure imposée du corps (une fois le titre et la description déjà produits séparément) :
-    1. Un paragraphe de synthèse (40-60 mots, proche du champ `description`), sans titre au-dessus
-       — c'est la première chose lue, avant tout développement.
-    2. `## Les faits` : contexte factuel et procédural utile à la compréhension (juridictions
-       antérieures le cas échéant), en langage clair.
-    3. `## La portée de la décision` : le raisonnement retenu par le Conseil d'État, une citation
-       en bloc Markdown (`>`), en *italique*, encadrée de guillemets français « » et fidèle au
-       texte fourni, puis la conclusion/le dispositif concret.
+    Structure imposée (une fois le titre et la description déjà produits séparément) :
+    - `synthese` : le paragraphe d'ouverture (voir description du champ).
+    - `corps`, dans cet ordre : `## Les faits` (contexte factuel et procédural utile à la
+      compréhension, juridictions antérieures le cas échéant, en langage clair), puis
+      `## La portée de la décision` (le raisonnement retenu par le Conseil d'État, une citation
+      en bloc Markdown (`>`), en *italique*, encadrée de guillemets français « » et fidèle au
+      texte fourni, puis la conclusion/le dispositif concret).
 
     Règles transversales :
-    - Rédige entièrement en français, avec une terminologie juridique précise ; mets en gras ou
-      en italique les termes juridiques clés à leur première occurrence.
+    - Rédige entièrement en français, avec une terminologie juridique précise.
+    - **Gras** : 2 à 4 passages au maximum dans tout l'article, jamais plus d'un par paragraphe,
+      sur un membre de phrase (pas un paragraphe entier) porteur de l'apport de la décision ou de
+      la règle à retenir — jamais combiné à l'italique sur le même passage. Au-delà de 4, l'effet
+      s'annule : ne pas en mettre par réflexe sur chaque terme juridique.
     - `title` : énonce l'apport juridique le plus significatif (règle de droit dégagée, seuil
       chiffré, notion précisée) — jamais une reprise de l'issue procédurale
       ("Annulation de...", "Confirmation de..."), et sans préfixe "Conseil d'État, [date]..." (la
@@ -257,15 +290,23 @@ def draft_article(client, decision)
     - Ne cite AUCUNE autre décision, texte de loi ou source que ceux mentionnés dans le texte de
       la décision fourni ci-dessous — n'invente aucune référence, aucune date, aucun numéro.
       N'insère AUCUN lien hypertexte vers un article de code ou une autre décision citée dans le
-      texte : mentionne-les en texte simple (référence complète, ex. "l'article L.111-3 du code
-      rural et de la pêche maritime"), sans lien — tu n'as aucun moyen de vérifier ici l'URL
-      Légifrance exacte, et un lien fabriqué serait pire qu'aucun lien.
+      texte (hormis les fiches décisions listées ci-dessous) : mentionne-les en texte simple
+      (référence complète, ex. "l'article L.111-3 du code rural et de la pêche maritime"), sans
+      lien — tu n'as aucun moyen de vérifier ici l'URL Légifrance exacte, et un lien fabriqué
+      serait pire qu'aucun lien.
     - Si le texte de la décision mentionne le nom d'une personne physique partie à l'instance,
       ne le répète pas inutilement dans l'article (désigne-la par sa qualité : "l'exploitant",
       "la requérante"...) même si le texte source ne l'anonymise pas lui-même.
-    - Quand c'est pertinent et naturel dans le texte (jamais forcé), insère 1 à 2 liens internes
-      en Markdown vers les pages de domaines d'intervention du cabinet listées ci-dessous (n'en
-      invente pas d'autres) :
+
+    Maillage interne — deux catégories de liens, jamais d'autres URLs que celles listées :
+    - **Fiches décisions déjà publiées** (précédents déjà commentés sur le site) : lien Markdown
+      **au fil du texte**, à l'endroit exact où le précédent est effectivement discuté dans le
+      raisonnement — seulement si l'une des fiches ci-dessous correspond vraiment à une décision
+      citée dans le texte fourni, jamais par simple proximité de sujet :
+      #{decisions_pour_maillage}
+    - **Pages de domaines d'intervention du cabinet** : lien(s) Markdown, 1 à 2 maximum,
+      **regroupés uniquement dans le dernier paragraphe de `corps`** (celui sur la portée
+      pratique) — jamais disséminés ailleurs dans le développement :
       #{domaines_pour_maillage}
 
     Réponds uniquement en appelant l'outil `publier_article`.
@@ -305,7 +346,7 @@ def draft_article(client, decision)
   # champs comme manquants (constaté en conditions réelles : les 5 champs rapportés absents alors
   # que l'appel avait réussi).
   article = tool_use.input.transform_keys(&:to_s)
-  manquants = %w[title seo_title description tags body] - article.keys
+  manquants = %w[title seo_title description tags synthese corps] - article.keys
   raise "Réponse Claude incomplète, champs manquants : #{manquants.join(', ')}" unless manquants.empty?
 
   article
@@ -331,11 +372,12 @@ end
 def reference_block(decision)
   # Bloc de référence construit ici, déterministe (pas par Claude) : c'est un format très normé
   # (gras/italique/liens exacts) où une erreur de mise en forme par le modèle serait plus
-  # difficile à repérer qu'à éviter en amont.
+  # difficile à repérer qu'à éviter en amont. Ariane Web en premier, Légifrance en second — source
+  # privilégiée pour les décisions du Conseil d'État sur ce site, les deux liens restant présents.
   <<~REF
     **Conseil d'État, #{date_en_lettres(decision['date_iso'])}, n° #{decision['num']}**
 
-    *Consulter [la décision sur Légifrance](#{decision['lien_legifrance']}) et [sur Ariane Web](#{decision['lien_arianeweb']}).*
+    *Consulter [la décision sur Ariane Web](#{decision['lien_arianeweb']}) et [sur Légifrance](#{decision['lien_legifrance']}).*
   REF
 end
 
@@ -353,13 +395,16 @@ def write_and_open_pr(article, decision)
     seo_title: "#{yaml_escape(article['seo_title'])}"
     description: "#{yaml_escape(article['description'])}"
     categories: ["#{CATEGORIE}"]
+    # image: "/assets/images/blog/#{date}-#{slug}.jpg" # TODO: image 1200x630 à fournir
     tags: [#{tags_yaml}]
     ce_numero: "#{decision['num']}"
     ---
 
   FM
 
-  body = "#{reference_block(decision)}\n#{article['body'].strip}\n"
+  # Ordre : synthèse (première chose lue), puis référence de la décision, puis développement —
+  # la référence n'est jamais avant la synthèse.
+  body = "#{article['synthese'].strip}\n\n#{reference_block(decision)}\n#{article['corps'].strip}\n"
   File.write(File.join(REPO_ROOT, relative_path), front_matter + body)
 
   repo = env!("GITHUB_REPOSITORY")
