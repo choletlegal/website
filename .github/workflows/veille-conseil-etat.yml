@@ -7,10 +7,16 @@ name: Veille Conseil d'État (droit de l'urbanisme)
 
 on:
   schedule:
-    # Lundi 7h heure de Paris ≈ 6h UTC en hiver / 5h UTC en été (CEST) — même cadence que le
-    # flux n8n d'origine (triggerAtDay: lundi, triggerAtHour: 7). Un décalage d'une heure selon
-    # la saison est sans conséquence pour une veille hebdomadaire.
-    - cron: "0 6 * * 1"
+    # Lundi ~7h heure de Paris (6h17 CET l'hiver / 7h17 CEST l'été — un cron fixe en UTC ne peut
+    # pas suivre le changement d'heure automatiquement ; l'écart d'une heure selon la saison est
+    # sans conséquence pour une veille hebdomadaire), même cadence que le flux n8n d'origine
+    # (triggerAtDay: lundi, triggerAtHour: 7). Minute volontairement non ronde (17, pas 0) :
+    # GitHub documente que les cron programmés pile à l'heure ronde sont les plus sujets aux
+    # retards/annulations silencieuses en période de forte charge — constaté en conditions
+    # réelles, le tout premier déclenchement automatique programmé sur "0 6 * * 1" n'a jamais eu
+    # lieu (aucune exécution "schedule" dans l'historique, alors que l'heure était largement
+    # dépassée).
+    - cron: "17 5 * * 1"
   workflow_dispatch: {} # déclenchement manuel depuis l'onglet Actions, pour tester sans attendre lundi
 
 permissions:

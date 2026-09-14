@@ -46,6 +46,15 @@ LEGIFRANCE_CONSULT_URL = "https://api.piste.gouv.fr/dila/legifrance/lf-engine-ap
 CLAUDE_MODEL = "claude-opus-5"
 CATEGORIE = "Droit de l'urbanisme"
 
+# Taille du bassin de résultats bruts interrogé chez Légifrance, avant filtrage sur le seul
+# Conseil d'État (voir commentaire sur `search_last_decisions`). Volontairement plus large que
+# le nombre de décisions réellement traitées par semaine : le Conseil d'État tranche beaucoup
+# moins souvent que les CAA/TA sur l'urbanisme, donc un pageSize trop petit (5, initialement)
+# risque de ne renvoyer que des décisions de CAA/TA écartées après coup, et de rater une
+# décision du Conseil d'État plus récente reléguée au-delà de ce rang — constaté en conditions
+# réelles (deux décisions retenues datées de 6 à 9 semaines).
+RECHERCHE_PAGE_SIZE = 30
+
 MOIS_FR = %w[janvier février mars avril mai juin juillet août septembre octobre novembre
              décembre].freeze
 
@@ -80,13 +89,13 @@ def piste_access_token
   JSON.parse(res.body).fetch("access_token")
 end
 
-# --- 2. Recherche des 5 dernières décisions "urbanisme" -------------------------
+# --- 2. Recherche des dernières décisions "urbanisme" ---------------------------
 #
 # Le fond "CETAT" de Légifrance couvre en réalité tout le contentieux administratif
 # (Conseil d'État, mais aussi CAA et TA) — pas seulement le Conseil d'État, contrairement à
 # ce que le nom du fond laisse penser (constaté en conditions réelles, une décision de CAA
 # de Paris étant remontée). Le filtrage sur le seul Conseil d'État se fait donc après coup,
-# sur le champ `juridiction` de chaque décision (voir `main`).
+# sur le champ `juridiction` de chaque décision (voir `main`) — d'où RECHERCHE_PAGE_SIZE.
 
 def search_last_decisions(access_token)
   body = {
@@ -105,7 +114,7 @@ def search_last_decisions(access_token)
           typeChamp: "ALL"
         }
       ],
-      pageSize: 5,
+      pageSize: RECHERCHE_PAGE_SIZE,
       operateur: "ET",
       typePagination: "DEFAUT",
       pageNumber: 1
@@ -429,6 +438,8 @@ def main
   access_token = piste_access_token
   hits = search_last_decisions(access_token)
   deja_publiees = already_published_numeros
+  repo = env!("GITHUB_REPOSITORY")
+  token = env!("GITHUB_TOKEN")
   claude = Anthropic::Client.new # lit ANTHROPIC_API_KEY dans l'environnement
 
   nouvelles = 0
@@ -443,6 +454,15 @@ def main
     end
     numero = decision["num"].to_s
     next if numero.empty? || deja_publiees.include?(numero)
+
+    # Vérifié ici, avant l'appel (payant) à Claude — pas seulement dans write_and_open_pr — pour
+    # ne pas refacturer la rédaction d'un article dont la PR est déjà ouverte et en attente de
+    # relecture, ce qui devient plus probable maintenant que RECHERCHE_PAGE_SIZE est plus large.
+    branch = "veille-ce/#{numero}"
+    if open_pr_exists?(repo, token, branch)
+      puts "PR déjà ouverte pour #{branch}, décision laissée de côté pour cette fois."
+      next
+    end
 
     date_iso = Time.at(decision["dateTexte"].to_i / 1000).utc.strftime("%Y-%m-%d")
     decision = decision.merge(
