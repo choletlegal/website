@@ -31,7 +31,7 @@ l'économie numérique.
     </p>
     <p>
       La profession d'avocat est soumise aux règles professionnelles définies par le
-      <a href="https://www.cnb.avocat.fr/fr/reglement-interieur-national-de-la-profession-davocat-rin" target="_blank" rel="noopener noreferrer">Règlement intérieur national</a>
+      <a href="https://cnb.avocat.fr/reglement-interieur-nationalde-la-profession-d-avocat-rin" target="_blank" rel="noopener noreferrer">Règlement intérieur national</a>
       dans sa version en vigueur adoptée par le Conseil national des Barreaux (CNB).
     </p>
 
