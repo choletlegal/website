@@ -7,6 +7,9 @@ description: "Le Tribunal administratif de Besançon annule, pour vice de procé
 resume: "Le Tribunal administratif de Besançon a annulé, pour vice de procédure, une délibération modifiant le plan local d'urbanisme intercommunal (PLUI) du Grand Dole : la collectivité avait pris une délibération complémentaire pour tenir compte tardivement des observations préfectorales, sans respecter la procédure de modification prévue par le code de l'urbanisme."
 lien_texte_integral: "https://www.doctrine.fr/d/TA/Besancon/2021/UF70C91C3F3300607F99A"
 tags: ["PLUi", "vice de procédure"]
+# Ancienne URL du site Hugo pré-migration (404 relevé par Google Search Console) — cf. CLAUDE.md.
+redirect_from:
+  - /resultats/annulation-modification-plui-grand-dole/
 ---
 
 ## En bref

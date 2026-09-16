@@ -2,6 +2,9 @@
 layout: post
 date: 2018-06-18
 permalink: "/blog/droit administratif/2018/06/18/contentieux-acte-reglementaire.html"
+# Ancienne URL du site Hugo pré-migration (404 relevé par Google Search Console) — cf. CLAUDE.md.
+redirect_from:
+  - /blog/contentieux-administratif-nouveau-régime-contentieux-des-actes-réglementaires/
 title: "Contentieux administratif : Nouveau régime contentieux des actes réglementaires"
 seo_title: "Nouveau régime contentieux des actes réglementaires"
 description: ""

@@ -2,6 +2,9 @@
 layout: post
 date: 2019-06-07
 permalink: "/blog/droit administratif/2019/06/07/l111-4-constructions-en-dehors-des-parties-urbanisees.html"
+# Ancienne URL du site Hugo pré-migration (404 relevé par Google Search Console) — cf. CLAUDE.md.
+redirect_from:
+  - /blog/l.111-4-1-précisions-sur-les-constructions-autorisées-en-dehors-des-parties-urbanisées/
 title: "L.111-4 1° : Précisions sur les constructions autorisées en dehors des parties urbanisées"
 seo_title: "L.111-4 : constructions hors parties urbanisées"
 description: ""

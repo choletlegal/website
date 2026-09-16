@@ -2,6 +2,9 @@
 layout: post
 date: 2017-12-18
 permalink: "/blog/droit administratif/2017/12/18/notification-r600-1-membres-indivision.html"
+# Ancienne URL du site Hugo pré-migration (404 relevé par Google Search Console) — cf. CLAUDE.md.
+redirect_from:
+  - /blog/r.600-1-précision-sur-la-notification-du-recours-à-légard-des-membres-dune-indivision/
 title: "R.600-1 : Précision sur la notification du recours à l'égard des membres d'une indivision"
 seo_title: "R.600-1 : notification du recours à une indivision"
 description: ""
