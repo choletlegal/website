@@ -2,6 +2,9 @@
 layout: post
 date: 2018-12-10
 permalink: "/blog/droit administratif/2018/12/10/double-degre-juridiction-zone-tendue.html"
+# Ancienne URL du site Hugo pré-migration (404 relevé par Google Search Console) — cf. CLAUDE.md.
+redirect_from:
+  - /blog/un-permis-de-construire-en-zone-dite-tendue-ne-créant-pas-de-logements-supplémentaires-est-soumis-au-double-degré-de-juridiction/
 title: "Un permis de construire en zone dite tendue ne créant pas de logements supplémentaires est soumis au double degré de juridiction"
 seo_title: "Permis en zone tendue : double degré de juridiction"
 description: ""

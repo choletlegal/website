@@ -7,6 +7,9 @@ description: "La Cour administrative d'appel de Nancy annule totalement le PLUI 
 resume: "La Cour administrative d'appel de Nancy a prononcé l'annulation totale du plan local d'urbanisme intercommunal (PLUI) de la Communauté d'agglomération du Grand Dole, après un rejet en première instance : les ouvertures à l'urbanisation autorisées par arrêtés préfectoraux postérieurs à l'enquête publique ne figuraient pas dans le projet initialement soumis à cette enquête."
 lien_texte_integral: "https://www.legifrance.gouv.fr/ceta/id/CETATEXT000051154132"
 tags: ["PLUi", "enquête publique"]
+# Ancienne URL du site Hugo pré-migration (404 relevé par Google Search Console) — cf. CLAUDE.md.
+redirect_from:
+  - /resultats/annulation-plui-grand-dole/
 ---
 
 ## En bref

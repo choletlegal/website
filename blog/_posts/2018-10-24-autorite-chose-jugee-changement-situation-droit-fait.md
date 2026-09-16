@@ -2,6 +2,9 @@
 layout: post
 date: 2018-10-24
 permalink: "/blog/droit administratif/2018/10/24/autorite-chose-jugee-changement-situation-droit-fait.html"
+# Ancienne URL du site Hugo pré-migration (404 relevé par Google Search Console) — cf. CLAUDE.md.
+redirect_from:
+  - /blog/appréciation-des-modifications-de-la-situation-de-droit-ou-de-fait-permettant-de-revenir-sur-lautorité-de-chose-jugée/
 title: "Appréciation des modifications de la situation de droit ou de fait permettant de revenir sur l’autorité de chose jugée"
 seo_title: "Autorité de chose jugée : changement de situation"
 description: ""

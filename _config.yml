@@ -63,6 +63,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-redirect-from
 
 # --- SEO Tag Configuration ---
 # (jekyll-seo-tag utilise site.title et site.description par défaut)
@@ -117,5 +118,4 @@ exclude:
 # --- Include (fichiers normalement exclus) ---
 include:
   - robots.txt
-  - .htaccess
   - 57e601dcf265611d76ba71b8f09c978d.txt
