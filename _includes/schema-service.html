@@ -15,7 +15,14 @@
     "@type": "Attorney",
     "name": {{ site.title | jsonify }},
     "url": {{ site_url | jsonify }},
-    "telephone": {{ author.phone | replace: ' ', '' | jsonify }}
+    "telephone": {{ author.phone | replace: ' ', '' | jsonify }},
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": {{ author.address.street | jsonify }},
+      "addressLocality": {{ author.address.city | jsonify }},
+      "postalCode": "{{ author.address.postal_code }}",
+      "addressCountry": "{{ author.address.country }}"
+    }
   }
 }
 </script>

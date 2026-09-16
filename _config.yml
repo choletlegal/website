@@ -8,6 +8,9 @@ description: "Cabinet d'avocat en droit de l'urbanisme à Besançon"
 baseurl: "" # Laisser vide si site à la racine du domaine
 url: "https://www.cholet-avocat.fr" # Domaine final
 twitter_username: "AntoninCholet"
+# jekyll-seo-tag utilise cette clé pour og:locale (défaut "en_US" si absente,
+# cf. checklist SEO/GEO du CLAUDE.md) — site francophone, jamais modifié.
+locale: "fr_FR"
 
 # --- Author (pour SEO et articles) ---
 author:

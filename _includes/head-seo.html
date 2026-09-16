@@ -38,7 +38,7 @@
   "url": "{{ site_url }}",
   "image": "{{ site_url }}{{ author.avatar }}",
   "hasOccupation": {
-    "@type": "Role",
+    "@type": "Occupation",
     "name": "Avocat"
   },
   "knowsAbout": {{ knows_about | jsonify }},
@@ -102,10 +102,6 @@
     "width": 1200,
     "height": 376
   },
-  "areaServed": {% include schema-area-served.html %},
-  "hasOccupation": {
-    "@type": "Occupation",
-    "name": "Avocat"
-  }
+  "areaServed": {% include schema-area-served.html %}
 }
 </script>
