@@ -9,7 +9,7 @@ categories: ["Droit administratif"]
 ---
 
 
-[Décret n° 2018-1305 du 27 décembre 2018](http://www.legifrance.gouv.fr/affichTexte.do;jsessionid=3E2D23DDDE791EF7F5735C3E0701FB09.tplgfr34s_2?cidTexte=JORFTEXT000037880316&dateTexte=&oldAction=rechJO&categorieLien=id&idJO=JORFCONT000037879199)
+[Décret n° 2018-1305 du 27 décembre 2018](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000037880316)
 
 Ce décret détermine les modalités d'application de l’article 14 du statut général de la fonction publique tel que modifié par l’ordonnance du 13 avril 2017, lequel dispose que
 
