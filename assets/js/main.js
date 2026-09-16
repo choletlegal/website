@@ -63,15 +63,34 @@
 // Chargé dynamiquement plutôt qu'en <script> statique dans head-js.html pour ne
 // jamais peser sur le rendu (aucun impact LCP/FCP) ; désactivé sur localhost pour
 // ne pas polluer les statistiques avec le trafic de développement.
+// Déclenché à la première interaction (scroll/clic/touche/toucher) plutôt qu'au
+// chargement de la page : gtag.js pèse 175 Kio (dont ~72 Kio inutilisés au chargement
+// initial, cf. audit PageSpeed) et n'a pas besoin d'être prêt avant que le visiteur
+// commence à consulter la page. Filet de sécurité à 5s pour ne pas perdre les visites
+// très courtes sans interaction (retour immédiat, etc.).
 (function loadGA() {
   if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') return;
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-  gtag('config', 'G-LVMH7WLBL6');
 
-  var script = document.createElement('script');
-  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-LVMH7WLBL6';
-  script.async = true;
-  document.head.appendChild(script);
+  var loaded = false;
+  function load() {
+    if (loaded) return;
+    loaded = true;
+    clearTimeout(fallback);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-LVMH7WLBL6');
+
+    var script = document.createElement('script');
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-LVMH7WLBL6';
+    script.async = true;
+    document.head.appendChild(script);
+  }
+
+  var events = ['scroll', 'mousemove', 'keydown', 'touchstart', 'pointerdown'];
+  events.forEach(function (evt) {
+    window.addEventListener(evt, load, { passive: true, once: true });
+  });
+  var fallback = setTimeout(load, 5000);
 })();
