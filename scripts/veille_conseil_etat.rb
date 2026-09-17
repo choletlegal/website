@@ -297,6 +297,9 @@ def draft_article(client, decision)
     - Si le texte de la décision mentionne le nom d'une personne physique partie à l'instance,
       ne le répète pas inutilement dans l'article (désigne-la par sa qualité : "l'exploitant",
       "la requérante"...) même si le texte source ne l'anonymise pas lui-même.
+    - Ne mentionne jamais la condamnation aux frais irrépétibles (article L.761-1 du code de
+      justice administrative) ni son montant, même si la décision en comporte une : c'est un
+      point procédural accessoire, sans intérêt pour le commentaire du point de droit tranché.
 
     Maillage interne — deux catégories de liens, jamais d'autres URLs que celles listées :
     - **Fiches décisions déjà publiées** (précédents déjà commentés sur le site) : lien Markdown
