@@ -1,0 +1,41 @@
+---
+layout: post
+title: "Permis modificatif de régularisation en cours d'instance : l'achèvement des travaux ne peut plus être opposé au pétitionnaire"
+seo_title: "Permis modificatif : l'achèvement des travaux inopposable"
+description: "Le Conseil d'État juge que le pétitionnaire qui sollicite un permis modificatif pour régulariser une autorisation contestée en justice ne peut se voir opposer l'achèvement des travaux, même sans sursis à statuer du juge. Il précise aussi que la cristallisation des moyens de l'article R. 600-5 du code de l'urbanisme ne joue pas en cassation."
+categories: ["Droit de l'urbanisme"]
+tags: ["permis modificatif", "cristallisation des moyens", "R. 600-5"]
+ce_numero: "502265"
+---
+
+**Conseil d'État, 11 juin 2026, n° 502265**
+
+*Consulter [la décision sur Légifrance](https://www.legifrance.gouv.fr/ceta/id/CETATEXT000054242968) et [sur Ariane Web](https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2026-06-11/502265).*
+
+Le Conseil d'État juge que le pétitionnaire qui sollicite un permis modificatif pour régulariser une autorisation contestée en justice ne peut se voir opposer l'achèvement des travaux, même en l'absence de sursis à statuer du juge. Il précise en outre que la cristallisation des moyens de l'article R. 600-5 du code de l'urbanisme ne s'applique pas aux moyens de cassation.
+
+## Les faits
+
+Par un arrêté du 2 décembre 2015, le maire d'une commune de la Drôme a délivré un **permis de construire** portant sur l'extension d'une construction existante et l'édification d'une piscine. Deux **permis de construire modificatifs** ont ensuite été accordés au même bénéficiaire, respectivement les 11 décembre 2019 et 27 octobre 2020, le second étant sollicité alors qu'une instance était déjà pendante contre le premier.
+
+Un propriétaire de plusieurs parcelles voisines a contesté ces deux arrêtés modificatifs devant le tribunal administratif de Grenoble, qui a rejeté ses demandes par un jugement du 14 juin 2022. La cour administrative d'appel de Lyon a rejeté son appel par un arrêt du 9 janvier 2025. Le requérant s'est alors pourvu en cassation, en articulant plusieurs moyens : erreur de droit dans la qualification de l'arrêté du 27 octobre 2020 comme permis modificatif, alors que la construction aurait été achevée à cette date ; méconnaissance de l'article R. 111-27 du code de l'urbanisme et de l'article N 11 du règlement du **plan local d'urbanisme** relatif à l'intégration architecturale ; interdiction des toitures-terrasses au point 3 de ce même article ; enfin, méconnaissance de l'article N 2 du règlement du PLU limitant l'augmentation de surface de plancher en zone N.
+
+Ce dernier moyen n'ayant été soulevé que par un mémoire enregistré le 13 mars 2026, soit plus de deux mois après la communication du premier mémoire en défense de la commune, les parties avaient été informées, sur le fondement de l'article R. 611-7 du code de justice administrative, de ce que le Conseil d'État était susceptible de relever d'office son irrecevabilité au regard de l'article R. 600-5 du code de l'urbanisme.
+
+## La portée de la décision
+
+La décision comporte trois apports, dont deux de principe.
+
+**Premier apport : l'achèvement des travaux n'est pas opposable à la demande de régularisation en cours d'instance.** Le Conseil d'État rappelle d'abord le principe classique selon lequel l'autorité compétente ne peut, en principe, délivrer un permis modificatif que tant que la construction autorisée n'est pas achevée, tandis que la régularisation prévue aux articles L. 600-5 et L. 600-5-1 du code de l'urbanisme peut être obtenue « même après l'achèvement des travaux ». Il en tire une conséquence nouvelle :
+
+> « *Lorsque, en vue de répondre à la contestation de la légalité d'un permis de construire faisant l'objet d'un recours contentieux, le pétitionnaire saisit l'autorité compétente d'une demande de permis modificatif afin de régulariser le permis en cours d'instance, le caractère achevé des travaux ne saurait lui être opposé, quand bien même le juge administratif n'a pas lui-même mis en œuvre les dispositions de l'article L. 600-5 ou de l'article L. 600-5-1 du code de l'urbanisme, ni même informé les parties de ce qu'il était susceptible de surseoir à statuer afin de permettre la régularisation du permis contesté.* »
+
+La solution est doublement utile en pratique. D'une part, elle sécurise la démarche spontanée du pétitionnaire diligent : il n'a pas à attendre que le juge annonce son intention de surseoir à statuer pour déposer une demande de régularisation, ce qui est souvent déterminant pour purger un vice avant l'audience. D'autre part, elle rend **inopérant** le moyen tiré de ce que la construction serait achevée à la date du permis modificatif de régularisation. En l'espèce, le Conseil d'État écarte ce moyen par une **substitution de motifs**, le motif retenu par les juges du fond étant remplacé par celui qu'il dégage. Les praticiens du [contentieux de l'urbanisme](/domaines-intervention/contentieux-urbanisme/) retiendront qu'il faut désormais distinguer nettement le permis modificatif « ordinaire », soumis à la condition de non-achèvement, du permis modificatif de régularisation sollicité en réponse à un recours.
+
+**Deuxième apport : la cristallisation automatique des moyens ne joue pas en cassation.** Le Conseil d'État juge que les dispositions de l'article R. 600-5 du code de l'urbanisme, prises dans un objectif de bonne administration de la justice et de respect du droit à un délai raisonnable de jugement, « entendent limiter, en première instance et en appel, le délai ouvert aux parties pour invoquer des moyens nouveaux mettant en cause la légalité des décisions administratives d'occupation ou d'utilisation du sol qu'elles visent » et qu'elles ne s'appliquent pas, devant le Conseil d'État, aux moyens de cassation dirigés contre la décision juridictionnelle. La distinction est logique : les moyens de cassation critiquent non la légalité de l'autorisation, mais la régularité et le bien-fondé de l'arrêt. Le moyen tardivement soulevé est donc jugé recevable.
+
+**Troisième apport : le périmètre de la demande de permis modificatif.** Le Conseil d'État précise que l'autorité compétente ne peut exiger du pétitionnaire qui modifie son projet en cours d'exécution que sa demande porte également sur d'autres travaux, au motif que ceux-ci auraient été réalisés sans respecter le permis initial. À défaut de mise en œuvre des pouvoirs de contrôle, ou de constat d'irrégularité, le pétitionnaire est réputé réaliser les travaux conformément à l'autorisation délivrée. Il appartient alors à l'administration de dresser **procès-verbal d'infraction**, transmis sans délai au ministère public, et, une fois les travaux achevés, d'user des pouvoirs de contrôle de conformité prévus aux articles L. 462-1 et L. 462-2 du code de l'urbanisme. Le permis modificatif du 11 décembre 2019, qui ne portait pas sur des éléments modifiant la surface de plancher, n'avait donc pas à régulariser une éventuelle extension réalisée en méconnaissance de l'autorisation initiale : le moyen tiré de l'article N 2 du règlement du PLU était bien inopérant, le procès-verbal du 29 juin 2022 étant au surplus postérieur aux décisions attaquées.
+
+Sur les autres moyens, la Haute juridiction se borne au contrôle habituel de cassation : l'appréciation portée par la cour sur l'absence de caractère spécifique de l'environnement bâti, au regard de l'article R. 111-27 du code de l'urbanisme et de l'article N 11 du règlement du [document d'urbanisme local](/domaines-intervention/plu-documents-urbanisme/), relève de l'appréciation souveraine des juges du fond, exempte de dénaturation. Il en va de même de l'admission des toitures-terrasses végétalisées au titre de la dérogation prévue au point 6 de l'article N 11 en faveur des architectures bioclimatiques — solution adoptée après avis favorable, sous réserve, de l'architecte des bâtiments de France.
+
+Le pourvoi est rejeté.
