@@ -3,7 +3,7 @@
 
 # Veille automatique des décisions du Conseil d'État en droit de l'urbanisme.
 #
-# Exécuté chaque semaine par .github/workflows/veille-conseil-etat.yml : interroge Légifrance
+# Exécuté chaque semaine par .github/workflows/veille-conseil-etat-hebdo.yml : interroge Légifrance
 # (API PISTE) pour les dernières décisions contenant le mot "urbanisme" (le filtre de recherche
 # `PUBLICATION_RECUEIL: PUBLIE` ne sélectionne déjà que les classifications A — publiée au recueil
 # Lebon — et B — mentionnée aux tables —, jamais C/inédit : pas de second contrôle nécessaire côté

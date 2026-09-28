@@ -4,6 +4,12 @@ name: Veille Conseil d'État (droit de l'urbanisme)
 # d'un job planifié qui propose des Pull Requests de relecture plutôt que de publier
 # directement — voir scripts/veille_conseil_etat.rb pour la logique complète et CLAUDE.md
 # pour le contexte de la décision.
+#
+# Fichier renommé (depuis veille-conseil-etat.yml) le 28/09/2026 : le déclencheur "schedule"
+# de l'ancien fichier ne s'est jamais exécuté en 3 semaines malgré une configuration valide
+# (cron correct, workflow "actif", aucune policy bloquante, branche par défaut correcte) et un
+# cycle désactivation/réactivation manuel sans effet — renommer le fichier force GitHub à
+# réenregistrer le workflow sous un identifiant neuf auprès de son planificateur interne.
 
 on:
   schedule:
@@ -12,10 +18,7 @@ on:
     # sans conséquence pour une veille hebdomadaire), même cadence que le flux n8n d'origine
     # (triggerAtDay: lundi, triggerAtHour: 7). Minute volontairement non ronde (17, pas 0) :
     # GitHub documente que les cron programmés pile à l'heure ronde sont les plus sujets aux
-    # retards/annulations silencieuses en période de forte charge — constaté en conditions
-    # réelles, le tout premier déclenchement automatique programmé sur "0 6 * * 1" n'a jamais eu
-    # lieu (aucune exécution "schedule" dans l'historique, alors que l'heure était largement
-    # dépassée).
+    # retards/annulations silencieuses en période de forte charge.
     - cron: "17 5 * * 1"
   workflow_dispatch: {} # déclenchement manuel depuis l'onglet Actions, pour tester sans attendre lundi
 
