@@ -1,0 +1,42 @@
+---
+layout: post
+title: "Référé L. 521-4 : la partie qui n'a pas produit en défense reste recevable à demander la fin des mesures de suspension"
+seo_title: "Référé L. 521-4 : recevabilité du défendeur silencieux"
+description: "Le Conseil d'État juge que des éléments de droit ou de fait qui auraient pu être invoqués lors de l'instance de référé initiale peuvent l'être ultérieurement au soutien d'une demande fondée sur l'article L. 521-4 du code de justice administrative, y compris lorsque le défendeur n'avait produit aucun mémoire."
+categories: ["Droit de l'urbanisme"]
+# image: "/assets/images/blog/2026-10-05-refere-l-521-4-la-partie-qui-n-a-pas-produit-en-defense-reste-recevable-a-demand.jpg" # TODO: image 1200x630 à fournir
+tags: ["référé suspension", "L. 521-4", "déclaration préalable"]
+ce_numero: "508928"
+---
+
+Une commune qui n'a produit aucun mémoire en défense devant le juge du référé-suspension reste recevable à saisir ce même juge, sur le fondement de l'article L. 521-4 du code de justice administrative, pour obtenir la modification ou la fin des mesures ordonnées, même en invoquant des éléments qu'elle aurait pu présenter initialement.
+
+**Conseil d'État, 1 octobre 2026, n° 508928**
+
+*Consulter [la décision sur Ariane Web](https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2026-10-01/508928) et [sur Légifrance](https://www.legifrance.gouv.fr/ceta/id/CETATEXT000054944248).*
+
+## Les faits
+
+Par un arrêté du 16 mai 2025, le maire d'Amboise (Indre-et-Loire) s'est opposé à la déclaration préalable déposée le 17 avril 2025 par un opérateur de téléphonie mobile en vue de l'installation d'un pylône supportant des équipements de radiotéléphonie sur le territoire communal.
+
+Saisi par le pétitionnaire, le juge des référés du tribunal administratif d'Orléans a, par une ordonnance du 4 août 2025 rendue sur le fondement de l'article L. 521-1 du code de justice administrative, suspendu l'exécution de cet arrêté d'opposition. Il a retenu que deux moyens étaient propres à créer, en l'état de l'instruction, un doute sérieux quant à la légalité de la décision : d'une part, l'erreur d'appréciation commise en retenant que le projet était de nature à porter atteinte aux paysages naturels ou urbains et à la conservation des perspectives monumentales ; d'autre part, la méconnaissance des dispositions de l'article R. 111-27 du code de l'urbanisme et du point 2.5.1 de l'orientation d'aménagement et de programmation OAP-AMB 3 du plan local d'urbanisme intercommunal. Le juge a en outre enjoint au maire de prendre, à titre provisoire, une décision de non-opposition à la déclaration préalable dans un délai d'un mois.
+
+La particularité de l'affaire tient à ce que la commune, régulièrement informée de la procédure de référé et convoquée à l'audience, n'avait pas produit de mémoire en défense dans cette première instance. Elle n'a pas davantage formé de pourvoi en cassation contre l'ordonnance du 4 août 2025. Elle a en revanche saisi le juge des référés d'une demande fondée sur l'article L. 521-4 du code de justice administrative, tendant à ce qu'il soit mis fin aux mesures de suspension et d'injonction précédemment prononcées, en faisant notamment valoir que le projet, implanté dans le périmètre de l'orientation d'aménagement et de programmation « Grand Malpogne », au sein d'un îlot à aménager à vocation principale d'habitation, entre le château royal d'Amboise et la pagode de Chanteloup, portait atteinte par ses dimensions et son aspect aux perspectives monumentales offertes depuis ces deux sites patrimoniaux.
+
+Par une ordonnance du 22 septembre 2025, le juge des référés a rejeté cette demande par la voie du tri prévu à l'article L. 522-3 du code de justice administrative, c'est-à-dire sans instruction ni audience, en jugeant la demande manifestement irrecevable. Le motif retenu était que la commune, n'ayant pas défendu lors de l'instance initiale, ne pouvait pas utiliser l'article L. 521-4 pour faire valoir après coup des éléments qu'elle aurait pu produire en temps utile. La commune s'est pourvue en cassation contre cette seconde ordonnance.
+
+## La portée de la décision
+
+Le Conseil d'État rappelle les deux textes en présence. L'article L. 521-1 du code de justice administrative permet au juge des référés d'ordonner la suspension de l'exécution d'une décision administrative, ou de certains de ses effets, lorsque l'urgence le justifie et qu'il est fait état d'un moyen propre à créer, en l'état de l'instruction, un doute sérieux quant à la légalité de la décision. L'article L. 521-4 dispose quant à lui que, « saisi par toute personne intéressée, le juge des référés peut, à tout moment, au vu d'un élément nouveau, modifier les mesures qu'il avait ordonnées ou y mettre fin ».
+
+La question posée était celle de l'articulation entre ces deux voies : la notion d'« élément nouveau » doit-elle s'entendre d'un élément postérieur à l'ordonnance initiale ou inconnu de son auteur, ou bien suffit-il qu'il soit nouveau au regard du débat effectivement tenu devant le juge ? La seconde branche l'emporte :
+
+> « *La seule circonstance que des éléments de droit ou de fait auraient pu être invoqués lors de l'instance initiale devant le juge des référés ne fait pas obstacle à ce qu'ils le soient ultérieurement au soutien d'une demande tendant à ce que ce même juge modifie les mesures qu'il a ordonnées ou y mette fin. Il en va ainsi y compris lorsque le défendeur n'a pas produit de mémoire dans l'instance initiale.* »
+
+**La carence du défendeur lors de l'instance de référé initiale ne le prive donc pas du droit de saisir ultérieurement le même juge sur le fondement de l'article L. 521-4.** Le raisonnement se comprend aisément au regard de la nature du référé : les mesures prononcées sur le fondement de l'article L. 521-1 ont un caractère provisoire et reposent sur une appréciation faite « en l'état de l'instruction ». Il serait contradictoire d'attacher à une telle décision une force comparable à celle de la chose jugée au principal, en interdisant la réouverture du débat au motif que le défendeur n'a pas saisi sa première chance. La voie de l'article L. 521-4 n'est pas davantage subordonnée à l'exercice préalable d'un pourvoi en cassation contre l'ordonnance initiale : les deux recours n'ont ni le même objet ni le même office.
+
+En jugeant manifestement irrecevable, au seul motif de l'absence de mémoire en défense dans l'instance ayant conduit aux mesures litigieuses, la demande de la commune tendant à ce qu'il soit mis fin à la suspension et à l'injonction, le juge des référés a entaché son ordonnance d'erreur de droit. L'annulation est prononcée pour ce seul motif, sans qu'il soit besoin d'examiner le moyen tiré de l'usage abusif de la faculté de statuer par voie d'ordonnance de tri au titre de l'article L. 522-3 — moyen qui, en pratique, était largement absorbé par le premier.
+
+Réglant l'affaire au titre de la procédure de référé engagée en application de l'article L. 821-2 du code de justice administrative, le Conseil d'État n'en donne pas pour autant gain de cause à la commune. Les éléments avancés — localisation du projet entre le château royal d'Amboise et la pagode de Chanteloup, atteinte aux perspectives monumentales par les dimensions et l'aspect du pylône — ne sont pas de nature à justifier qu'il soit mis fin aux mesures prononcées le 4 août 2025. La demande est donc rejetée au fond. **Recevabilité n'est pas bien-fondé** : encore faut-il que les éléments invoqués soient, par leur teneur, de nature à remettre en cause l'appréciation portée par le premier juge sur l'urgence ou sur le doute sérieux.
+
+Pour les collectivités comme pour les pétitionnaires, l'enseignement pratique est double. D'un côté, l'article L. 521-4 constitue une véritable soupape : la commune qui, faute de temps ou d'organisation, n'a pu défendre utilement devant le juge du référé-suspension conserve la possibilité de rouvrir le débat, sans être enfermée dans la seule voie de la cassation. De l'autre, cette soupape n'a d'utilité que si la demande s'appuie sur une argumentation renouvelée et substantielle, et non sur la simple reprise des motifs de la décision suspendue — ce qui suppose, en matière de [contentieux de l'urbanisme](/domaines-intervention/contentieux-urbanisme/), de documenter précisément l'atteinte invoquée au regard des dispositions du [document d'urbanisme applicable](/domaines-intervention/plu-documents-urbanisme/) et des règles d'insertion paysagère.
