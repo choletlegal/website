@@ -62,16 +62,32 @@ def env!(name)
   ENV.fetch(name) { abort "Variable d'environnement manquante : #{name}" }
 end
 
-def post_json(uri, body, headers = {})
-  req = Net::HTTP::Post.new(uri)
-  req["Content-Type"] = "application/json"
-  req["Accept"] = "application/json"
-  headers.each { |k, v| req[k] = v }
-  req.body = JSON.generate(body)
-  res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) { |http| http.request(req) }
-  raise "Échec requête #{uri} (#{res.code}) : #{res.body}" unless res.is_a?(Net::HTTPSuccess)
-
-  res
+# tentatives: l'API PISTE (consult/juri en particulier) a été observée en conditions réelles
+# renvoyant un 504 passager sur une requête isolée — sans nouvelle tentative, cette seule erreur
+# fait échouer tout le script, pas seulement la décision concernée (constaté sur une exécution
+# réelle qui avait déjà rédigé un article avant de planter sur la décision suivante). Seules les
+# erreurs transitoires (5xx, timeout réseau) sont retentées ; une erreur 4xx ne l'est jamais, le
+# problème ne disparaîtra pas au prochain essai.
+def post_json(uri, body, headers = {}, tentatives: 3)
+  tentative = 0
+  loop do
+    tentative += 1
+    begin
+      req = Net::HTTP::Post.new(uri)
+      req["Content-Type"] = "application/json"
+      req["Accept"] = "application/json"
+      headers.each { |k, v| req[k] = v }
+      req.body = JSON.generate(body)
+      res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) { |http| http.request(req) }
+      return res if res.is_a?(Net::HTTPSuccess)
+      unless res.is_a?(Net::HTTPServerError) && tentative < tentatives
+        raise "Échec requête #{uri} (#{res.code}) : #{res.body}"
+      end
+    rescue Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET, SocketError
+      raise if tentative >= tentatives
+    end
+    sleep(2**tentative) # backoff : 2s, puis 4s avant une nouvelle tentative
+  end
 end
 
 # --- 1. Authentification PISTE -------------------------------------------------
@@ -491,43 +507,61 @@ def main
   claude = Anthropic::Client.new # lit ANTHROPIC_API_KEY dans l'environnement
 
   nouvelles = 0
+  erreurs = 0
   hits.each do |hit|
     text_id = hit.dig("titles", 0, "id")
     next unless text_id
 
-    decision = fetch_decision(access_token, text_id)
-    unless decision["juridiction"].to_s.downcase.start_with?("conseil d")
-      puts "Décision #{decision['juridiction'].inspect} ignorée (pas le Conseil d'État)"
-      next
+    # rescue StandardError : une décision dont le traitement échoue (API Légifrance/Claude en
+    # panne, erreur transitoire non résolue malgré les tentatives de post_json...) est signalée
+    # puis laissée de côté, plutôt que de faire échouer tout le run et priver les décisions
+    # suivantes de la liste de tout traitement cette semaine-là (constaté en conditions réelles).
+    # Elle sera retentée naturellement la semaine suivante, le dédoublonnage ne portant que sur
+    # les décisions déjà publiées avec succès.
+    begin
+      decision = fetch_decision(access_token, text_id)
+      unless decision["juridiction"].to_s.downcase.start_with?("conseil d")
+        puts "Décision #{decision['juridiction'].inspect} ignorée (pas le Conseil d'État)"
+        next
+      end
+      numero = decision["num"].to_s
+      next if numero.empty? || deja_publiees.include?(numero)
+
+      # Vérifié ici, avant l'appel (payant) à Claude — pas seulement dans write_and_open_pr — pour
+      # ne pas refacturer la rédaction d'un article dont la PR est déjà ouverte et en attente de
+      # relecture, ce qui devient plus probable maintenant que RECHERCHE_PAGE_SIZE est plus large.
+      branch = "veille-ce/#{numero}"
+      if open_pr_exists?(repo, token, branch)
+        puts "PR déjà ouverte pour #{branch}, décision laissée de côté pour cette fois."
+        next
+      end
+
+      date_iso = Time.at(decision["dateTexte"].to_i / 1000).utc.strftime("%Y-%m-%d")
+      decision = decision.merge(
+        "date_iso" => date_iso,
+        "resumePrincipal" => hit["resumePrincipal"],
+        "autreResume" => hit["autreResume"],
+        "lien_legifrance" => "https://www.legifrance.gouv.fr/ceta/id/#{text_id}",
+        "lien_arianeweb" => "https://www.conseil-etat.fr/fr/arianeweb/CE/decision/#{date_iso}/#{numero}"
+      )
+
+      puts "Nouvelle décision détectée : #{decision['juridiction']} n°#{numero} du #{date_iso}"
+      article = draft_article(claude, decision)
+      write_and_open_pr(article, decision)
+      nouvelles += 1
+    rescue StandardError => e
+      erreurs += 1
+      warn "Décision #{text_id} laissée de côté après erreur : #{e.message}"
     end
-    numero = decision["num"].to_s
-    next if numero.empty? || deja_publiees.include?(numero)
-
-    # Vérifié ici, avant l'appel (payant) à Claude — pas seulement dans write_and_open_pr — pour
-    # ne pas refacturer la rédaction d'un article dont la PR est déjà ouverte et en attente de
-    # relecture, ce qui devient plus probable maintenant que RECHERCHE_PAGE_SIZE est plus large.
-    branch = "veille-ce/#{numero}"
-    if open_pr_exists?(repo, token, branch)
-      puts "PR déjà ouverte pour #{branch}, décision laissée de côté pour cette fois."
-      next
-    end
-
-    date_iso = Time.at(decision["dateTexte"].to_i / 1000).utc.strftime("%Y-%m-%d")
-    decision = decision.merge(
-      "date_iso" => date_iso,
-      "resumePrincipal" => hit["resumePrincipal"],
-      "autreResume" => hit["autreResume"],
-      "lien_legifrance" => "https://www.legifrance.gouv.fr/ceta/id/#{text_id}",
-      "lien_arianeweb" => "https://www.conseil-etat.fr/fr/arianeweb/CE/decision/#{date_iso}/#{numero}"
-    )
-
-    puts "Nouvelle décision détectée : #{decision['juridiction']} n°#{numero} du #{date_iso}"
-    article = draft_article(claude, decision)
-    write_and_open_pr(article, decision)
-    nouvelles += 1
   end
 
   puts(nouvelles.zero? ? "Aucune nouvelle décision à commenter cette semaine." : "#{nouvelles} PR(s) traitée(s).")
+
+  # Sortie en échec si au moins une décision a été laissée de côté après erreur : les PR déjà
+  # ouvertes restent valides (le job n'est pas annulé en cours de route), mais le run doit
+  # apparaître en échec dans Actions plutôt que silencieusement vert — sans ça, une décision
+  # qui échoue à chaque tentative resterait indéfiniment invisible.
+  exit(1) if erreurs.positive?
 end
 
 main if $PROGRAM_NAME == __FILE__
