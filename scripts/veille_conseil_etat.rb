@@ -62,13 +62,19 @@ def env!(name)
   ENV.fetch(name) { abort "Variable d'environnement manquante : #{name}" }
 end
 
-# tentatives: l'API PISTE (consult/juri en particulier) a été observée en conditions réelles
-# renvoyant un 504 passager sur une requête isolée — sans nouvelle tentative, cette seule erreur
-# fait échouer tout le script, pas seulement la décision concernée (constaté sur une exécution
-# réelle qui avait déjà rédigé un article avant de planter sur la décision suivante). Seules les
-# erreurs transitoires (5xx, timeout réseau) sont retentées ; une erreur 4xx ne l'est jamais, le
-# problème ne disparaîtra pas au prochain essai.
-def post_json(uri, body, headers = {}, tentatives: 3)
+# tentatives : positionnel (pas `tentatives:` en mot-clé) — avec un paramètre mot-clé déclaré,
+# Ruby 3 tente d'interpréter le hash à chaînes brutes passé par les appelants (`"Authorization"
+# => "..."`) comme des arguments mot-clé plutôt que comme la valeur positionnelle de `headers`,
+# et plante immédiatement sur le moindre appel (`ArgumentError: unknown keyword`, constaté sur
+# une exécution réelle — régression introduite par une version antérieure de ce correctif).
+#
+# L'API PISTE (consult/juri en particulier) a été observée en conditions réelles renvoyant un
+# 504 passager sur une requête isolée — sans nouvelle tentative, cette seule erreur fait échouer
+# tout le script, pas seulement la décision concernée (constaté sur une exécution réelle qui
+# avait déjà rédigé un article avant de planter sur la décision suivante). Seules les erreurs
+# transitoires (5xx, timeout réseau) sont retentées ; une erreur 4xx ne l'est jamais, le problème
+# ne disparaîtra pas au prochain essai.
+def post_json(uri, body, headers = {}, tentatives = 3)
   tentative = 0
   loop do
     tentative += 1
