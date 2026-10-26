@@ -1,0 +1,44 @@
+---
+layout: post
+title: "Cristallisation des règles d'urbanisme dans un lotissement : le bénéfice de l'article L.442-14 est acquis dès la délivrance du permis d'aménager"
+seo_title: "L.442-14 : cristallisation dès le permis d'aménager"
+description: "Le Conseil d'État juge que la cristallisation des règles d'urbanisme prévue à l'article L.442-14 du code de l'urbanisme n'est pas subordonnée à l'achèvement des travaux du lotissement : elle est acquise dès la délivrance du permis d'aménager et court jusqu'à cinq ans après la déclaration d'achèvement."
+categories: ["Droit de l'urbanisme"]
+# image: "/assets/images/blog/2026-10-26-cristallisation-des-regles-d-urbanisme-dans-un-lotissement-le-benefice-de-l-arti.jpg" # TODO: image 1200x630 à fournir
+tags: ["lotissement", "permis d'aménager", "cristallisation"]
+ce_numero: "509019"
+---
+
+Le pétitionnaire d'un lot peut invoquer les règles d'urbanisme en vigueur à la date du permis d'aménager dès la délivrance de celui-ci, et jusqu'à cinq ans après la réception par l'administration de la déclaration d'achèvement du lotissement. L'achèvement des travaux ne conditionne pas ce bénéfice, mais seulement le point de départ du délai de cinq ans.
+
+**Conseil d'État, 21 octobre 2026, n° 509019**
+
+*Consulter [la décision sur Ariane Web](https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2026-10-21/509019) et [sur Légifrance](https://www.legifrance.gouv.fr/ceta/id/CETATEXT000055008721).*
+
+## Les faits
+
+Le maire d'Erquy (Côtes-d'Armor) a délivré, le 20 novembre 2015, à une société de promotion immobilière un permis d'aménager portant sur un lotissement de 27 lots, le lot n° 27 étant destiné à accueillir des logements sociaux.
+
+Plus de sept ans plus tard, par un arrêté du 26 janvier 2023, le même maire a accordé à cette société un permis de construire trois maisons et un bâtiment collectif de onze logements sur le terrain correspondant à ce lot n° 27. Le permis a été délivré sur le fondement de l'article R.442-18 du code de l'urbanisme, qui autorise la délivrance d'un permis de construire sur un lot soit à compter de l'achèvement des travaux d'aménagement du lotissement constaté conformément aux articles R.462-1 à R.462-10, soit à compter de la délivrance de l'autorisation de procéder à la vente ou à la location des lots avant exécution des travaux, à la condition que les équipements desservant le lot concerné soient achevés — le lotisseur fournissant alors à l'acquéreur un certificat attestant, sous sa responsabilité, cet achèvement, certificat joint à la demande de permis.
+
+Des voisins ont formé un recours gracieux, implicitement rejeté, puis saisi le tribunal administratif de Rennes d'un recours pour excès de pouvoir. Par un jugement du 14 août 2025, le tribunal a fait droit à leur demande et annulé le permis de construire.
+
+Pour ce faire, les premiers juges ont retenu notamment que la société n'avait pas justifié de l'achèvement des travaux d'équipement desservant le lot n° 27 à la date de délivrance du permis, que l'achèvement des équipements au sens de l'article R.442-13 du code de l'urbanisme incluait les travaux de finition, et surtout — c'est le point qui emporte la cassation — que **le mécanisme de cristallisation des règles d'urbanisme prévu par l'article L.442-14 du code de l'urbanisme ne pouvait bénéficier à un permis délivré avant l'achèvement de l'ensemble des travaux prévus par le permis d'aménager**. Le tribunal en avait tiré la conséquence que le permis devait être apprécié au regard des règles en vigueur en 2023, et notamment de l'article 1 AU 2 du règlement du document d'urbanisme local, qui n'admet les constructions individuelles en zone à urbaniser que si elles sont incluses dans le périmètre d'une opération d'ensemble et que les travaux d'aménagement ont été réalisés.
+
+La société pétitionnaire s'est pourvue en cassation, invoquant plusieurs erreurs de droit et dénaturations : sur la possibilité de déposer la déclaration attestant l'achèvement et la conformité des travaux d'équipement hors finitions, puis de demander l'autorisation de différer les travaux de finition de voirie et de vendre les lots par anticipation en application de l'article R.442-13 du code de l'urbanisme ; sur la portée de la notion d'achèvement des équipements ; et sur le champ d'application de l'article L.442-14.
+
+## La portée de la décision
+
+Le Conseil d'État s'en tient à ce dernier moyen, qui suffit à fonder la cassation. Après avoir rappelé les termes de l'article L.442-14 du code de l'urbanisme — selon lequel, lorsque le lotissement a fait l'objet d'un permis d'aménager, le permis de construire ne peut être refusé ou assorti de prescriptions spéciales sur le fondement de dispositions d'urbanisme nouvelles intervenues depuis la date de délivrance du permis d'aménager, et ce pendant cinq ans à compter de l'achèvement des travaux constaté dans les conditions prévues par décret en Conseil d'État —, la Haute juridiction en livre l'interprétation suivante :
+
+> « *Il en résulte que, dans un lotissement soumis à permis d'aménager, à partir de la date de délivrance de ce permis et jusqu'à l'expiration d'un délai de cinq ans à compter de la réception, par l'administration, de la déclaration d'achèvement du lotissement, les pétitionnaires ont un droit à voir leurs demandes de permis de construire présentées dans le cadre du lotissement examinées au regard des dispositions d'urbanisme applicables à la date du permis d'aménager.* »
+
+La formule est doublement éclairante. D'une part, elle fixe le **point de départ de la cristallisation à la date de délivrance du permis d'aménager**, et non à l'achèvement des travaux : la référence à l'achèvement, dans le texte, ne sert qu'à déterminer le point de départ du délai de cinq ans au terme duquel la protection s'éteint, non à conditionner son ouverture. D'autre part, elle précise que l'événement déclencheur de ce délai de cinq ans est la réception par l'administration de la déclaration d'achèvement du lotissement.
+
+Dès lors qu'un permis d'aménager a été délivré, le pétitionnaire d'un lot dispose donc d'un droit à voir sa demande instruite au regard des règles applicables à cette date, que les travaux d'aménagement soient ou non terminés. La solution est cohérente avec l'économie du lotissement : la cristallisation a précisément pour objet de sécuriser la commercialisation et la construction des lots pendant la phase de réalisation de l'opération, période durant laquelle, par hypothèse, les travaux ne sont pas achevés. Subordonner la protection à l'achèvement aurait privé le dispositif d'effet utile dans l'intervalle le plus exposé au risque de changement de règles.
+
+En jugeant que l'article L.442-14 n'était pas applicable à un permis de construire délivré avant l'achèvement général des travaux du lotissement, le tribunal administratif de Rennes a donc commis une erreur de droit. Le Conseil d'État annule le jugement du 14 août 2025 sans examiner les autres moyens du pourvoi et renvoie l'affaire au même tribunal.
+
+Il faut souligner la portée exacte de cette censure. Le Conseil d'État ne se prononce ni sur la légalité du permis de construire litigieux, ni sur les conditions de l'article R.442-18, ni sur la question — distincte et laissée ouverte — de savoir si l'achèvement des équipements desservant le lot, au sens des articles R.442-13 et R.442-18, inclut ou non les travaux de finition. Ces questions seront rejugées par le tribunal de renvoi. La décision tranche un seul point, mais un point structurant : les conditions dans lesquelles un permis de construire peut être délivré sur un lot (article R.442-18) et le bénéfice de la cristallisation des règles d'urbanisme (article L.442-14) relèvent de deux logiques autonomes, qu'il ne faut pas confondre. Un permis irrégulier au regard de la première n'en perd pas pour autant le bénéfice de la seconde.
+
+En pratique, l'enseignement est net pour les opérateurs comme pour les services instructeurs : la modification du plan local d'urbanisme intervenue après la délivrance du permis d'aménager — ici, l'exigence tenant à la réalisation préalable des travaux d'aménagement posée par le règlement de la zone 1 AU — est inopposable aux demandes de permis de construire déposées dans le périmètre du lotissement, pendant toute la durée de la protection. Les communes qui entendent faire évoluer leur règlement doivent intégrer cette contrainte dans leur stratégie, et les requérants qui contestent un permis délivré dans un lotissement ancien doivent vérifier le corpus de règles réellement applicable avant d'invoquer une disposition nouvelle. Le cabinet accompagne les collectivités, aménageurs et riverains sur ces problématiques de [permis d'aménager](/domaines-intervention/permis-amenager/) et de [contentieux de l'urbanisme](/domaines-intervention/contentieux-urbanisme/).
