@@ -1,0 +1,46 @@
+---
+layout: post
+title: "Saturation visuelle d'un parc éolien : l'effet d'encerclement relève de la commodité du voisinage et s'apprécie par les angles d'occupation et de respiration"
+seo_title: "Éolien : saturation visuelle et commodité du voisinage"
+description: "Le Conseil d'État juge que l'effet de saturation visuelle d'un parc éolien peut être pris en compte au titre de la commodité du voisinage et s'apprécie au regard des angles d'occupation et de respiration, hors ressenti des riverains, et précise le régime de contestation du sursis à statuer de l'article L. 181-18."
+categories: ["Droit de l'urbanisme"]
+# image: "/assets/images/blog/2026-11-23-saturation-visuelle-d-un-parc-eolien-l-effet-d-encerclement-releve-de-la-commodi.jpg" # TODO: image 1200x630 à fournir
+tags: ["autorisation environnementale", "sursis à statuer", "saturation visuelle"]
+ce_numero: "504914"
+---
+
+L'impact visuel d'un parc éolien, et notamment l'effet d'encerclement qu'il produit, peut être pris en compte au titre des inconvénients pour la commodité du voisinage. Le juge doit l'apprécier objectivement, au regard des angles d'occupation et de respiration et de la configuration des lieux, sans égard au ressenti des riverains ni au soutien local au projet.
+
+**Conseil d'État, 13 novembre 2026, n° 504914**
+
+*Consulter [la décision sur Ariane Web](https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2026-11-13/504914) et [sur Légifrance](https://www.legifrance.gouv.fr/ceta/id/CETATEXT000055088305).*
+
+## Les faits
+
+Par un arrêté du 26 juin 2017, le préfet des Ardennes a autorisé une société d'exploitation à installer et exploiter soixante-trois éoliennes et un poste de livraison sur le territoire de sept communes. Un collectif de riverains et plusieurs particuliers ont demandé l'annulation de cette autorisation environnementale au tribunal administratif de Châlons-en-Champagne, qui a rejeté leur demande par un jugement du 23 janvier 2020.
+
+Saisie en appel, la cour administrative d'appel de Nancy a procédé en deux temps. Par un premier arrêt du 15 décembre 2022, elle a fait application du 2° du I de l'article L. 181-18 du code de l'environnement : après avoir écarté une partie des moyens, elle a sursis à statuer jusqu'à ce que le préfet transmette un arrêté de régularisation, dans un délai de six mois porté à neuf mois en cas de nouvelle enquête publique. Elle a en outre réservé jusqu'en fin d'instance l'examen de plusieurs moyens, dont ceux tirés de l'insuffisance de l'étude d'impact, de la méconnaissance de l'article L. 511-1 du code de l'environnement et de la nécessité d'une dérogation « espèces protégées ».
+
+Le préfet a délivré, le 3 octobre 2023, une autorisation modificative destinée à régulariser l'autorisation initiale. Par un second arrêt du 3 avril 2025, la cour a néanmoins annulé le jugement de première instance ainsi que les deux arrêtés préfectoraux, en retenant que le projet aggravait de façon significative l'encerclement des horizons pour les habitants de cinq villages situés à moins de 2,5 kilomètres de certaines éoliennes.
+
+La société pétitionnaire et la ministre chargée de la transition écologique se sont pourvues en cassation, la seconde contre les deux arrêts. Étaient en cause, pour l'essentiel : la possibilité pour la cour de statuer, après régularisation, sur un moyen antérieurement réservé ; la méthode d'appréciation de la saturation visuelle ; et le refus de mettre en œuvre une nouvelle fois la faculté de régularisation.
+
+## La portée de la décision
+
+Le Conseil d'État commence par définir le régime contentieux de la décision avant dire droit prononçant un sursis à statuer sur le fondement du 2° du I de l'article L. 181-18 du code de l'environnement. Il juge que l'auteur du recours est recevable à contester cette décision en tant qu'elle écarte comme non fondés les moyens dirigés contre l'autorisation initiale, qu'elle réserve l'examen de certains moyens en fin d'instance et qu'elle fait application de l'article L. 181-18. Mais il assortit cette recevabilité d'un tempérament décisif :
+
+> « *Toutefois, à compter de l'intervention de la mesure de régularisation dans le cadre du sursis à statuer, les conclusions dirigées contre cette décision avant-dire-droit en tant qu'elle met en œuvre les pouvoirs que le juge tient de l'article L. 181-18 du code de l'environnement et réserve corrélativement l'examen de certains moyens sont privées d'objet.* »
+
+**La délivrance de l'arrêté de régularisation prive ainsi d'objet la contestation du mécanisme même du sursis**, seule subsistant la critique de la décision en tant qu'elle écarte comme non fondés les moyens dirigés contre l'autorisation initiale. En l'espèce, le pourvoi de la ministre dirigé contre le premier arrêt, reprochant à la cour d'avoir réservé l'examen du moyen tiré de l'atteinte à la commodité du voisinage alors qu'elle pouvait se prononcer immédiatement, devenait sans objet.
+
+La décision précise ensuite l'office du juge en fin d'instance. La cour devait statuer sur le moyen réservé « au vu de l'ensemble des éléments produits dans le cours de l'instruction devant elle », indépendamment de la question de savoir si l'aggravation de l'encerclement avait ou non été révélée par le nouvel avis de l'autorité environnementale rendu dans le cadre de la régularisation. Elle pouvait donc retenir une aggravation pour les habitants de cinq villages alors que l'énoncé du moyen, avant le premier arrêt, n'en visait que trois : le périmètre factuel du moyen réservé n'est pas figé par sa formulation initiale.
+
+Sur le fond, l'apport principal tient à l'articulation des intérêts protégés par l'article L. 511-1 du code de l'environnement. La circonstance que ces intérêts incluent expressément la protection des paysages ne fait pas obstacle à ce que l'impact visuel d'un projet, et en particulier le phénomène de saturation visuelle, soit pris en compte au titre des inconvénients pour la commodité du voisinage. **L'impact visuel se dédouble donc : il relève à la fois de l'atteinte au paysage et, lorsqu'il affecte le cadre de vie quotidien des riverains, de la commodité du voisinage.**
+
+Le Conseil d'État détaille la méthode d'appréciation qui s'impose au juge de plein contentieux. Lorsqu'une telle argumentation est soulevée devant lui, il lui appartient de tenir compte de l'effet d'encerclement résultant du projet en évaluant, au regard de l'ensemble des parcs installés ou autorisés et de la configuration particulière des lieux — notamment en termes de reliefs et d'écrans visuels — l'incidence du projet sur les angles d'occupation et de respiration, ce dernier s'entendant du plus grand angle continu sans éolienne depuis les points de vue pertinents. La grille d'analyse est donc objective et géométrique.
+
+Cette objectivation a un corollaire que la décision assume explicitement : en statuant à partir des seuls indices d'occupation de l'horizon et de respiration et de la configuration des lieux, « sans prendre en compte le ressenti des riverains ou le soutien dont bénéficierait le projet localement », la cour n'a pas commis d'erreur de droit. L'acceptabilité sociale du projet, dans un sens comme dans l'autre, n'est pas un paramètre de l'appréciation. La cour pouvait au demeurant se fonder sur l'étude de saturation visuelle produite par les demandeurs de première instance, en l'absence de calcul des indices par la société pétitionnaire — répartition de la charge probatoire qui mérite d'être relevée par les porteurs de projet.
+
+Reste la question de la régularisation. Le Conseil d'État rappelle que la faculté du 2° du I de l'article L. 181-18 relève d'un pouvoir propre du juge, non subordonné à la présentation de conclusions en ce sens : en l'absence de telles conclusions, il peut y recourir sans y être tenu, son choix échappant au contrôle de cassation. En revanche, **lorsqu'il est saisi de conclusions aux fins de régularisation, le juge est tenu de mettre en œuvre ces pouvoirs si les vices retenus apparaissent, au vu de l'instruction, régularisables**. Ici, la cour avait souverainement jugé que la méconnaissance de l'article L. 511-1 ne pouvait être régularisée sans bouleverser le projet au point d'en changer la nature et d'imposer une nouvelle étude d'impact dans le cadre d'une nouvelle demande : son refus est exempt d'erreur de droit. Enfin, le moyen tiré du règlement (UE) 2022/2577 du Conseil du 22 décembre 2022, nouveau en cassation, a été écarté comme inopérant.
+
+Les deux pourvois sont rejetés et l'annulation des arrêtés de 2017 et 2023 devient définitive. Pour les porteurs de projets éoliens comme pour les services instructeurs, l'enseignement pratique est clair : les indices de saturation visuelle doivent être calculés et produits dès l'instruction de la demande, en intégrant l'ensemble des parcs installés ou autorisés, sous peine de voir le juge trancher sur la base de l'étude adverse ; et un vice tenant à la saturation visuelle d'un projet de grande ampleur a vocation à être jugé non régularisable. Le cabinet accompagne exploitants, riverains et collectivités en [droit de l'environnement et des ICPE](/domaines-intervention/environnement-icpe/) comme en [contentieux de l'urbanisme](/domaines-intervention/contentieux-urbanisme/).
