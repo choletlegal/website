@@ -1,0 +1,42 @@
+---
+layout: post
+title: "Autorisation environnementale : passé le sursis à statuer de l'article L. 181-18, le juge ne peut plus régulariser lui-même"
+seo_title: "L. 181-18 : le juge ne régularise pas à la place du préfet"
+description: "Le Conseil d'État juge qu'après un sursis à statuer fondé sur l'article L. 181-18 du code de l'environnement resté sans régularisation par l'autorité compétente, le juge de plein contentieux ne peut plus délivrer lui-même l'autorisation de régularisation : il doit annuler l'autorisation environnementale litigieuse."
+categories: ["Droit de l'urbanisme"]
+# image: "/assets/images/blog/2026-11-23-autorisation-environnementale-passe-le-sursis-a-statuer-de-l-article-l-181-18-le.jpg" # TODO: image 1200x630 à fournir
+tags: ["autorisation environnementale", "sursis à statuer", "régularisation"]
+ce_numero: "507633"
+---
+
+Lorsque le juge a sursis à statuer sur le fondement de l'article L. 181-18 du code de l'environnement et que l'autorité compétente n'a pris aucune mesure de régularisation, le juge de plein contentieux ne peut plus se substituer à elle pour délivrer une autorisation de régularisation : il lui appartient d'annuler l'autorisation environnementale.
+
+**Conseil d'État, 13 novembre 2026, n° 507633**
+
+*Consulter [la décision sur Ariane Web](https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2026-11-13/507633) et [sur Légifrance](https://www.legifrance.gouv.fr/ceta/id/CETATEXT000055088310).*
+
+## Les faits
+
+Une société avait sollicité, en octobre 2014, une autorisation unique pour exploiter un parc éolien composé de huit aérogénérateurs et de deux postes de livraison, sur le territoire de deux communes de l'Oise. Le préfet avait délivré l'autorisation par un arrêté du 1er mars 2016, à l'exclusion de deux éoliennes, puis, par un arrêté du 5 mai 2017, une autorisation complémentaire portant précisément sur ces deux machines.
+
+Une commune, une association de protection de l'environnement et plusieurs particuliers ont demandé au tribunal administratif d'Amiens l'annulation de cette autorisation complémentaire ainsi que du rejet implicite de leur recours gracieux. Par un premier jugement du 22 novembre 2019, le tribunal a estimé que l'arrêté du 5 mai 2017 était entaché d'un vice tenant à l'insuffisance de l'étude d'impact s'agissant des chiroptères. Faisant application de l'article L. 181-18 du code de l'environnement, il a sursis à statuer pendant dix-huit mois pour permettre la régularisation de ce vice, en réservant les autres moyens jusqu'à la fin de l'instance.
+
+La pétitionnaire a alors engagé un processus de régularisation substantiel : réalisation d'une étude complémentaire transmise au préfet le 6 mai 2021, avis de la mission régionale d'autorité environnementale des Hauts-de-France rendu le 21 septembre 2021, enquête publique complémentaire conduite en janvier 2022, rapport et conclusions du commissaire enquêteur le 3 février 2022, réunion de la commission départementale de la nature, des paysages et des sites en « formation éolien » en juin 2022. Au terme de ce parcours, toutefois, **aucune mesure de régularisation n'a été décidée par le préfet** : aucun arrêté de régularisation n'a été édicté.
+
+Par un second jugement du 19 mai 2022, le tribunal administratif a annulé l'arrêté du 5 mai 2017. La cour administrative d'appel de Douai a rejeté l'appel de la société le 26 juin 2025, en retenant qu'en l'absence d'arrêté de régularisation, le préfet devait être regardé comme ayant refusé de procéder à la régularisation du vice relevé, de sorte que l'autorisation demeurait illégale.
+
+Devant le Conseil d'État, la société soutenait notamment que la cour avait méconnu son office de juge de plein contentieux : dès lors que l'ensemble des actes de procédure avaient été accomplis, il lui appartenait, selon elle, de délivrer elle-même l'autorisation environnementale de régularisation, ou à tout le moins de répondre expressément aux conclusions présentées en ce sens.
+
+## La portée de la décision
+
+Le Conseil d'État rappelle d'abord l'étendue des pouvoirs du juge de pleine juridiction des autorisations environnementales. Lorsqu'il relève que l'autorisation contestée est illégale à la date à laquelle il statue, il peut modifier ou compléter l'autorisation délivrée afin de remédier à l'illégalité constatée ; s'il ne fait pas usage de cette faculté, il peut, lorsque les conditions sont réunies, mettre en œuvre le sursis à statuer prévu par l'article L. 181-18 du code de l'environnement. Les deux voies coexistent, mais la décision précise qu'elles ne sont pas cumulables indéfiniment dans le temps.
+
+La décision apporte ensuite une précision utile sur les modalités mêmes de la régularisation. En principe, celle-ci implique l'intervention d'une décision complémentaire corrigeant le ou les vices dont l'acte attaqué est entaché. Le juge peut toutefois admettre la régularisation en l'absence de nouvelle décision, mais à deux conditions cumulatives : que les mesures de régularisation entreprises ne soient pas susceptibles d'exercer une influence sur le sens et la portée de l'acte initial, et que **l'autorité compétente manifeste de manière non équivoque, dans le cadre de l'instruction contradictoire, sa volonté de confirmer l'acte attaqué**. L'accomplissement des seules formalités — étude complémentaire, avis de l'autorité environnementale, enquête publique — ne suffit donc pas : il y faut encore l'expression claire de la volonté administrative.
+
+Vient enfin l'apport central, formulé en termes généraux :
+
+> « Lorsqu'au terme de la procédure de régularisation menée en application de l'article L. 181-18 du code de l'environnement, le juge constate que l'autorisation en litige ne peut être regardée comme régularisée par l'autorité compétente, il ne lui appartient plus de la régulariser lui-même au titre de ses pouvoirs de juge de plein contentieux mais de prononcer son annulation, sans que puisse être contestée devant lui la légalité du refus opposé, le cas échéant, à la demande de régularisation présentée par le bénéficiaire de cette autorisation. Une telle contestation ne peut intervenir que dans le cadre d'une nouvelle instance, qui doit être regardée comme dirigée contre le refus d'autoriser le projet dans son ensemble, y compris les modifications qu'il était envisagé d'y apporter. »
+
+Appliquant cette grille, le Conseil d'État juge que la cour n'a commis ni erreur de droit ni dénaturation en estimant que l'arrêté demeurait illégal, dès lors que l'administration n'avait produit, dans le cadre de l'instruction contradictoire, aucun élément établissant de manière non équivoque sa volonté de confirmer l'acte attaqué. Et c'est sans insuffisance de motivation que la cour a implicitement mais nécessairement écarté les conclusions tendant à ce qu'elle délivre elle-même l'autorisation de régularisation : après la mise en œuvre du sursis à statuer et en l'absence de régularisation administrative, ce pouvoir lui échappait. Le pourvoi est rejeté.
+
+L'enseignement pratique est net pour les porteurs de projets soumis à autorisation environnementale, au premier rang desquels les parcs éoliens. Le sursis à statuer de l'article L. 181-18 constitue une fenêtre de régularisation dont l'issue dépend, en dernier ressort, d'un acte de l'autorité préfectorale : la diligence du pétitionnaire à reprendre l'étude d'impact et à faire conduire les consultations ne produit aucun effet contentieux si elle n'est pas couronnée par un arrêté de régularisation, ou à tout le moins par une prise de position explicite de l'administration dans l'instance. Il appartient donc au bénéficiaire de l'autorisation, pendant le délai fixé par le juge, de solliciter formellement le préfet et de veiller à ce que sa position soit versée au débat contradictoire. En cas de refus — y compris implicite — la voie contentieuse ne se poursuit pas dans l'instance initiale, qui s'achève par l'annulation : elle suppose l'introduction d'un **nouveau recours dirigé contre le refus d'autoriser le projet dans son ensemble**, modifications comprises, avec les délais et les risques que comporte un tel redémarrage. Les collectivités et les riverains, de leur côté, y trouvent la confirmation que l'inertie de l'administration, loin de consolider l'autorisation, en scelle l'annulation. Le cabinet accompagne porteurs de projets, exploitants et collectivités en [droit de l'environnement et des ICPE](/domaines-intervention/environnement-icpe/) ainsi qu'en [contentieux de l'urbanisme](/domaines-intervention/contentieux-urbanisme/).
